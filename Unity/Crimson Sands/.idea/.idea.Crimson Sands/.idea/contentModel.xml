@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Crimson Sands.-710247288.00" t="ExcludeRecursive" />
+    <e p="D:\GIT\Crimson-Sands\Unity\Crimson Sands" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CarSelector.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="ReplaceSplatmap2.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Armor.cs" t="Include" />
+          <e p="Car.cs" t="Include" />
+          <e p="CarDatabase.cs" t="Include" />
+          <e p="CarUpdater.cs" t="Include" />
+          <e p="Controls" t="Include">
+            <e p="CarController.cs" t="Include" />
+            <e p="CIAIToPoint.cs" t="Include" />
+            <e p="CIConfig.cs" t="Include" />
+            <e p="CIPlayer.cs" t="Include" />
+            <e p="ControlInputs.cs" t="Include" />
+          </e>
+          <e p="SceneManage.cs" t="Include" />
+          <e p="Weapons System" t="Include">
+            <e p="Weapon.cs" t="Include" />
+          </e>
+        </e>
+        <e p="SetCenterOfMass.cs" t="Include" />
+        <e p="SpawnPlayerCar.cs" t="Include" />
+        <e p="SpawnWheelParticles.cs" t="Include" />
+        <e p="SphereCarController.cs" t="Include" />
+        <e p="TextMesh Pro" t="Include">
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Tom's Terrain Tools" t="Include">
+          <e p="2DTools" t="Include">
+            <e p="Editor" t="Include">
+              <e p="TTTools2D.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Camera2DFollow.cs" t="Include" />
+              <e p="CircleMoverSample.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="ClearWaterLevel.cs" t="Include" />
+            <e p="IncrementalSplatmapping.cs" t="Include" />
+            <e p="PlaceOnTerrain.cs" t="Include" />
+            <e p="RandomObjectMap.cs" t="Include" />
+            <e p="SplatMapGenerator.cs" t="Include" />
+            <e p="TerrainTools.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ForceGrassDistanceInEditor.cs" t="Include" />
+            <e p="KeepOnSurface.cs" t="Include" />
+            <e p="PlaceOnSurfaceAtStart.cs" t="Include" />
+            <e p="SpawnInArea.cs" t="Include" />
+            <e p="TerrainQualitySettings.cs" t="Include" />
+            <e p="TreeExplosion.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Toon.shader" t="Include" />
+      </e>
+      <e p="Crimson Sands.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
