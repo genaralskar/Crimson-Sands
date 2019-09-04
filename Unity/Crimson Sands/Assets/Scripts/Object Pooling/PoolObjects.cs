@@ -6,9 +6,15 @@ using UnityEngine;
 /// </summary>
 public class PoolObjects : MonoBehaviour
 {
+    [SerializeField]
+    private List<GameObjectPool> gameObjectPools;
+    
     void Awake()
     {
-        GameObjectPool.PoolObjects();
+        foreach (var pool in gameObjectPools)
+        {
+            pool.SpawnPooledObject();
+        }
     }
 
 }

@@ -5039,5 +5039,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   firePoint: {fileID: 405474871715582090}
-  projectile: {fileID: 405474871581839025}
+  projectile: {fileID: 11400000, guid: 1494f167d5fb59a42982f4967f2c1811, type: 2}
+  player: 1
   anims: {fileID: 0}
