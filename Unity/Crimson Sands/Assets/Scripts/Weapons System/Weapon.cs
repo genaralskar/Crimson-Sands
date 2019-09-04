@@ -14,10 +14,15 @@ public class Weapon : MonoBehaviour
     public int damage = 10;
     
     [Tooltip("The transform where the projectile with appear from")]
-    public Transform firePoint;
+    [SerializeField]
+    private Transform firePoint;
     
     [Tooltip("The projectile particle system. This should be attached to the firePoint transform")]
-    public ParticleSystem projectile;
+    public GameObjectPool projectile;
+
+    [Tooltip("Whether or not this weapon is being fired by a player")]
+    [SerializeField]
+    private bool player = true;
     
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
@@ -49,23 +54,23 @@ public class Weapon : MonoBehaviour
     }
 
 //    Used for testing purposes
-//    private void Update()
-//    {
-//        if (Input.GetMouseButtonDown(0) && !IsFiring)
-//        {
-//            IsFiring = true;
-//        }
-//
-//        if (Input.GetMouseButtonUp(0) && IsFiring)
-//        {
-//            IsFiring = false;
-//        }
-//
-//        if (Input.GetButtonDown("Brake"))
-//        {
-//            RetractWeaponHandler();
-//        }
-//    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && !IsFiring)
+        {
+            IsFiring = true;
+        }
+
+        if (Input.GetMouseButtonUp(0) && IsFiring)
+        {
+            IsFiring = false;
+        }
+
+        if (Input.GetButtonDown("Brake"))
+        {
+            RetractWeaponHandler();
+        }
+    }
     
     private void SetAnimsFiring(bool value)
     {
@@ -79,7 +84,8 @@ public class Weapon : MonoBehaviour
 
     private void FireParticle()
     {
-        projectile.Play();
+        GameObject newProj = projectile.GetPooledObject(transform.position, transform.rotation);
+        //set team
     }
 
     
