@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Jeep.ma
-//Last modified: Sat, Sep 07, 2019 12:45:01 PM
+//Last modified: Sat, Sep 07, 2019 12:55:46 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "stereoCamera" "10.0";
@@ -41969,6 +41969,8 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :modelPanel2ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr "Jeep_rotateX.o" "Jeep.rx";
 connectAttr "Jeep_rotateY.o" "Jeep.ry";
 connectAttr "Jeep_rotateZ.o" "Jeep.rz";
