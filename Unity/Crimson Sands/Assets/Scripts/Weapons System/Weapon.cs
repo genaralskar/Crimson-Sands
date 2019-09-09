@@ -23,6 +23,13 @@ public class Weapon : MonoBehaviour
     [Tooltip("Whether or not this weapon is being fired by a player")]
     [SerializeField]
     private bool player = true;
+
+    [Tooltip("This is used to set the proper layer when spawning projectiles. This shouldn't need to be changed as long" +
+             " as the layers don't change")]
+    [SerializeField] private int playerHitboxLayer = 10;
+    [Tooltip("This is used to set the proper layer when spawning projectiles. This shouldn't need to be changed as long" +
+             " as the layers don't change")]
+    [SerializeField] private int enemyHitboxLayer = 12;
     
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
@@ -68,10 +75,16 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetButtonDown("Brake"))
         {
-            RetractWeaponHandler();
+            //RetractWeaponHandler();
         }
     }
-    
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(firePoint.transform.position, firePoint.transform.forward * 100);
+    }
+
     private void SetAnimsFiring(bool value)
     {
         anims.SetBool("IsFiring", value);
@@ -79,13 +92,38 @@ public class Weapon : MonoBehaviour
 
     private void OnWeaponFireHandler()
     {
-        FireParticle();
+        FireProjectile();
     }
 
-    private void FireParticle()
+    private void FireProjectile()
     {
-        GameObject newProj = projectile.GetPooledObject(transform.position, transform.rotation);
+        GameObject newProj = projectile.GetPooledObject(firePoint.transform.position, firePoint.transform.rotation);
+        Projectile proj = newProj.GetComponent<Projectile>();
+        if (proj == null)
+        {
+            Debug.LogError("Object " + newProj + " does not have a projectile componenet. If you want to use this object " +
+                           "as a projectile, you need to add the Projectile component");
+            return;
+        }
+            
+        
         //set team
+        proj.player = player;
+        
+        //set the proper layer for the projectile
+        if (player)
+        {
+            proj.SetLayer(playerHitboxLayer);
+        }
+        else
+        {
+            proj.SetLayer(enemyHitboxLayer);
+        }
+        
+        //set damage
+        proj.damage = damage;
+        
+        //set projectile velocity
     }
 
     

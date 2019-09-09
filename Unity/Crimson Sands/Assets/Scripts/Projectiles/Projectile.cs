@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class Projectile : MonoBehaviour
 {
@@ -20,19 +22,42 @@ public class Projectile : MonoBehaviour
              "This gets changed on the Weapon script when it gets fired")]
     public bool player = true;
 
+    public int damage = 10;
+
     [Tooltip("The time it takes for the projectile to disable itself. Set to -1 to keep enabled forever")]
     [SerializeField]    
     private float lifetime = 5f;
-    
+
+    private Collider col;
+
+    //when the velocity of the projectile is changed, it updates its move speed/direction with the new velocity
+    //velocity is reset back to 0 whenever the object is disabled
+    public Vector3 Velocity
+    {
+        get
+        {
+            return velocity;
+        }
+        set
+        {
+            UpdateGravity(gravity);
+            velocity = value;
+        }
+    }
+
+    private Vector3 velocity = Vector3.zero;
+
     private Vector3 moveVector = Vector3.forward;
 
     private void Awake()
     {
         UpdateGravity(gravity);
+        col = GetComponentInChildren<Collider>();
     }
 
     private void OnDisable()
     {
+        velocity = Vector3.zero;
         StopAllCoroutines();
     }
 
@@ -59,6 +84,7 @@ public class Projectile : MonoBehaviour
     private void UpdateGravity(bool grav)
     {
         moveVector = transform.forward * speed;
+        moveVector += velocity;
         if (grav)
         {
             moveVector += transform.InverseTransformDirection(Physics.gravity) * gravityModifier;
@@ -69,5 +95,10 @@ public class Projectile : MonoBehaviour
     {
         yield return new WaitForSeconds(lifetime);
         gameObject.SetActive(false);
+    }
+
+    public void SetLayer(int newLayer)
+    {
+        col.gameObject.layer = newLayer;
     }
 }

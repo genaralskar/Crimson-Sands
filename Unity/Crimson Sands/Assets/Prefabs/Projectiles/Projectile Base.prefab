@@ -45,9 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ff06b995f320b4da87c752dcda65c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 100
   gravity: 0
   gravityModifier: 1
+  player: 1
+  damage: 10
+  lifetime: 5
 --- !u!1 &3138231505981449067
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +62,6 @@ GameObject:
   - component: {fileID: 1261405266998678961}
   - component: {fileID: 8893320776926328285}
   - component: {fileID: 3214303864024377002}
-  - component: {fileID: 3421839667479493795}
   m_Layer: 0
   m_Name: Projectile Mesh
   m_TagString: Untagged
@@ -126,19 +128,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &3421839667479493795
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3138231505981449067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3647077389420500639
 GameObject:
   m_ObjectHideFlags: 0
