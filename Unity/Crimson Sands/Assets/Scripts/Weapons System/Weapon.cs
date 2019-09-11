@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 ///<summary>
 /// This class handles firing weapons. This should only be on the root object of a weapon prefab.
@@ -33,6 +35,10 @@ public class Weapon : MonoBehaviour
     
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
+
+    public AudioSource fireSoundSource;
+
+    public GameObject muzzleFlash;
     
     private WeaponFireHandler fireHandler;
     
@@ -58,6 +64,8 @@ public class Weapon : MonoBehaviour
         
         fireHandler = anims.gameObject.AddComponent<WeaponFireHandler>();
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
+        
+        muzzleFlash.SetActive(false);
     }
 
 //    Used for testing purposes
@@ -93,6 +101,18 @@ public class Weapon : MonoBehaviour
     private void OnWeaponFireHandler()
     {
         FireProjectile();
+
+        if (fireSoundSource != null)
+        {
+            fireSoundSource.Play();
+        }
+        
+        if (muzzleFlash != null)
+        {
+            StopAllCoroutines();
+            StartCoroutine(MuzzleFlash());
+        }
+        
     }
 
     private void FireProjectile()
@@ -124,6 +144,21 @@ public class Weapon : MonoBehaviour
         proj.damage = damage;
         
         //set projectile velocity
+    }
+
+    private IEnumerator MuzzleFlash()
+    {
+        muzzleFlash.SetActive(true);
+        //random rotation
+        Vector3 newRot = Vector3.zero;
+        //newRot.z = Mathf.PerlinNoise(Time.time, muzzleFlash.GetInstanceID());
+        newRot.z = Random.Range(0f, 1f);
+        newRot.z *= 360;
+        muzzleFlash.transform.localRotation = Quaternion.Euler(newRot);
+
+        yield return new WaitForFixedUpdate();
+        
+        muzzleFlash.SetActive(false);
     }
 
     
