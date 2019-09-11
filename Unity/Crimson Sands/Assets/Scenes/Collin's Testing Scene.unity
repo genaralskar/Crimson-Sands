@@ -2205,6 +2205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon Base
       objectReference: {fileID: 0}
+    - target: {fileID: 405474872055561905, guid: bd269f68c2918b742843472062274dba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 405474872055561904, guid: bd269f68c2918b742843472062274dba,
         type: 3}
       propertyPath: m_LocalPosition.x
