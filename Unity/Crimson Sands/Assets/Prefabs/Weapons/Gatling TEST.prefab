@@ -5120,7 +5120,8 @@ AudioSource:
   m_GameObject: {fileID: 4654465861917823095}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 55c2a60f99b5806498a5011fbbcc59e7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 8b7f09823e32afe4f809b5f3a6ff8365, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.133
@@ -5250,6 +5251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigun_Animations_EX TEST
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 601fe62b9a02e5b4f8c71d3190688201,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae83b14b3275f874eac546f90600f304, type: 2}
     - target: {fileID: -4216859302048453862, guid: 601fe62b9a02e5b4f8c71d3190688201,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5315,11 +5321,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 601fe62b9a02e5b4f8c71d3190688201,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae83b14b3275f874eac546f90600f304, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601fe62b9a02e5b4f8c71d3190688201, type: 3}
 --- !u!4 &4921429791982527218 stripped
