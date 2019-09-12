@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Car Swap Menu.unity
     guid: 25e1f98e5b35f3e4dbe3d6445072ddf2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Playable.unity
     guid: 371874dfbdb032f4b94f36637724c820
+  - enabled: 1
+    path: Assets/Scenes/Playble 1.unity
+    guid: 52fe2f641474ab840af72704beb22515
   m_configObjects: {}
