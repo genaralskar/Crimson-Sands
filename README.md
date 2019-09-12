@@ -6,8 +6,8 @@ Crimson Sands is a game set in a post apocalypse, where crystals are power. You'
 
 ## Releases
 These are the current stable builds/releases
-[V0.1.0](https://drive.google.com/file/d/16lFl2HQKqc4FfFLB7sl5i4gXDIhMRops/view)
-[Video](https://youtu.be/tvedBjCEEF8)
+- [V0.1.0](https://drive.google.com/file/d/16lFl2HQKqc4FfFLB7sl5i4gXDIhMRops/view)
+- [0.1.0 Video](https://youtu.be/tvedBjCEEF8)
 
 ## Links
 Links to all our other stuff
@@ -15,12 +15,12 @@ Links to all our other stuff
 
 
 ### Collin
-https://twitter.com/GenaralSkar/
-https://www.artstation.com/genaralskar
+- https://twitter.com/GenaralSkar/
+- https://www.artstation.com/genaralskar
 
 ### Josh
-https://sketchfab.com/caboosereynolds
-https://www.artstation.com/caboosereynolds
+- https://sketchfab.com/caboosereynolds
+- https://www.artstation.com/caboosereynolds
 
 ### Logan
 
