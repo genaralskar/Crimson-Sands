@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Buggy.ma
-//Last modified: Sun, Sep 15, 2019 09:15:21 PM
+//Last modified: Sun, Sep 15, 2019 10:28:24 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "stereoCamera" "10.0";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "84E3A2AB-411A-7A17-193F-7DA3747469F2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.3025293163029517 5.8446703802838975 7.6758731471683461 ;
-	setAttr ".r" -type "double3" -25.538352642759662 -15.399999999650166 4.123755112162424e-16 ;
+	setAttr ".t" -type "double3" -11.943488307488902 8.9259941447880013 7.8897479575881251 ;
+	setAttr ".r" -type "double3" -27.938352642681878 -60.599999999998587 -3.2394890628162432e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "712F8C2D-4494-279D-2DE5-73908B1DE529";
 	setAttr -k off ".v";
@@ -24,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.03937007874015748;
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
-	setAttr ".coi" 7.940320078022828;
+	setAttr ".coi" 15.669856794409764;
 	setAttr ".ow" 3.9370078740157477;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
