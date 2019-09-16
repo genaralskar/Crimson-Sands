@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Charger.ma
-//Last modified: Mon, Sep 16, 2019 11:38:17 AM
+//Last modified: Mon, Sep 16, 2019 12:56:57 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "84E3A2AB-411A-7A17-193F-7DA3747469F2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.1973327555942024 22.619592164339199 9.1060964258672481 ;
-	setAttr ".r" -type "double3" -61.538352661908526 -1093.3999999995876 8.173914343231246e-16 ;
+	setAttr ".t" -type "double3" -13.595452418043175 8.666423905939709 -14.311126087854152 ;
+	setAttr ".r" -type "double3" -18.93835266191876 -1215.3999999995349 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "712F8C2D-4494-279D-2DE5-73908B1DE529";
 	setAttr -k off ".v" no;
@@ -24,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.03937007874015748;
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
-	setAttr ".coi" 21.918688000060978;
+	setAttr ".coi" 23.541579019010168;
 	setAttr ".ow" 3.9370078740157477;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
