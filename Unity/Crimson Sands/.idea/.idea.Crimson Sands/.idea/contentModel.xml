@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Crimson Sands.-710247288.00" t="ExcludeRecursive" />
-    <e p="D:\GIT\Crimson-Sands\Unity\Crimson Sands" t="IncludeRecursive">
+    <e p="C:\Users\Mitch\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mitch\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Crimson Sands.252278497.00" t="ExcludeRecursive" />
+    <e p="D:\Fall 2019\Crimson-Sands\Unity\Crimson Sands" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CarSelector.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="ReplaceSplatmap2.cs" t="Include" />
+        </e>
+        <e p="RealisticCarControllerV3" t="Include">
+          <e p="Editor" t="Include">
+            <e p="CrossPlatformInput" t="Include">
+              <e p="CrossPlatformInputInitialize.cs" t="Include" />
+            </e>
+            <e p="RCC_AIBZEditor.cs" t="Include" />
+            <e p="RCC_AIEditor.cs" t="Include" />
+            <e p="RCC_AIWPEditor.cs" t="Include" />
+            <e p="RCC_CameraEditor.cs" t="Include" />
+            <e p="RCC_Editor.cs" t="Include" />
+            <e p="RCC_EditorWindows.cs" t="Include" />
+            <e p="RCC_GroundMaterialsEditor.cs" t="Include" />
+            <e p="RCC_InitLoad.cs" t="Include" />
+            <e p="RCC_LabelEditor.cs" t="Include" />
+            <e p="RCC_LightEditor.cs" t="Include" />
+            <e p="RCC_MirrorsSetupEditor.cs" t="Include" />
+            <e p="RCC_PhysicMaterialsEditor.cs" t="Include" />
+            <e p="RCC_SceneManagerEditor.cs" t="Include" />
+            <e p="RCC_SettingsEditor.cs" t="Include" />
+          </e>
+          <e p="LICENSE - Read Me!.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="RCC.cs" t="Include" />
+            <e p="RCC_AIBrakeZone.cs" t="Include" />
+            <e p="RCC_AIBrakeZonesContainer.cs" t="Include" />
+            <e p="RCC_AICarController.cs" t="Include" />
+            <e p="RCC_AIO.cs" t="Include" />
+            <e p="RCC_AIWaypointsContainer.cs" t="Include" />
+            <e p="RCC_APIExample.cs" t="Include" />
+            <e p="RCC_Caliper.cs" t="Include" />
+            <e p="RCC_Camera.cs" t="Include" />
+            <e p="RCC_CameraCarSelection.cs" t="Include" />
+            <e p="RCC_CameraConfig.cs" t="Include" />
+            <e p="RCC_CarControllerV3.cs" t="Include" />
+            <e p="RCC_CarSelectionExample.cs" t="Include" />
+            <e p="RCC_ChangableWheels.cs" t="Include" />
+            <e p="RCC_CharacterController.cs" t="Include" />
+            <e p="RCC_Chassis.cs" t="Include" />
+            <e p="RCC_CinematicCamera.cs" t="Include" />
+            <e p="RCC_ColorPickerBySliders.cs" t="Include" />
+            <e p="RCC_CreateAudioSource.cs" t="Include" />
+            <e p="RCC_Customization.cs" t="Include" />
+            <e p="RCC_CustomizerExample.cs" t="Include" />
+            <e p="RCC_DashboardColors.cs" t="Include" />
+            <e p="RCC_DashboardInputs.cs" t="Include" />
+            <e p="RCC_DashboardObjects.cs" t="Include" />
+            <e p="RCC_Demo.cs" t="Include" />
+            <e p="RCC_Exhaust.cs" t="Include" />
+            <e p="RCC_FixedCamera.cs" t="Include" />
+            <e p="RCC_FOVForCinematicCamera.cs" t="Include" />
+            <e p="RCC_FuelStation.cs" t="Include" />
+            <e p="RCC_GetBounds.cs" t="Include" />
+            <e p="RCC_GroundMaterials.cs" t="Include" />
+            <e p="RCC_HoodCamera.cs" t="Include" />
+            <e p="RCC_InfoLabel.cs" t="Include" />
+            <e p="RCC_LevelLoader.cs" t="Include" />
+            <e p="RCC_Light.cs" t="Include" />
+            <e p="RCC_LightEmission.cs" t="Include" />
+            <e p="RCC_Mirror.cs" t="Include" />
+            <e p="RCC_MobileButtons.cs" t="Include" />
+            <e p="RCC_PlayerPrefsX.cs" t="Include" />
+            <e p="RCC_PoliceSiren.cs" t="Include" />
+            <e p="RCC_Recorder.cs" t="Include" />
+            <e p="RCC_SceneManager.cs" t="Include" />
+            <e p="RCC_Settings.cs" t="Include" />
+            <e p="RCC_ShadowRotConst.cs" t="Include" />
+            <e p="RCC_Skidmarks.cs" t="Include" />
+            <e p="RCC_Skidmarks.shader" t="Include" />
+            <e p="RCC_SuspensionArm.cs" t="Include" />
+            <e p="RCC_TruckTrailer.cs" t="Include" />
+            <e p="RCC_UIController.cs" t="Include" />
+            <e p="RCC_UIDashboardButton.cs" t="Include" />
+            <e p="RCC_UIDashboardDisplay.cs" t="Include" />
+            <e p="RCC_UIDrag.cs" t="Include" />
+            <e p="RCC_UIJoystick.cs" t="Include" />
+            <e p="RCC_UISliderTextReader.cs" t="Include" />
+            <e p="RCC_UISteeringWheelController.cs" t="Include" />
+            <e p="RCC_UNetNetwork.cs" t="Include" />
+            <e p="RCC_Useless.cs" t="Include" />
+            <e p="RCC_WheelCamera.cs" t="Include" />
+            <e p="RCC_WheelCollider.cs" t="Include" />
+          </e>
+          <e p="Standard Assets" t="Include">
+            <e p="CrossPlatformInput" t="Include">
+              <e p="CrossPlatformInputGuidelines.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="AxisTouchButton.cs" t="Include" />
+                <e p="ButtonHandler.cs" t="Include" />
+                <e p="CrossPlatformInputManager.cs" t="Include" />
+                <e p="InputAxisScrollbar.cs" t="Include" />
+                <e p="Joystick.cs" t="Include" />
+                <e p="MobileControlRig.cs" t="Include" />
+                <e p="PlatformSpecific" t="Include">
+                  <e p="MobileInput.cs" t="Include" />
+                  <e p="StandaloneInput.cs" t="Include" />
+                </e>
+                <e p="TiltInput.cs" t="Include" />
+                <e p="TouchPad.cs" t="Include" />
+                <e p="VirtualInput.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Projectors" t="Include">
+              <e p="Guidelines.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="ProjectorLight.shader" t="Include" />
+                <e p="ProjectorMultiply.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Utility" t="Include">
+              <e p="ActivateTrigger.cs" t="Include" />
+              <e p="AlphaButtonClickMask.cs" t="Include" />
+              <e p="AutoMobileShaderSwitch.cs" t="Include" />
+              <e p="AutoMoveAndRotate.cs" t="Include" />
+              <e p="CameraRefocus.cs" t="Include" />
+              <e p="CurveControlledBob.cs" t="Include" />
+              <e p="DragRigidbody.cs" t="Include" />
+              <e p="DynamicShadowSettings.cs" t="Include" />
+              <e p="EventSystemChecker.cs" t="Include" />
+              <e p="FollowTarget.cs" t="Include" />
+              <e p="ForcedReset.cs" t="Include" />
+              <e p="FOVKick.cs" t="Include" />
+              <e p="FPSCounter.cs" t="Include" />
+              <e p="LerpControlledBob.cs" t="Include" />
+              <e p="ObjectResetter.cs" t="Include" />
+              <e p="ParticleSystemDestroyer.cs" t="Include" />
+              <e p="PlatformSpecificContent.cs" t="Include" />
+              <e p="SimpleActivatorMenu.cs" t="Include" />
+              <e p="SimpleMouseRotator.cs" t="Include" />
+              <e p="SmoothFollow.cs" t="Include" />
+              <e p="TimedObjectActivator.cs" t="Include" />
+              <e p="TimedObjectDestructor.cs" t="Include" />
+              <e p="WaypointCircuit.cs" t="Include" />
+              <e p="WaypointProgressTracker.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Armor.cs" t="Include" />
@@ -22,9 +159,18 @@
             <e p="CIPlayer.cs" t="Include" />
             <e p="ControlInputs.cs" t="Include" />
           </e>
+          <e p="Object Pooling" t="Include">
+            <e p="GameObjectPool.cs" t="Include" />
+            <e p="PooledObjectSpawnerTest.cs" t="Include" />
+            <e p="PoolObjects.cs" t="Include" />
+          </e>
+          <e p="Projectiles" t="Include">
+            <e p="Projectile.cs" t="Include" />
+          </e>
           <e p="SceneManage.cs" t="Include" />
           <e p="Weapons System" t="Include">
             <e p="Weapon.cs" t="Include" />
+            <e p="WeaponFireHandler.cs" t="Include" />
           </e>
         </e>
         <e p="SetCenterOfMass.cs" t="Include" />
@@ -83,6 +229,7 @@
             <e p="TreeExplosion.cs" t="Include" />
           </e>
         </e>
+        <e p="Toon Test.shader" t="Include" />
         <e p="Toon.shader" t="Include" />
       </e>
       <e p="Crimson Sands.sln" t="IncludeFlat" />
