@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// This goes on the base weapon mount
-/// It handles swapping weapons
+/// It handles, playing deploy/retract animations for the weapon mount and current weapon and destorying/instantiating weapons to swap them
+/// Should probably change it to a pool instead of instatiation
+/// SwapWeapon(WeaponInfo newWeapon) can be called to swap out the weapon manually
 /// </summary>
 public class WeaponMount : MonoBehaviour
 {
+    public bool isPlayer = false;
+    
     public WeaponInfo currentWeapon;
     private WeaponInfo nextWeapon;
 
@@ -24,6 +28,18 @@ public class WeaponMount : MonoBehaviour
     private bool swapping = false;
     private bool retracted = false;
 
+    private void OnEnable()
+    {
+        if(isPlayer)
+            SendSwapWeaponEvent.SwapPlayerWeapon += SwapWeaponHandler;
+    }
+
+    private void OnDisable()
+    {
+        if(isPlayer)
+            SendSwapWeaponEvent.SwapPlayerWeapon -= SwapWeaponHandler;
+    }
+
     private void Awake()
     {
         mountAnims = GetComponent<Animator>();
@@ -38,7 +54,7 @@ public class WeaponMount : MonoBehaviour
         }
     }
 
-    public void SwapWeapon(WeaponInfo newWeapon)
+    public void SwapWeaponHandler(WeaponInfo newWeapon)
     {
         Debug.Log("Swapping!");
         swapping = true;
@@ -79,21 +95,21 @@ public class WeaponMount : MonoBehaviour
     private void DeployWeapon()
     {
         mountAnims.SetBool("Deployed", true);
-        //deployed = true;
+        
+        //tell the attached weapon to play its deploy animation
+        weaponAnims.SetTrigger("Deploy");
+        swapping = false;
     }
     
     private void RetractWeapon()
     {
         mountAnims.SetBool("Deployed", false);
-        //tell animator on the weapon to play its retract animation
-        //probably want to do this when we start the retract animation, so called from another event
-        weaponAnims.SetTrigger("Retract");
-        //deployed = false;
     }
 
     public void WeaponRetractStartHandler()
     {
-        
+        //tell animator on the weapon to play its retract animation
+        weaponAnims.SetTrigger("Retract");
     }
 
 
