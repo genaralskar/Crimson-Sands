@@ -138,8 +138,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4718033233983303442}
   - component: {fileID: 8963517609030508219}
+  - component: {fileID: 8580022274019882453}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Collider/Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +173,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8580022274019882453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647077389420500639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec817079e2463ce4f9b4827e4829ab85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &3786905115642468933
 GameObject:
   m_ObjectHideFlags: 0

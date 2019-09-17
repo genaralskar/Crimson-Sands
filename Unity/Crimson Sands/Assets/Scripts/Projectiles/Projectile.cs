@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
-
+/// <summary>
+/// This goes on an object that is meant to be shot out of a weapon
+/// SetLayer(int newLayer) can be used to set the proper layer for this projectile
+/// </summary>
 public class Projectile : MonoBehaviour
 {
     [Tooltip("How fast the projectile moves")]
@@ -28,7 +31,12 @@ public class Projectile : MonoBehaviour
     [SerializeField]    
     private float lifetime = 5f;
 
+    [Tooltip("The pooled hit spark projectiles to be placed when this projectile collides with an object")]
+    public GameObjectPool hitSparks;
+
     private Collider col;
+
+    private Hitbox hitbox;
 
     //when the velocity of the projectile is changed, it updates its move speed/direction with the new velocity
     //velocity is reset back to 0 whenever the object is disabled
@@ -46,13 +54,15 @@ public class Projectile : MonoBehaviour
     }
 
     private Vector3 velocity = Vector3.zero;
-
     private Vector3 moveVector = Vector3.forward;
 
+    
     private void Awake()
     {
         UpdateGravity(gravity);
         col = GetComponentInChildren<Collider>();
+        hitbox = GetComponentInChildren<Hitbox>();
+        hitbox.projectile = this;
     }
 
     private void OnDisable()
@@ -100,5 +110,11 @@ public class Projectile : MonoBehaviour
     public void SetLayer(int newLayer)
     {
         col.gameObject.layer = newLayer;
+    }
+
+    public void SetProjectileDamage(int newDamage)
+    {
+        damage = newDamage;
+        hitbox.damage = damage;
     }
 }
