@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Revolver Grenade Launcher_For_Animation.ma
-//Last modified: Wed, Sep 18, 2019 11:18:27 AM
+//Last modified: Wed, Sep 18, 2019 11:27:27 AM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -79,7 +79,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "Launcher_Geo_Grp";
 	rename -uid "45C493EC-4AE2-4D7D-7114-F89704859A24";
-	setAttr ".t" -type "double3" 0.023484146222472163 -4.8225234183985419 -0.41821960967573357 ;
 createNode transform -n "Revolver_Cylinder" -p "Launcher_Geo_Grp";
 	rename -uid "54F95497-4E2A-3D3F-735F-E3B6649C748E";
 	setAttr ".rp" -type "double3" -0.0027046799659729004 3.8386427164077759 -0.057126164436340332 ;
@@ -5976,7 +5975,7 @@ createNode parentConstraint -n "Gun_Mount:Left_Door_parentConstraint1" -p "Gun_M
 	setAttr ".tg[0].tot" -type "double3" 3.1795623860464417e-06 0.00065109303430732623 
 		-0.024206066664024029 ;
 	setAttr ".tg[0].tor" -type "double3" 0 180 0 ;
-	setAttr ".lr" -type "double3" 0 -1.4033418597069752e-14 0 ;
+	setAttr ".lr" -type "double3" 8.4590716679252448e-16 -1.3982242332360418e-14 -6.9241982507288364 ;
 	setAttr ".rst" -type "double3" 0 -2.2204460492503131e-16 -2.2204460492503131e-16 ;
 	setAttr ".rsrr" -type "double3" 0 -1.4033418597069752e-14 0 ;
 	setAttr -k on ".w0";
@@ -6040,6 +6039,7 @@ createNode parentConstraint -n "Gun_Mount:Right_Door_parentConstraint1" -p "Gun_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.5574746556067396e-06 0.00065109303430732623 
 		0.024206066664023584 ;
+	setAttr ".lr" -type "double3" 0 0 6.9241982507288364 ;
 	setAttr ".rst" -type "double3" 0 -2.2204460492503131e-16 -2.2204460492503131e-16 ;
 	setAttr -k on ".w0";
 createNode transform -n "Gun_Mount:Mount_Box" -p "Gun_Mount:Base_Box_Grp";
@@ -6444,6 +6444,7 @@ createNode parentConstraint -n "Gun_Mount:Right_Door_Jnt_parentConstraint1" -p "
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.2204460492503131e-16 0 4.4408920985006262e-16 ;
+	setAttr ".lr" -type "double3" 0 0 6.9241982507288364 ;
 	setAttr ".rst" -type "double3" -1.7164785861968996 -1.2547160387039185 -2.3602466583251949 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Gun_Mount:Right_Door_Jnt_scaleConstraint1" -p "Gun_Mount:Right_Door_Jnt";
@@ -6485,6 +6486,7 @@ createNode parentConstraint -n "Gun_Mount:Left_Door_Jnt_parentConstraint1" -p "G
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 0 4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0 180 0 ;
+	setAttr ".lr" -type "double3" 8.4590716679252448e-16 -5.1176264709335683e-17 6.9241982507288364 ;
 	setAttr ".rst" -type "double3" 1.7180413007736206 -1.2547160387039185 -2.3602466583251949 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Gun_Mount:Left_Door_Jnt_scaleConstraint1" -p "Gun_Mount:Left_Door_Jnt";
@@ -6746,22 +6748,22 @@ createNode nurbsCurve -n "Gun_Mount:Left_Door_CrtlShape" -p "Gun_Mount:Left_Door
 		0.69934618841502871 -0.23602092634532668 -2.3602466583251953
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "FB4F5DBE-431D-672F-4E0A-FDB64F55A15E";
+	rename -uid "15F96D79-4944-BB9A-3A7A-4B95FD058D51";
 	setAttr -s 563 ".lnk";
 	setAttr -s 563 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AB224C04-4AF5-BFE8-FBA8-1DBCB4D98044";
+	rename -uid "11325F7E-45BE-BC68-08C0-F6A5ED63E07A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "96661A13-4FE2-9D70-BC7C-BC8A726CBFFC";
+	rename -uid "6B01B492-410C-9991-300D-C3AC187DFB12";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9CBB0471-4D90-1172-89B7-EF9EF76B03CA";
+	rename -uid "C5C2112C-45E5-D037-5816-52864EE5B6C9";
 	setAttr -s 19 ".dli[1:18]"  1 2 3 4 5 6 7 8 
 		9 10 11 12 13 14 15 16 17 18;
 	setAttr -s 19 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C3355B3A-4176-D552-737B-D7A2DF16B179";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1EB0AFAF-49B4-FD16-E120-9B80953FB068";
+	rename -uid "BC38DF2F-4008-B354-605C-F88F7F607619";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8C2D7431-46D1-545C-34FE-6B8B8E9DD714";
 	setAttr ".g" yes;
@@ -13838,15 +13840,15 @@ createNode animCurveTA -n "Launcher_Geo_Grp_rotateX";
 	rename -uid "3D56424B-489F-AFF6-C2E1-D4BA3D20BD4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 0 4 0 11 0 15 28.000000000000007 19 -15.980655294849262
+	setAttr -s 16 ".ktv[0:15]"  1 0 4 0 11 0 15 28.000000000000007 19 -15.980655294849262
 		 22 0 28 0 29 -8.4806321439788963 31 -42.711009698464338 35 20 37 0 59 0 63 -4.4812047263691284
-		 65 16.102481224764492 69 10 77 10 79 -80.000000000067317;
-	setAttr -s 17 ".kit[9:16]"  1 1 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 1 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  1 1 1 1 1 1 1 1;
-	setAttr -s 17 ".kiy[9:16]"  0 0 0 0 0 0 0 0;
-	setAttr -s 17 ".kox[9:16]"  1 1 1 1 1 1 1 1;
-	setAttr -s 17 ".koy[9:16]"  0 0 0 0 0 0 0 0;
+		 65 16.102481224764492 69 10 77 10;
+	setAttr -s 16 ".kit[9:15]"  1 1 18 18 18 18 18;
+	setAttr -s 16 ".kot[9:15]"  1 1 18 18 18 18 18;
+	setAttr -s 16 ".kix[9:15]"  1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[9:15]"  0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[9:15]"  1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[9:15]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "Launcher_Geo_Grp_rotateY";
 	rename -uid "5F72FA92-4947-7B96-8783-92918E75A7DE";
 	setAttr ".tan" 18;
@@ -14146,8 +14148,8 @@ createNode gameFbxExporter -n "gameExporterPreset3";
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
 select -ne :time1;
-	setAttr ".o" 79;
-	setAttr ".unw" 79;
+	setAttr ".o" 78;
+	setAttr ".unw" 78;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
