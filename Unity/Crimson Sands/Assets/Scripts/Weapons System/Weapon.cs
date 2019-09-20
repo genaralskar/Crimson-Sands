@@ -178,7 +178,15 @@ public class Weapon : MonoBehaviour
             }
             
             //spawn hitsparks
-            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, Quaternion.Euler(hit.normal));
+            Vector3 inDir = firePoint.position - hit.point;
+            
+            Vector3 dir = Vector3.Reflect(inDir, hit.normal);
+            dir *= -1;
+//            Debug.DrawRay(hit.point, inDir, Color.red, 1f);
+//            Debug.DrawRay(hit.point, hit.normal, Color.green, 1f);
+//            Debug.DrawRay(hit.point, dir, Color.blue, 1f);
+            Quaternion newRot = Quaternion.LookRotation(dir);
+            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
 
             //play audio on impact point
 
@@ -191,9 +199,8 @@ public class Weapon : MonoBehaviour
         muzzleFlash.SetActive(true);
         //random rotation
         Vector3 newRot = Vector3.zero;
-        //newRot.z = Mathf.PerlinNoise(Time.time, muzzleFlash.GetInstanceID());
-        newRot.z = Random.Range(0f, 1f);
-        newRot.z *= 360;
+        newRot.z = Random.Range(0f, 360f);
+        //newRot.z *= 360;
         muzzleFlash.transform.localRotation = Quaternion.Euler(newRot);
 
         yield return new WaitForFixedUpdate();
