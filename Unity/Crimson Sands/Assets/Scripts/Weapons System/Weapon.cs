@@ -18,6 +18,16 @@ public class Weapon : MonoBehaviour
     [Tooltip("The transform where the projectile with appear from")]
     [SerializeField]
     private Transform firePoint;
+
+    [Tooltip("Whether or not the weapon will use raycasts or gameObjects for its projectiles")]
+    [SerializeField]
+    private bool useRaycast = false;
+
+    [Tooltip("All the layers the raycast projectile can hit. This should include all physics layers, not just hurtbox layers")]
+    [SerializeField]
+    private LayerMask raycastProjectileLayerMask;
+
+    [SerializeField] private RaycastProjectileInfo raycastProjectileInfo;
     
     [Tooltip("The projectile particle system. This should be attached to the firePoint transform")]
     public GameObjectPool projectile;
@@ -32,6 +42,8 @@ public class Weapon : MonoBehaviour
     [Tooltip("This is used to set the proper layer when spawning projectiles. This shouldn't need to be changed as long" +
              " as the layers don't change")]
     [SerializeField] private int enemyHitboxLayer = 12;
+
+    [SerializeField] private LayerInfo layerInfo;
     
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
@@ -93,9 +105,18 @@ public class Weapon : MonoBehaviour
         anims.SetBool("IsFiring", value);
     }
 
+    //this is called when the weapon event is called from the fire animation
     private void OnWeaponFireHandler()
     {
-        FireProjectile();
+        if (useRaycast)
+        {
+            FireRaycast();
+        }
+        else
+        {
+            FireProjectile();
+        }
+        
 
         if (fireSoundSource != null)
         {
@@ -139,6 +160,30 @@ public class Weapon : MonoBehaviour
         proj.damage = damage;
         
         //set projectile velocity
+    }
+
+    private void FireRaycast()
+    {
+        Ray ray = new Ray(firePoint.position, firePoint.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastProjectileLayerMask))
+        {
+            int hitLayer = hit.collider.gameObject.layer;
+            
+            //player hit enemy hurtbox or enemy hit player hurtbox
+            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
+            {
+                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
+                hurtbox.SendDamage(damage);
+            }
+            
+            //spawn hitsparks
+            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, Quaternion.Euler(hit.normal));
+
+            //play audio on impact point
+
+
+        }
     }
 
     private IEnumerator MuzzleFlash()

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 499286311504927842, guid: 19ba4eb1fdb976244ab26c083aca3b89,
         type: 3}
       propertyPath: m_Name
-      value: Gatling New 2
+      value: Gatling New Raycast
       objectReference: {fileID: 0}
     - target: {fileID: 499286311504927843, guid: 19ba4eb1fdb976244ab26c083aca3b89,
         type: 3}
@@ -67,6 +67,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 499286311504927840, guid: 19ba4eb1fdb976244ab26c083aca3b89,
+        type: 3}
+      propertyPath: useRaycast
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499286311504927840, guid: 19ba4eb1fdb976244ab26c083aca3b89,
+        type: 3}
+      propertyPath: raycastProjectileLayerMask.m_Bits
+      value: 28983
+      objectReference: {fileID: 0}
+    - target: {fileID: 499286311504927840, guid: 19ba4eb1fdb976244ab26c083aca3b89,
+        type: 3}
+      propertyPath: raycastProjectileInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: a28a0f0130b9d5444ba7a9f13e96888e,
+        type: 2}
+    - target: {fileID: 499286311504927840, guid: 19ba4eb1fdb976244ab26c083aca3b89,
+        type: 3}
+      propertyPath: layerInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4,
+        type: 2}
     - target: {fileID: 2511526215132987742, guid: 19ba4eb1fdb976244ab26c083aca3b89,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

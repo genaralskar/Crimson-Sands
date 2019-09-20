@@ -80,10 +80,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   firePoint: {fileID: 499286312096166489}
+  useRaycast: 0
+  raycastProjectileLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastProjectileInfo: {fileID: 0}
   projectile: {fileID: 11400000, guid: 1494f167d5fb59a42982f4967f2c1811, type: 2}
-  player: 1
+  isPlayer: 1
   playerHitboxLayer: 10
   enemyHitboxLayer: 12
+  layerInfo: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4, type: 2}
   anims: {fileID: 0}
   fireSoundSource: {fileID: 6660763190451431646}
   muzzleFlash: {fileID: 1712178479581209168}
@@ -378,11 +384,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reworked Minigun Animation EX
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -443,6 +444,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.00002852651
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ade6daf511d2e47ad10a56aa0516e0, type: 3}
 --- !u!4 &3115795686200107448 stripped
