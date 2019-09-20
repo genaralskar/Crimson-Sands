@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 /// <summary>
 /// Base abstract class for health
 /// Contains info for maxHealth and currentHealth
@@ -10,9 +12,18 @@ using UnityEngine;
 /// </summary>
 public abstract class Health : MonoBehaviour
 {
+    public UnityAction<int> HealthChange;
+    
     public int maxHealth = 100;
     public int currentHealth = 100;
+
+    public List<Hurtbox> Hurtboxes
+    {
+        get { return hurtboxes; }
+    }
     
+    private List<Hurtbox> hurtboxes = new List<Hurtbox>();
+
     public float NormalizedHealth
     {
         get { return (float)currentHealth / (float)maxHealth; }
@@ -20,6 +31,7 @@ public abstract class Health : MonoBehaviour
 
     public void ModifyHealth(int amount)
     {
+        OnDamage(amount);
         currentHealth += amount;
 
         HealthCheck();
@@ -27,6 +39,7 @@ public abstract class Health : MonoBehaviour
 
     public void SetHealth(int amount)
     {
+        OnDamage(amount);
         currentHealth = amount;
         
         HealthCheck();
@@ -49,5 +62,47 @@ public abstract class Health : MonoBehaviour
     protected virtual void Death()
     {
         
+    }
+
+    protected virtual void OnDamage(int amount)
+    {
+        
+    }
+
+    public void AddHurtbox(Hurtbox hurtbox)
+    {
+        if (!hurtboxes.Contains(hurtbox))
+        {
+            hurtboxes.Add(hurtbox);
+        }
+    }
+
+    public void RemoveHurtbox(Hurtbox hurtbox)
+    {
+        if (hurtboxes.Contains(hurtbox))
+        {
+            hurtboxes.Remove(hurtbox);
+        }
+    }
+
+    public void RemoveAllHurtboxes()
+    {
+        foreach (var hurtbox in hurtboxes)
+        {
+            RemoveHurtbox(hurtbox);
+        }
+    }
+
+    public void DisableHurtbox(Hurtbox hurtbox)
+    {
+        hurtbox.gameObject.SetActive(false);
+    }
+
+    public void DisableAllHurtboxes()
+    {
+        for (int i = hurtboxes.Count - 1; i >= 0; i--)
+        {
+            DisableHurtbox(hurtboxes[i]);
+        }
     }
 }

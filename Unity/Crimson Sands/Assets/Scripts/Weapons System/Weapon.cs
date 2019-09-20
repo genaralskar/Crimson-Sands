@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
 
     [Tooltip("Whether or not this weapon is being fired by a player")]
     [SerializeField]
-    private bool player = true;
+    private bool isPlayer = true;
 
     [Tooltip("This is used to set the proper layer when spawning projectiles. This shouldn't need to be changed as long" +
              " as the layers don't change")]
@@ -71,19 +71,14 @@ public class Weapon : MonoBehaviour
 //    Used for testing purposes
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !IsFiring)
+        if (Input.GetMouseButtonDown(0) && !IsFiring && isPlayer)
         {
             IsFiring = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && IsFiring)
+        if (Input.GetMouseButtonUp(0) && IsFiring & isPlayer)
         {
             IsFiring = false;
-        }
-
-        if (Input.GetButtonDown("Brake"))
-        {
-            //RetractWeaponHandler();
         }
     }
 
@@ -128,10 +123,10 @@ public class Weapon : MonoBehaviour
             
         
         //set team
-        proj.player = player;
+        proj.player = isPlayer;
         
         //set the proper layer for the projectile
-        if (player)
+        if (isPlayer)
         {
             proj.SetLayer(playerHitboxLayer);
         }

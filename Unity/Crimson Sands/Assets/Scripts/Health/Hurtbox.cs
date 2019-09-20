@@ -14,7 +14,17 @@ public class Hurtbox : MonoBehaviour
 
     public UnityAction HurtboxDamage;
     public UnityAction HurtboxHealing;
-    
+
+    private void OnEnable()
+    {
+        health.AddHurtbox(this);
+    }
+
+    private void OnDisable()
+    {
+        health.RemoveHurtbox(this);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Hitbox otherHit = other.GetComponent<Hitbox>();
@@ -23,7 +33,33 @@ public class Hurtbox : MonoBehaviour
         //place hitsparks
         //get direction to rotate the sparks in (hopefully)
         Vector3 triggerNormalDirection = other.transform.position - transform.position;
-        GameObject hitSparks = otherHit.projectile.hitSparks.GetPooledObject(other.transform.position, Quaternion.Euler(triggerNormalDirection));
+
+        if (otherHit.projectile.hitSparks != null)
+        {
+            GameObject hitSparks = otherHit.projectile.hitSparks.GetPooledObject(other.transform.position, Quaternion.Euler(triggerNormalDirection));
+        }
+        
+        //disable projectile that hit this
+        otherHit.projectile.gameObject.SetActive(false);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Hitbox otherHit = other.collider.GetComponent<Hitbox>();
+        SendDamage(otherHit.damage);
+        
+        //place hitsparks
+        //get direction to rotate the sparks in (hopefully)
+        Vector3 triggerNormalDirection = other.contacts[0].normal;
+
+        //spawn hitsparks
+        if (otherHit.projectile.hitSparks != null)
+        {
+            GameObject hitSparks = otherHit.projectile.hitSparks.GetPooledObject(other.transform.position, Quaternion.Euler(triggerNormalDirection));
+        }
+        
+        //disable projectile that hit this
+        otherHit.projectile.gameObject.SetActive(false);
     }
 
     public void SendDamage(int amount)
