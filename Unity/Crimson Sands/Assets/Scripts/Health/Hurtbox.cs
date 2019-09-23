@@ -12,8 +12,8 @@ public class Hurtbox : MonoBehaviour
 {
     [SerializeField] private Health health;
 
-    public UnityAction HurtboxDamage;
-    public UnityAction HurtboxHealing;
+    public UnityAction OnHurtboxDamage;
+    public UnityAction OnHurtboxHealing;
 
     private void OnEnable()
     {
@@ -65,12 +65,12 @@ public class Hurtbox : MonoBehaviour
     public void SendDamage(int amount)
     {
         health.ModifyHealth(-amount);
-        HurtboxDamage?.Invoke();
+        OnHurtboxDamage?.Invoke();
     }
 
     public void SendHealth(int amount)
     {
         health.ModifyHealth(amount);
-        HurtboxHealing?.Invoke();
+        OnHurtboxHealing?.Invoke();
     }
 }

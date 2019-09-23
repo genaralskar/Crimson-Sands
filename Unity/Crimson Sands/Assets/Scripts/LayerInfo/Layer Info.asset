@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98dc0189d8260e142a6eadf9d1dfe281, type: 3}
-  m_Name: Gatling Gun 2
+  m_Script: {fileID: 11500000, guid: db3ee8b2af86d764e91b4d409b666402, type: 3}
+  m_Name: Layer Info
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 3437888980727873267, guid: 6751443a590a4e4449f3536804fa4bb4,
-    type: 3}
-  weaponDamage: 10
-  fireSound: {fileID: 0}
-  projectile: {fileID: 0}
+  playerLayer: 9
+  playerHitbox: 10
+  playerHurtbox: 11
+  enemyHitbox: 12
+  enemyHurtbox: 13

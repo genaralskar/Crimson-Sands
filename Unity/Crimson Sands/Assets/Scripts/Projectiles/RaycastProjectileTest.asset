@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
-  m_Name: Pool Hitsparks
+  m_Script: {fileID: 11500000, guid: 4aa9ed0fe5348684191173e6e15ed958, type: 3}
+  m_Name: RaycastProjectileTest
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 7230960600284056853, guid: 69ba33ba654ebb54c9cd2a9c8d83cf61,
-    type: 3}
-  amount: 20
+  damage: 10
+  hitSparks: {fileID: 11400000, guid: e40952fa55f506042947ba65ed8c6891, type: 2}
