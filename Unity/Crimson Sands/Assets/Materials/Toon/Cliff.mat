@@ -33,7 +33,7 @@ Material:
     - _RimAmount: 0.764
     - _RimThreshold: 0.766
     m_Colors:
-    - _AmbientColor: {r: 0.7122642, g: 0.897919, b: 1, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _AmbientColor: {r: 0.119771965, g: 0.117992006, b: 0.19600001, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 0.9009434, b: 0.9009434, a: 1}

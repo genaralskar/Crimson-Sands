@@ -13,7 +13,7 @@ namespace genaralskar.Cars
         public GameObject carPrefab;
         public string carName;
         public string carFlavor;
-        public Armor[] armors;
+        public OldArmor[] oldArmors;
         public int currentArmor;
 
         public void SetValues(Car carValues)
@@ -21,7 +21,7 @@ namespace genaralskar.Cars
             carPrefab = carValues.carPrefab;
             carName = carValues.carName;
             carFlavor = carValues.carFlavor;
-            armors = carValues.armors;
+            oldArmors = carValues.oldArmors;
             currentArmor = carValues.currentArmor;
         }
     }

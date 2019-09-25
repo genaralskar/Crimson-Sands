@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This goes on all vehicle armor pieces that have/need health
+/// <para>Handles armor health and detatching armor when health drops to or below </para>
+/// <para>This will also eventually handles changing the model depending on health thresholds to show damage</para>
+/// </summary>
 public class ArmorHealth : Health
 {
     [Tooltip("Rigidbody for the armor")]
     [SerializeField]
-    private Rigidbody rb;
+    public Rigidbody rb;
+
+    [HideInInspector] public Rigidbody vehicleRb;
 
     [Tooltip("The joint the rigidbody is connected to")]
     [SerializeField]
-    private Joint joint;
+    public Joint joint;
+
+    //[HideInInspector]
+    public Vector3 positionOffset;
+    //[HideInInspector]
+    public Quaternion rotationOffset;
 
     [SerializeField]
     private Vector3 lauchDirection = Vector3.forward;
@@ -20,27 +32,59 @@ public class ArmorHealth : Health
 
     private bool dead = false;
     
+
+    private void Awake()
+    {
+        if (joint == null)
+        {
+            joint = GetComponent<Joint>();
+        }
+
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+    }
+
     protected override void Death()
     {
         if (!dead)
         {
             //detach armor from car
+            joint.connectedBody = null;
             Destroy(joint);
-        
-            //lauch armor
-            Vector3 dir = transform.TransformDirection(lauchDirection);
-            rb.AddForce((dir * launchForce) + (Vector3.up * 50));
+            joint = null;
+
+            StartCoroutine(LaunchArmor());
         
             //Disable hitbox?
-            DisableAllHurtboxes();
+            SetAllHurtboxesActive(false);
             dead = true;
         }
-       
+    }
+
+    public override void ResetHealth()
+    {
+        SetHealth(maxHealth);
+        SetAllHurtboxesActive(true);
+        dead = false;
+    }
+    
+    private IEnumerator LaunchArmor()
+    {
+        yield return new WaitForFixedUpdate();
+        //lauch armor
+        //might have to wait for a fixed update to add force
+        Vector3 dir = transform.TransformDirection(lauchDirection);
+        //Debug.Log("lauch direction: " + dir);
+        Vector3 lForce = (dir * launchForce);
+        //Debug.Log("launch force: " + lForce);
+        rb.AddForce(lForce);
     }
 
     protected override void OnDamage(int amount)
     {
-        Debug.Log("Damage: " + amount);
+        //Debug.Log("Damage: " + amount);
     }
 
     private void CheckArmorState()

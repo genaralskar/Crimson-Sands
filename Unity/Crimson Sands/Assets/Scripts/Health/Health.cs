@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Base abstract class for health
-/// Contains info for maxHealth and currentHealth
-/// Handles adding/subtracting health and handling proper events/methods, like when health drops below 0
-/// ModifyHealth(int amount) will change the current health by amount, SetHealth(int amount) sets current health to amount
+/// Base abstract class for health.
+/// Contains info for maxHealth and currentHealth.
+/// Handles adding/subtracting health and handling proper events/methods, like when health drops below 0.
+/// ModifyHealth(int amount) will change the current health by amount, SetHealth(int amount) sets current health to amount.
 /// Death() can be overridden to change what happens on death by a case by case basis
 /// </summary>
 public abstract class Health : MonoBehaviour
@@ -69,6 +69,11 @@ public abstract class Health : MonoBehaviour
         
     }
 
+    public virtual void ResetHealth()
+    {
+        
+    }
+
     public void AddHurtbox(Hurtbox hurtbox)
     {
         if (!hurtboxes.Contains(hurtbox))
@@ -90,6 +95,19 @@ public abstract class Health : MonoBehaviour
         foreach (var hurtbox in hurtboxes)
         {
             RemoveHurtbox(hurtbox);
+        }
+    }
+
+    public void SetHurtboxActive(Hurtbox hurtbox, bool active)
+    {
+        hurtbox.gameObject.SetActive(active);
+    }
+
+    public void SetAllHurtboxesActive(bool active)
+    {
+        for (int i = hurtboxes.Count - 1; i >= 0; i--)
+        {
+            SetHurtboxActive(hurtboxes[i], active);
         }
     }
 

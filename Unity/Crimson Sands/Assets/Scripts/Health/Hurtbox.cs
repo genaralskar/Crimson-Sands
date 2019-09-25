@@ -15,14 +15,16 @@ public class Hurtbox : MonoBehaviour
     public UnityAction OnHurtboxDamage;
     public UnityAction OnHurtboxHealing;
 
+    public bool enableCollision = false;
+
     private void OnEnable()
     {
-        health.AddHurtbox(this);
+        //health.AddHurtbox(this);
     }
 
     private void OnDisable()
     {
-        health.RemoveHurtbox(this);
+        //health.RemoveHurtbox(this);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,6 +47,8 @@ public class Hurtbox : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (!enableCollision) return;
+        
         Hitbox otherHit = other.collider.GetComponent<Hitbox>();
         SendDamage(otherHit.damage);
         
@@ -66,6 +70,7 @@ public class Hurtbox : MonoBehaviour
     {
         health.ModifyHealth(-amount);
         OnHurtboxDamage?.Invoke();
+        //Debug.Log("sending damage");
     }
 
     public void SendHealth(int amount)
