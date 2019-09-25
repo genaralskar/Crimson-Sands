@@ -56,7 +56,7 @@ public class WeaponMount : MonoBehaviour
 
     public void SwapWeaponHandler(WeaponInfo newWeapon)
     {
-        Debug.Log("Swapping!");
+        //Debug.Log("Swapping!");
         swapping = true;
         nextWeapon = newWeapon;
         RetractWeapon();
