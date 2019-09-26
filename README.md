@@ -16,6 +16,10 @@ These are the current stable builds/releases
       - Left Mouse Button to shoot
       - No escape menu, so you have to Alt+F4 to quit
 
+## Special Thanks
+### Realistic Car Controller from Bonecracker Games
+- https://assetstore.unity.com/packages/tools/physics/realistic-car-controller-16296
+
 ## Links
 Links to all our other stuff
 ### Addison
