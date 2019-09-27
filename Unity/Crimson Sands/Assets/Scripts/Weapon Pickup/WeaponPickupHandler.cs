@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// This goes on the object on the vehicle that has the collider
+/// This object gets attached to the vehicle's colliders on Start from the WeaponPickupVehicle script
+/// <para>Used to tell the weapons to swap to a new weapon when driving through a weapon pickup</para>
 /// </summary>
 public class WeaponPickupHandler : MonoBehaviour
 {
-    public List<WeaponMount> weaponMounts;
+    public WeaponPickupVehicle vehicle;
 
     public void SwapWeapons(WeaponInfo weapon)
     {
-        foreach (var mount in weaponMounts)
-        {
-            mount.SwapWeaponHandler(weapon);
-        }
+        vehicle.SwapWeapons(weapon);
     }
 }

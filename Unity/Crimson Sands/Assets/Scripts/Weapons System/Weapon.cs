@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
 
     [Tooltip("Whether or not this weapon is being fired by a player")]
     [SerializeField]
-    private bool isPlayer = true;
+    public bool isPlayer = true;
 
     [Tooltip("This is used to set the proper layer when spawning projectiles. This shouldn't need to be changed as long" +
              " as the layers don't change")]
