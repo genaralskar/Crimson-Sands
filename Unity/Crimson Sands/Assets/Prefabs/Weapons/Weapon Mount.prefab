@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c8f442c90d78445b2ceec4d829e198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: c445e87ee84c0e54d82315dfcbdffc4a, type: 2}
-  mountPoint: {fileID: 5033810190589499956}
+  isPlayer: 1
+  currentWeapon: {fileID: 11400000, guid: 70e2788087c853b4d83d3fa84bd30130, type: 2}
+  mountPoint: {fileID: 155040142967078146}
   deployOnStart: 1
 --- !u!1001 &45347691534594350
 PrefabInstance:
@@ -95,9 +96,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 45347691534594350}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5033810190589499956 stripped
+--- !u!4 &155040142967078146 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6c02390e509d6a348b75923ddd5fddb9,
+  m_CorrespondingSourceObject: {fileID: 182337839126006828, guid: 6c02390e509d6a348b75923ddd5fddb9,
     type: 3}
   m_PrefabInstance: {fileID: 45347691534594350}
   m_PrefabAsset: {fileID: 0}
