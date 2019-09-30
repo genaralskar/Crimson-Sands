@@ -4,16 +4,17 @@ Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl pasted__blinn2SG1
+newmtl pasted__blinn1SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd image (3).png
 Ni 1.00
 Ks 0.50 0.50 0.50
-newmtl pasted__blinn3SG
+newmtl pasted__blinn2SG1
 illum 4
-Kd 0.12 0.12 0.12
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
@@ -28,13 +29,6 @@ Ks 0.50 0.50 0.50
 newmtl pasted__blinn5SG1
 illum 4
 Kd 0.29 0.09 0.05
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-Ks 0.50 0.50 0.50
-newmtl pasted__blinn8SG
-illum 4
-Kd 0.12 0.12 0.12
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
