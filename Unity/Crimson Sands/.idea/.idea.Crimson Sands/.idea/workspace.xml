@@ -13,9 +13,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Effects/FX Shaders/HologramTest.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Effects/DustToonTest.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Effects/FX Shaders/BlendShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Effects/FX Shaders/ToonTest.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Effects/FX Shaders/BlendMaterials.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Effects/FX Shaders/ToonPassTest.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -27,6 +29,7 @@
         <option value="$PROJECT_DIR$/Assets/Effects/FX Shaders/BlendMaterials.cs" />
         <option value="$PROJECT_DIR$/Assets/Effects/FX Shaders/HologramTest.shader" />
         <option value="$PROJECT_DIR$/Assets/Effects/FX Shaders/ToonTest.shader" />
+        <option value="$PROJECT_DIR$/Assets/Effects/FX Shaders/ToonPassTest.shader" />
       </list>
     </option>
   </component>
@@ -37,6 +40,7 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -78,6 +82,8 @@
       <updated>1566443541724</updated>
       <workItem from="1566443545977" duration="2604000" />
       <workItem from="1569429023165" duration="4462000" />
+      <workItem from="1569450011545" duration="2684000" />
+      <workItem from="1569859710784" duration="242000" />
     </task>
     <servers />
   </component>
@@ -91,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -99,5 +107,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="617" y="271" key="run.anything.popup" />
+    <state x="617" y="271" key="run.anything.popup/2880.1800" />
   </component>
 </project>
