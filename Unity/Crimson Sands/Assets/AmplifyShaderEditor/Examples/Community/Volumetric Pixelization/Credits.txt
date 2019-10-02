@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Created by Raphael Ernaelsten
 @RaphErnaelsten - https://twitter.com/RaphErnaelsten
 Email : raphael.ernaelsten@gmail.com
@@ -7,4 +8,15 @@ Description : Volumetric Pixelization : The scene lying inside the volumetric sp
 New Node : Volumetric Sphere ( Category : Functions ) 
 
 Keep them coming, contribute today! 
+=======
+Created by Raphael Ernaelsten
+@RaphErnaelsten - https://twitter.com/RaphErnaelsten
+Email : raphael.ernaelsten@gmail.com
+
+Description : Volumetric Pixelization : The scene lying inside the volumetric sphere gets pixelated.
+
+New Node : Volumetric Sphere ( Category : Functions ) 
+
+Keep them coming, contribute today! 
+>>>>>>> Stashed changes
 http://amplify.pt/unity/amplify-shader-editor/contribute
