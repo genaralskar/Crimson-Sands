@@ -24700,7 +24700,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: db48dda1a48db3e42ad1e3886e563c09,
+      objectReference: {fileID: -8015033487709828370, guid: 826319ee9a092014cbbebf3e31e3c711,
         type: 3}
     - target: {fileID: 5794101510625261333, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
