@@ -1,18 +1,25 @@
+newmtl M134_MiniGun:DelinkerSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd image_(3).png
+Ni 1.00
 newmtl initialShadingGroup
 illum 4
 Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert2SG
+newmtl lambert4SG
 illum 4
-Kd 0.00 0.00 0.00
+Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert3SG
+newmtl lambert6SG
 illum 4
-Kd 0.00 0.00 0.00
+Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
@@ -25,9 +32,10 @@ Ni 1.00
 Ks 0.50 0.50 0.50
 newmtl pasted__blinn4SG1
 illum 4
-Kd 0.07 0.06 0.05
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd image_(3).png
 Ni 1.00
 Ks 0.50 0.50 0.50
 newmtl pasted__blinn5SG1
@@ -65,9 +73,15 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
-newmtl pasted__lambert6SG
+newmtl pasted__lambert2SG1
 illum 4
-Kd 0.03 0.03 0.03
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl pasted__lambert3SG
+illum 4
+Kd 1.00 1.00 1.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00

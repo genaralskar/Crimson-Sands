@@ -21,7 +21,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd image (5).png
+map_Kd image_(5).png
 Ni 1.00
 newmtl pasted__Dash_BoardSG
 illum 4
@@ -70,14 +70,14 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd image (7).png
+map_Kd image_(7).png
 Ni 1.00
 newmtl pasted__Hood_ShellSG2
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd image (4).png
+map_Kd image_(4).png
 Ni 1.00
 newmtl pasted__Hood_ShellSG3
 illum 4
@@ -111,7 +111,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd image (3).png
+map_Kd image_(4).png
 Ni 1.00
 newmtl pasted__pCube5SG
 illum 4
