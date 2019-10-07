@@ -18,15 +18,10 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 newmtl M134_MiniGun:pCube1SG
 illum 4
-Kd 0.50 0.50 0.50
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-Ni 1.00
-newmtl initialShadingGroup
-illum 4
-Kd 0.50 0.50 0.50
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
+map_Kd image_(5).png
 Ni 1.00
 newmtl pasted__Dash_BoardSG
 illum 4
@@ -72,15 +67,17 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 newmtl pasted__Hood_ShellSG1
 illum 4
-Kd 0.11 0.53 0.26
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd image_(7).png
 Ni 1.00
 newmtl pasted__Hood_ShellSG2
 illum 4
-Kd 0.00 0.96 1.00
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd image_(4).png
 Ni 1.00
 newmtl pasted__Hood_ShellSG3
 illum 4
@@ -109,6 +106,13 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
+newmtl pasted__lambert8SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd image_(4).png
+Ni 1.00
 newmtl pasted__pCube5SG
 illum 4
 Kd 0.42 0.43 0.24
