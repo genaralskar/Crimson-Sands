@@ -12,7 +12,11 @@ public class ArmorSet : MonoBehaviour
     public bool autoCreateArmorInChildren = false;
     public bool populateArmorFromChildren = false;
 
+    public Vector3 armorOffset;
+
     public ArmorHolder vehicle;
+    [Tooltip("The object for the armor to reset its transformation to so it can be placed properly")]
+    public Transform snapPoint;
 
     private Rigidbody vehicleRb;
 
@@ -43,12 +47,21 @@ public class ArmorSet : MonoBehaviour
 
     public void SetupArmor()
     {
-        transform.position = vehicle.transform.position;
-        transform.rotation = vehicle.transform.rotation;
+        Vector3 offsetP = Vector3.zero;
+        Quaternion offsetR = Quaternion.identity;
+        if (snapPoint != null)
+        {
+            offsetP = snapPoint.localPosition;
+            offsetR = snapPoint.localRotation;
+        }
+        transform.position = vehicle.transform.position + offsetP + armorOffset;
+        transform.rotation = vehicle.transform.rotation * offsetR;
 
         SetupOffsets();
         
         SetupJoints();
+
+        vehicle.currentArmor = this;
     }
 
     private void SetupOffsets()
@@ -73,15 +86,15 @@ public class ArmorSet : MonoBehaviour
         }
     }
 
-    public void DetatchAllArmor()
+    public void DetachAllArmor()
     {
         foreach (var armor in armorParts)
         {
-            DetatchArmor(armor);
+            DetachArmor(armor);
         }
     }
 
-    public void DetatchArmor(ArmorHealth armor)
+    public void DetachArmor(ArmorHealth armor)
     {
         armor.SetHealth(0);
     }
