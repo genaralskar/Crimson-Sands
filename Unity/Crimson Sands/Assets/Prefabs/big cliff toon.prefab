@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &4005298985529224854
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5730081153516076555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 6dde92d13fbdd1144a758fe150d62f8d, type: 3}
 --- !u!1001 &5730081153516173481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +23,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6dde92d13fbdd1144a758fe150d62f8d, type: 3}
       propertyPath: m_Name
-      value: bigBigRock_low (5)
+      value: big cliff toon
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6dde92d13fbdd1144a758fe150d62f8d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -69,3 +83,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 064a97690fb179d4fb30a87b67a2bdc9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dde92d13fbdd1144a758fe150d62f8d, type: 3}
+--- !u!1 &5730081153516076555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 6dde92d13fbdd1144a758fe150d62f8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5730081153516173481}
+  m_PrefabAsset: {fileID: 0}

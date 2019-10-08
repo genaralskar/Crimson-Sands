@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2548607592261808326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461990939871057165}
+  m_Layer: 14
+  m_Name: Gun Ray Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461990939871057165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548607592261808326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.299, z: 2.122}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5046885231107123128}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4832630987093400469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046885231107123132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dcd0266b466224f8d1d8ae405f4d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointsContainer: {fileID: 0}
+  currentWaypoint: 0
+  targetChase: {fileID: 0}
+  targetTag: Player
+  _AIType: 1
+  wideRayLength: 20
+  tightRayLength: 20
+  sideRayLength: 3
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  limitSpeed: 0
+  maximumSpeed: 100
+  smoothedSteer: 1
+  lap: 0
+  totalWaypointPassed: 0
+  nextWaypointPassRadius: 40
+  ignoreWaypointNow: 0
+  detectorRadius: 300
+  targetsInZone: []
+--- !u!114 &8172785247847305020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046885231107123132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19492a0ba46a34a4e80c5987f1ee4ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carController: {fileID: 0}
+  armorHolder: {fileID: 0}
+  playerTag: Player
+  semiTag: AITarget
+  rayPoint: {fileID: 461990939871057165}
+  rayLayers:
+    serializedVersion: 2
+    m_Bits: 2048
+  weapons: []
+--- !u!1001 &2977571355514882796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8023257568847195472, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Name
+      value: Charger AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195472, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.307808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7756348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658236437342165889, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064a97690fb179d4fb30a87b67a2bdc9, type: 2}
+    - target: {fileID: 8023257568847195474, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: externalController
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195479, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: setupHandlersOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653273529700565930, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
+--- !u!1 &5046885231107123132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8023257568847195472, guid: ff362b3b7e292b545bd1c309b6729bb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2977571355514882796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5046885231107123128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8023257568847195476, guid: ff362b3b7e292b545bd1c309b6729bb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2977571355514882796}
+  m_PrefabAsset: {fileID: 0}
