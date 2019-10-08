@@ -1396,6 +1396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032853208287472020}
   - component: {fileID: 5407788881027596884}
+  - component: {fileID: 7875639100064883972}
   m_Layer: 15
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -1428,8 +1429,24 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.056196, z: 5.052125}
+  m_Size: {x: 1.95, y: 1.14, z: 5.052125}
   m_Center: {x: 0, y: 0.13096482, z: -0.09061098}
+--- !u!114 &7875639100064883972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789610944286428147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  col: {fileID: 5407788881027596884}
 --- !u!1 &4925276424044392285
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3436,7 @@ GameObject:
   - component: {fileID: 8023257568847195475}
   - component: {fileID: 8023257568847195478}
   - component: {fileID: 8023257568847195479}
+  - component: {fileID: 5878610331577300688}
   m_Layer: 14
   m_Name: Charger
   m_TagString: Player
@@ -3900,6 +3918,22 @@ MonoBehaviour:
   autoFindWeaponMounts: 1
   weaponMounts:
   - {fileID: 8653273529700565930}
+--- !u!114 &5878610331577300688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023257568847195472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d011048399a32fa4b9323ae83da72bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  isPlayer: 1
+  deathExplosion: {fileID: 0}
 --- !u!1 &8023257568901981818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,16 +4530,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8023257568901981820}
     m_Modifications:
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon Mount
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4560,6 +4584,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Mount
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 183605043952530237, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}

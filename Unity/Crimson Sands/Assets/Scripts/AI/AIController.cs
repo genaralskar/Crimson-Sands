@@ -61,12 +61,12 @@ public class AIController : MonoBehaviour
         //then fire if it is
         if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation, Mathf.Infinity, rayLayers))
         {
-            Debug.Log("Firing at player. " + hit.collider);
+            //Debug.Log("Firing at player. " + hit.collider);
             FireWeapon(true);
         }
         else
         {
-            Debug.Log("Stopped firing!");
+            //Debug.Log("Stopped firing!");
             FireWeapon(false);
         }
     }
