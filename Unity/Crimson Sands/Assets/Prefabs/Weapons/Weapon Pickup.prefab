@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2987207339272269053}
   - component: {fileID: 2987207339272269050}
   - component: {fileID: 2987207339272269051}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Weapon Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2987207340316857296}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Weapon Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 2987207340761343960}
   - component: {fileID: 2987207340761343962}
   - component: {fileID: 2987207340761343963}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,6 +23,7 @@ public class WeaponMount : MonoBehaviour
     private Animator mountAnims;
     
     private GameObject weaponPrefab;
+    private Weapon weapon;
     private Animator weaponAnims;
 
     private bool swapping = false;
@@ -88,6 +89,8 @@ public class WeaponMount : MonoBehaviour
         weaponPrefab = Instantiate(currentWeapon.weaponPrefab, mountPoint);
         weaponPrefab.transform.localPosition = Vector3.zero;
         weaponPrefab.transform.localRotation = Quaternion.identity;
+
+        weapon = weaponPrefab.GetComponent<Weapon>();
         weaponAnims = weaponPrefab.GetComponent<Weapon>().anims;
 
     }
@@ -110,6 +113,11 @@ public class WeaponMount : MonoBehaviour
     {
         //tell animator on the weapon to play its retract animation
         weaponAnims.SetTrigger("Retract");
+    }
+
+    public void SetWeaponFiring(bool isFiring)
+    {
+        weapon.IsFiring = isFiring;
     }
 
 
