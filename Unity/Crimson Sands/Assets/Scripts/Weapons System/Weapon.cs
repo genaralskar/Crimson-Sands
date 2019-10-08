@@ -169,6 +169,7 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastProjectileLayerMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
+            Debug.Log(hitLayer);
             
             //player hit enemy hurtbox or enemy hit player hurtbox
             if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))

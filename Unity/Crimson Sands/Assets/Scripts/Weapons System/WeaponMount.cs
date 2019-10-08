@@ -91,7 +91,8 @@ public class WeaponMount : MonoBehaviour
         weaponPrefab.transform.localRotation = Quaternion.identity;
 
         weapon = weaponPrefab.GetComponent<Weapon>();
-        weaponAnims = weaponPrefab.GetComponent<Weapon>().anims;
+        weapon.isPlayer = isPlayer;
+        weaponAnims = weapon.anims;
 
     }
     

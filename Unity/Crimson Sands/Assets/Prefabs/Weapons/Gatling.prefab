@@ -83,7 +83,7 @@ MonoBehaviour:
   useRaycast: 1
   raycastProjectileLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 98103
   raycastProjectileInfo: {fileID: 11400000, guid: a28a0f0130b9d5444ba7a9f13e96888e,
     type: 2}
   projectile: {fileID: 11400000, guid: 1494f167d5fb59a42982f4967f2c1811, type: 2}
@@ -350,16 +350,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reworked Minigun Animation EX
       objectReference: {fileID: 0}
-    - target: {fileID: -2403065033187307517, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.00002852651
-      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
+    - target: {fileID: -2403065033187307517, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.00002852651
+      objectReference: {fileID: 0}
     - target: {fileID: -3702653043558708228, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -455,6 +455,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.11090277
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_Name
+      value: GatlingFlashV3
+      objectReference: {fileID: 0}
     - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -469,11 +474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5771
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_Name
-      value: GatlingFlashV3
       objectReference: {fileID: 0}
     - target: {fileID: -8205571362833684013, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
