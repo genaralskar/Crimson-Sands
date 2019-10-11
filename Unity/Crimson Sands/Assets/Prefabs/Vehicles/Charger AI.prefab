@@ -160,11 +160,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 064a97690fb179d4fb30a87b67a2bdc9, type: 2}
-    - target: {fileID: 8023257568847195474, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: externalController
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8023257568847195479, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: setupHandlersOnStart
@@ -178,12 +173,22 @@ PrefabInstance:
     - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195474, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: externalController
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5878610331577300688, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: isPlayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246283030377722033, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
