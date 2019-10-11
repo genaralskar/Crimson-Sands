@@ -16,6 +16,7 @@ MonoBehaviour:
   currentWaypoint: 0
   targetChase: {fileID: 0}
   targetTag: Player
+  targetTransform: {fileID: 0}
   _AIType: 0
   wideRayLength: 20
   tightRayLength: 20

@@ -108,6 +108,7 @@ public class RCC_AIEditor : Editor {
 		} else {
 			//EditorGUILayout.PropertyField (serializedObject.FindProperty ("targetChase"), new GUIContent ("Target For Chase", "Target For Chase."), false);
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("targetTag"), new GUIContent("Target Tag For Chase", "Target Tag For Chase."), false);
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("targetChase"), new GUIContent("Target Transform For Chase", "Target Transform For Chase."));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("detectorRadius"), new GUIContent("Detector Radius."), false);
 		}
 

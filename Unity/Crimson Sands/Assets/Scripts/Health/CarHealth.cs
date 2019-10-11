@@ -17,9 +17,13 @@ public class CarHealth : Health
         }
         else
         {
-            deathExplosion.transform.position = transform.position;
-            deathExplosion.gameObject.SetActive(true);
-            deathExplosion.Play();
+            if (deathExplosion)
+            {
+                deathExplosion.transform.position = transform.position;
+                deathExplosion.gameObject.SetActive(true);
+                deathExplosion.Play();
+            }
+
             gameObject.SetActive(false);
         }
     }

@@ -54,91 +54,99 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArmorHolder.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Armor/ArmorHolder.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding>
-                <marker date="1570563984598" expanded="false" signature="6:78" ph="..." />
-                <marker date="1570563984598" expanded="true" signature="79:243" ph="/// This goes on the same GameObject as the vehicle's rigidbody, and will contains info on what armor set the veh ... " />
-                <marker date="1570563984598" expanded="true" signature="284:793" ph="{...}" />
-                <marker date="1570563984598" expanded="true" signature="373:425" ph="{...}" />
-                <marker date="1570563984598" expanded="true" signature="431:531" ph="/* should only get called from another ArmorSet ... */" />
-                <marker date="1570563984598" expanded="true" signature="576:621" ph="{...}" />
-                <marker date="1570563984598" expanded="true" signature="655:706" ph="{...}" />
-                <marker date="1570563984598" expanded="true" signature="740:791" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RCC_AICarController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RCC_AICarController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="516" column="64" lean-forward="true" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
+            <state relative-caret-position="375">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <marker date="1570817448153" expanded="true" signature="0:242" ph="/* ---------------------------------------------- ... */" />
-                <marker date="1570817448153" expanded="false" signature="250:358" ph="..." />
-                <marker date="1570817448153" expanded="true" signature="360:514" ph="/// AI Controller of RCC. It's not professional, but it does the job. Follows all waypoints, or chases the target ... " />
-                <marker date="1570817448153" expanded="true" signature="654:16277" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="2981:4179" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="4197:4308" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="4325:5428" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="4423:4673" ph="/* Assigning navigator's position to front wheels of the vehicle. ... */" />
-                <marker date="1570817448153" expanded="true" signature="4937:5257" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="5093:5252" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="5451:5820" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="5842:8734" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="6048:7775" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="6182:6273" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="6439:6542" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="7132:7406" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="7348:7400" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="7540:7631" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="7811:8129" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="7846:8027" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="8466:8602" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="8756:9109" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="9043:9103" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="9133:13991" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="10703:10924" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="10927:10989" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="11190:11412" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="11693:11916" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="12177:12400" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="12679:12900" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="13160:13381" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14008:14686" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14079:14272" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14099:14144" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14700:14761" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14799:15420" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="14912:15034" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="15227:15416" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="15456:15581" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="15511:15577" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="15641:16134" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="15827:16108" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="16012:16103" ph="{...}" />
-                <marker date="1570817448153" expanded="true" signature="16153:16273" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="0:242" ph="/* ---------------------------------------------- ... */" />
+                <marker date="1570818170300" expanded="false" signature="250:358" ph="..." />
+                <marker date="1570818170300" expanded="true" signature="360:514" ph="/// AI Controller of RCC. It's not professional, but it does the job. Follows all waypoints, or chases the target ... " />
+                <marker date="1570818170300" expanded="true" signature="654:16368" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="3016:4214" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="4232:4343" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="4360:5519" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="4458:4708" ph="/* Assigning navigator's position to front wheels of the vehicle. ... */" />
+                <marker date="1570818170300" expanded="true" signature="4972:5292" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="5128:5287" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="5296:5515" ph="/* If there is a target, get closest enemy. ... */" />
+                <marker date="1570818170300" expanded="true" signature="5542:5911" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="5933:8825" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="6139:7866" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="6273:6364" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="6530:6633" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="7223:7497" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="7439:7491" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="7631:7722" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="7902:8220" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="7937:8118" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="8557:8693" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="8847:9200" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="9134:9194" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="9224:14082" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="10794:11015" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="11018:11080" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="11281:11503" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="11784:12007" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="12268:12491" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="12770:12991" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="13251:13472" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="14099:14777" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="14170:14363" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="14190:14235" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="14791:14852" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="14890:15511" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15003:15125" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15318:15507" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15547:15672" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15602:15668" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15732:16225" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="15918:16199" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="16103:16194" ph="{...}" />
+                <marker date="1570818170300" expanded="true" signature="16244:16364" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarHealth.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RCC_AIEditor.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="108" column="157" selection-start-line="108" selection-start-column="157" selection-end-line="108" selection-end-column="157" />
+              <folding>
+                <marker date="1570818317731" expanded="true" signature="0:215" ph="/* ---------------------------------------------- ... */" />
+                <marker date="1570818317731" expanded="false" signature="223:280" ph="..." />
+                <marker date="1570818317731" expanded="true" signature="385:6451" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="459:541" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="688:1415" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="771:914" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="995:1141" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="1561:1674" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="1833:2065" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="2226:2677" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="2299:2540" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="2719:6448" ph="{...}" />
+                <marker date="1570818317731" expanded="true" signature="2891:3239" ph="/* if(aiController.gameObject.GetComponent&lt;RCC_CarControllerV3&gt;().canEngineStall) ... */" />
+                <marker date="1570818317731" expanded="true" signature="3654:3970" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarHealth.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="360">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
-                <marker date="1570568081561" expanded="true" signature="6:78" ph="..." />
-                <marker date="1570568081561" expanded="true" signature="111:572" ph="{...}" />
-                <marker date="1570568081561" expanded="true" signature="230:570" ph="{...}" />
-                <marker date="1570568081561" expanded="true" signature="281:332" ph="{...}" />
-                <marker date="1570568081561" expanded="true" signature="345:564" ph="{...}" />
+                <marker date="1570819293367" expanded="true" signature="6:78" ph="..." />
+                <marker date="1570819293367" expanded="true" signature="111:645" ph="{...}" />
+                <marker date="1570819293367" expanded="true" signature="230:643" ph="{...}" />
+                <marker date="1570819293367" expanded="true" signature="281:332" ph="{...}" />
+                <marker date="1570819293367" expanded="true" signature="345:637" ph="{...}" />
+                <marker date="1570819293367" expanded="true" signature="387:585" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -235,25 +243,25 @@
       <file leaf-file-name="AIController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+            <state relative-caret-position="540">
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding>
-                <marker date="1570568081563" expanded="false" signature="6:78" ph="..." />
-                <marker date="1570568081563" expanded="true" signature="79:250" ph="/// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and ... " />
-                <marker date="1570568081563" expanded="true" signature="292:2399" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="681:833" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="860:1049" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1090:1338" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1206:1332" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1258:1322" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1370:1953" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1518:1551" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1727:1839" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1852:1947" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="1998:2055" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="2104:2206" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="2250:2397" ph="{...}" />
-                <marker date="1570568081563" expanded="true" signature="2325:2391" ph="{...}" />
+                <marker date="1570818776260" expanded="false" signature="6:78" ph="..." />
+                <marker date="1570818776260" expanded="true" signature="79:250" ph="/// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and ... " />
+                <marker date="1570818776260" expanded="true" signature="292:2871" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="717:869" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="896:1086" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1127:1375" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1243:1369" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1295:1359" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1408:1602" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1482:1570" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1652:2425" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="1747:2261" ph="/* if (Physics.Raycast(ray, out hit, rayLayers)) ... */" />
+                <marker date="1570818776260" expanded="true" signature="2470:2527" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="2576:2678" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="2722:2869" ph="{...}" />
+                <marker date="1570818776260" expanded="true" signature="2797:2863" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -316,6 +324,7 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/ArmorHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickupVehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" root0="FORCE_HIGHLIGHTING" />
@@ -333,6 +342,9 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons System/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/AIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs" />
       </list>
     </option>
   </component>
@@ -418,7 +430,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2989000" />
+    <option name="totallyTimeSpent" value="4758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,31 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
-          <folding>
-            <marker date="1570568081563" expanded="false" signature="6:78" ph="..." />
-            <marker date="1570568081563" expanded="true" signature="79:250" ph="/// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and ... " />
-            <marker date="1570568081563" expanded="true" signature="292:2399" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="681:833" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="860:1049" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1090:1338" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1206:1332" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1258:1322" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1370:1953" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1518:1551" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1727:1839" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1852:1947" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="1998:2055" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="2104:2206" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="2250:2397" ph="{...}" />
-            <marker date="1570568081563" expanded="true" signature="2325:2391" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/WeaponMount.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="843">
@@ -776,20 +763,6 @@
             <marker date="1570568081566" expanded="true" signature="6509:6546" ph="{...}" />
             <marker date="1570568081566" expanded="true" signature="6583:6621" ph="{...}" />
             <marker date="1570568081566" expanded="true" signature="6665:6714" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <marker date="1570568081561" expanded="true" signature="6:78" ph="..." />
-            <marker date="1570568081561" expanded="true" signature="111:572" ph="{...}" />
-            <marker date="1570568081561" expanded="true" signature="230:570" ph="{...}" />
-            <marker date="1570568081561" expanded="true" signature="281:332" ph="{...}" />
-            <marker date="1570568081561" expanded="true" signature="345:564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -902,55 +875,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="108" column="157" selection-start-line="108" selection-start-column="157" selection-end-line="108" selection-end-column="157" />
+          <folding>
+            <marker date="1570818317731" expanded="true" signature="0:215" ph="/* ---------------------------------------------- ... */" />
+            <marker date="1570818317731" expanded="false" signature="223:280" ph="..." />
+            <marker date="1570818317731" expanded="true" signature="385:6451" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="459:541" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="688:1415" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="771:914" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="995:1141" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="1561:1674" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="1833:2065" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="2226:2677" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="2299:2540" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="2719:6448" ph="{...}" />
+            <marker date="1570818317731" expanded="true" signature="2891:3239" ph="/* if(aiController.gameObject.GetComponent&lt;RCC_CarControllerV3&gt;().canEngineStall) ... */" />
+            <marker date="1570818317731" expanded="true" signature="3654:3970" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="516" column="64" lean-forward="true" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
+        <state relative-caret-position="375">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <marker date="1570817448153" expanded="true" signature="0:242" ph="/* ---------------------------------------------- ... */" />
-            <marker date="1570817448153" expanded="false" signature="250:358" ph="..." />
-            <marker date="1570817448153" expanded="true" signature="360:514" ph="/// AI Controller of RCC. It's not professional, but it does the job. Follows all waypoints, or chases the target ... " />
-            <marker date="1570817448153" expanded="true" signature="654:16277" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="2981:4179" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="4197:4308" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="4325:5428" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="4423:4673" ph="/* Assigning navigator's position to front wheels of the vehicle. ... */" />
-            <marker date="1570817448153" expanded="true" signature="4937:5257" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="5093:5252" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="5451:5820" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="5842:8734" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="6048:7775" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="6182:6273" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="6439:6542" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="7132:7406" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="7348:7400" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="7540:7631" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="7811:8129" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="7846:8027" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="8466:8602" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="8756:9109" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="9043:9103" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="9133:13991" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="10703:10924" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="10927:10989" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="11190:11412" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="11693:11916" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="12177:12400" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="12679:12900" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="13160:13381" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14008:14686" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14079:14272" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14099:14144" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14700:14761" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14799:15420" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="14912:15034" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="15227:15416" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="15456:15581" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="15511:15577" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="15641:16134" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="15827:16108" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="16012:16103" ph="{...}" />
-            <marker date="1570817448153" expanded="true" signature="16153:16273" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="0:242" ph="/* ---------------------------------------------- ... */" />
+            <marker date="1570818170300" expanded="false" signature="250:358" ph="..." />
+            <marker date="1570818170300" expanded="true" signature="360:514" ph="/// AI Controller of RCC. It's not professional, but it does the job. Follows all waypoints, or chases the target ... " />
+            <marker date="1570818170300" expanded="true" signature="654:16368" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="3016:4214" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="4232:4343" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="4360:5519" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="4458:4708" ph="/* Assigning navigator's position to front wheels of the vehicle. ... */" />
+            <marker date="1570818170300" expanded="true" signature="4972:5292" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="5128:5287" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="5296:5515" ph="/* If there is a target, get closest enemy. ... */" />
+            <marker date="1570818170300" expanded="true" signature="5542:5911" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="5933:8825" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="6139:7866" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="6273:6364" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="6530:6633" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="7223:7497" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="7439:7491" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="7631:7722" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="7902:8220" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="7937:8118" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="8557:8693" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="8847:9200" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="9134:9194" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="9224:14082" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="10794:11015" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="11018:11080" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="11281:11503" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="11784:12007" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="12268:12491" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="12770:12991" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="13251:13472" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="14099:14777" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="14170:14363" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="14190:14235" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="14791:14852" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="14890:15511" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15003:15125" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15318:15507" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15547:15672" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15602:15668" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15732:16225" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="15918:16199" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="16103:16194" ph="{...}" />
+            <marker date="1570818170300" expanded="true" signature="16244:16364" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <marker date="1570818776260" expanded="false" signature="6:78" ph="..." />
+            <marker date="1570818776260" expanded="true" signature="79:250" ph="/// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and ... " />
+            <marker date="1570818776260" expanded="true" signature="292:2871" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="717:869" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="896:1086" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1127:1375" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1243:1369" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1295:1359" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1408:1602" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1482:1570" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1652:2425" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="1747:2261" ph="/* if (Physics.Raycast(ray, out hit, rayLayers)) ... */" />
+            <marker date="1570818776260" expanded="true" signature="2470:2527" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="2576:2678" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="2722:2869" ph="{...}" />
+            <marker date="1570818776260" expanded="true" signature="2797:2863" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <marker date="1570819293367" expanded="true" signature="6:78" ph="..." />
+            <marker date="1570819293367" expanded="true" signature="111:645" ph="{...}" />
+            <marker date="1570819293367" expanded="true" signature="230:643" ph="{...}" />
+            <marker date="1570819293367" expanded="true" signature="281:332" ph="{...}" />
+            <marker date="1570819293367" expanded="true" signature="345:637" ph="{...}" />
+            <marker date="1570819293367" expanded="true" signature="387:585" ph="{...}" />
           </folding>
         </state>
       </provider>

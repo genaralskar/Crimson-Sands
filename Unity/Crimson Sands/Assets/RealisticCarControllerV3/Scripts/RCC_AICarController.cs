@@ -26,6 +26,7 @@ public class RCC_AICarController : MonoBehaviour {
 	public int currentWaypoint = 0;											// Current index in Waypoint Container.
 	public Transform targetChase;											// Target Gameobject for chasing.
 	public string targetTag = "Player";									// Search and chase Gameobjects with tags.
+	public Transform targetTransform;
 
 	// AI Type
 	public AIType _AIType;
@@ -149,10 +150,12 @@ public class RCC_AICarController : MonoBehaviour {
 		}
 
 		// If there is a target, get closest enemy.
-		if (targetsInZone.Count > 0)
-			targetChase = GetClosestEnemy(targetsInZone.ToArray());
-		else
-			targetChase = null;
+		
+		//CHAINGING THIS SO IT ONLY HAS ONE TARGET
+//		if (targetsInZone.Count > 0)
+//			targetChase = GetClosestEnemy(targetsInZone.ToArray());
+//		else
+//			targetChase = null;
 
 	}
 	

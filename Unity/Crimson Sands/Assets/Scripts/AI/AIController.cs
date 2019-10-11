@@ -14,7 +14,8 @@ public class AIController : MonoBehaviour
     public string semiTag = "AITarget";
     private string currentTargetTag;
 
-    public Transform rayPoint;
+    public Transform[] rayPoints;
+    //public Transform rayPoint;
     public LayerMask rayLayers;
 
     [SerializeField] private List<WeaponMount> weapons;
@@ -29,7 +30,7 @@ public class AIController : MonoBehaviour
     private void Update()
     {
         //shoot ray you see if player/semi is infront of ai
-        CheckRayHit();
+        CheckRayHits();
         
         
         
@@ -49,26 +50,40 @@ public class AIController : MonoBehaviour
         }
     }
 
-    private void CheckRayHit()
+    private void CheckRayHits()
+    {
+        bool fire = false;
+        foreach (var point in rayPoints)
+        {
+            fire = CheckRayHit(point);
+            if (fire) break;
+        }
+        FireWeapon(fire);
+    }
+
+    private bool CheckRayHit(Transform rayPoint)
     {
         Ray ray = new Ray(rayPoint.position, rayPoint.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, rayLayers))
-        {
-            
-        }
-    
-        //then fire if it is
-        if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation, Mathf.Infinity, rayLayers))
-        {
-            //Debug.Log("Firing at player. " + hit.collider);
-            FireWeapon(true);
-        }
-        else
-        {
-            //Debug.Log("Stopped firing!");
-            FireWeapon(false);
-        }
+//        if (Physics.Raycast(ray, out hit, rayLayers))
+//        {
+//            
+//        }
+//    
+//        //then fire if it is
+//        if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation, Mathf.Infinity, rayLayers))
+//        {
+//            //Debug.Log("Firing at player. " + hit.collider);
+//            FireWeapon(true);
+//        }
+//        else
+//        {
+//            //Debug.Log("Stopped firing!");
+//            FireWeapon(false);
+//        }
+
+        return Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
+            Mathf.Infinity, rayLayers);
     }
 
     private IEnumerator TargetSwitchTimer()
