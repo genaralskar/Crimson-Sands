@@ -1753,8 +1753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 500
   currentHealth: 500
+  invincible: 0
   isPlayer: 0
-  deathExplosion: {fileID: 0}
+  deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
 --- !u!1 &2185716373763427598
 GameObject:
   m_ObjectHideFlags: 0

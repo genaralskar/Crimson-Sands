@@ -17,6 +17,8 @@ public abstract class Health : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 100;
 
+    public bool invincible = false;
+
     public List<Hurtbox> Hurtboxes
     {
         get { return hurtboxes; }
@@ -31,6 +33,8 @@ public abstract class Health : MonoBehaviour
 
     public void ModifyHealth(int amount)
     {
+        if (invincible) return;
+        
         OnDamage(amount);
         currentHealth += amount;
 
@@ -39,6 +43,8 @@ public abstract class Health : MonoBehaviour
 
     public void SetHealth(int amount)
     {
+        if (invincible) return;
+        
         OnDamage(amount);
         currentHealth = amount;
         

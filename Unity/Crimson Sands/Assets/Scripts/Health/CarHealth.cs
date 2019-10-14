@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarHealth : Health
 {
     public bool isPlayer = false;
-    public ParticleSystem deathExplosion;
+    public GameObjectPool deathExplosion;
     
     protected override void Death()
     {
@@ -19,9 +19,8 @@ public class CarHealth : Health
         {
             if (deathExplosion)
             {
-                deathExplosion.transform.position = transform.position;
-                deathExplosion.gameObject.SetActive(true);
-                deathExplosion.Play();
+                GameObject explosion = deathExplosion.GetPooledObject(transform.position, Quaternion.identity);
+                explosion.gameObject.SetActive(true);
             }
 
             gameObject.SetActive(false);

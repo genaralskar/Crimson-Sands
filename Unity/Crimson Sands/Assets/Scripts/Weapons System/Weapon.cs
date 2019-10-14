@@ -170,6 +170,14 @@ public class Weapon : MonoBehaviour
         {
             int hitLayer = hit.collider.gameObject.layer;
             Debug.Log(hitLayer);
+
+            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            if (weaponHit != null)
+            {
+                //if player, hit only enemy
+                //if enemy, hit only player
+                weaponHit.OnWeaponHit(damage);
+            }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
             if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))

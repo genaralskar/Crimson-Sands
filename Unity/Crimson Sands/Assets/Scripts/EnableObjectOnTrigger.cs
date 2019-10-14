@@ -57,7 +57,7 @@ public class EnableObjectOnTrigger : MonoBehaviour
                             Rigidbody rb = obj.GetComponent<Rigidbody>();
                             if (rb)
                             {
-                                rb.AddForce(rb.transform.forward * launchForce, ForceMode.Impulse);
+                                rb.AddForce(rb.transform.forward * launchForce, ForceMode.VelocityChange);
                             }
                         }
                     }
