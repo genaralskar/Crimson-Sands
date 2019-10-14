@@ -668,6 +668,7 @@
                 </e>
                 <e p="SRP" t="Include">
                   <e p="BakedGINode.cs" t="Include" />
+                  <e p="MaterialQualityNode.cs" t="Include" />
                 </e>
                 <e p="SurfaceShaderInputs" t="Include">
                   <e p="ColorInputsNode.cs" t="Include" />
@@ -1021,10 +1022,14 @@
             <e p="Amp Toon Test.shader" t="Include" />
             <e p="BlendMaterials.cs" t="Include" />
             <e p="BlendShader.shader" t="Include" />
+            <e p="CutoutTest.shader" t="Include" />
             <e p="HologramTest.shader" t="Include" />
             <e p="ToonPassTest.shader" t="Include" />
             <e p="ToonTest.shader" t="Include" />
           </e>
+        </e>
+        <e p="Materials" t="Include">
+          <e p="New Amplify Shader.shader" t="Include" />
         </e>
         <e p="RealisticCarControllerV3" t="Include">
           <e p="Editor" t="Include">
