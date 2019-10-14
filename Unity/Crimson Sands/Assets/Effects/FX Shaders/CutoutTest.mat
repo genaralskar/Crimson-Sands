@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CutoutTest
-  m_Shader: {fileID: 4800000, guid: 56bbb9f5781dbc64f982d96d25d837c3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5aef7fba26431504dbe505f23ba0f90e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -81,11 +81,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
         m_Texture: {fileID: 2800000, guid: 16d574e53541bba44a84052fa38778df, type: 3}
-        m_Scale: {x: 0.3, y: 0.3}
+        m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
         m_Texture: {fileID: 2800000, guid: 7c3377ba75b009546a210fa64959e202, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
@@ -93,11 +93,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.7
-    - _CutoffRamp: 25.4
+    - _Cutoff: 0.9
+    - _CutoffAccelerator: 1.59
+    - _CutoffPower: 0.237
+    - _CutoffRamp: 0.09
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FadeStrength: 82.8
+    - _FadeStrength: 5.2
     - _Float0: 72.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -114,7 +116,7 @@ Material:
     - _RimOffset1: 1
     - _RimPower: 0.505
     - _RimPower1: 0
-    - _ScaleandOffset: 0.736
+    - _ScaleandOffset: 0.551
     - _SmoothnessTextureChannel: 0
     - _SpecCoverage: 0.401
     - _SpecCoverage1: 0.284
@@ -129,7 +131,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimTint: {r: 0.764151, g: 0.6019491, b: 0.6114899, a: 0}
+    - _RimTint: {r: 0.764151, g: 0.60194916, b: 0.6114899, a: 0}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Tint1: {r: 1, g: 1, b: 1, a: 0}
