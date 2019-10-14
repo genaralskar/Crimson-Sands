@@ -110,6 +110,9 @@ public class RCC_AICarController : MonoBehaviour {
 		detector.gameObject.AddComponent<SphereCollider> ();
 		detector.GetComponent<SphereCollider> ().isTrigger = true;
 		detector.GetComponent<SphereCollider> ().radius = detectorRadius;
+		
+		//Set the layer for the detector!
+		detector.layer = 17;
 
 	}
 
@@ -240,7 +243,7 @@ public class RCC_AICarController : MonoBehaviour {
 			// Setting destination of the Navigator. 
 			if (navigator.isOnNavMesh && distance < detectorRadius)
 			{
-				Debug.Log("Setting Destination");
+				//Debug.Log("Setting Destination");
 				navigator.SetDestination (targetChase.position);
 			}
 				

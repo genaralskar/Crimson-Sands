@@ -46,8 +46,8 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         string searchTerm = $"Colliders/{gameObject.name}(Clone)";
-        Debug.Log(searchTerm);
-        Debug.Log(transform.root);
+        //Debug.Log(searchTerm);
+        //Debug.Log(transform.root);
         GameObject newCol = transform.root.Find(searchTerm).gameObject;
         Hurtbox newHurt = newCol.AddComponent<Hurtbox>();
         newHurt.moveHurtboxToCollider = false;
@@ -96,6 +96,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(int damage)
     {
+        Debug.Log("Sending Damage!");
         SendDamage(damage);
     }
 
@@ -103,7 +104,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
     {
         health.ModifyHealth(-amount);
         OnHurtboxDamage?.Invoke();
-        Debug.Log("sending damage");
+        //Debug.Log("sending damage");
     }
 
     public void SendHealth(int amount)

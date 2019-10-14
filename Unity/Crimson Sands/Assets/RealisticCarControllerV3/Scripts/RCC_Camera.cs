@@ -423,7 +423,7 @@ public class RCC_Camera : MonoBehaviour{
 		lastDirection = playerCar.direction;
 
 		// Calculate the current rotation angles for TPS mode.
-		wantedRotation = playerCar.transform.rotation * Quaternion.AngleAxis ((direction == 1 ? 0 : 180) + (useOrbitInTPSCameraMode ? orbitX : 0), Vector3.up);
+		wantedRotation = playerCar.transform.rotation * Quaternion.AngleAxis ((direction == 1 ? 0 : 0) + (useOrbitInTPSCameraMode ? orbitX : 0), Vector3.up);
 		wantedRotation = wantedRotation * Quaternion.AngleAxis ((useOrbitInTPSCameraMode ? orbitY : 0), Vector3.right);
 
 		if(Input.GetKey(KeyCode.B))

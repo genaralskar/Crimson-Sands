@@ -18,6 +18,8 @@ public class AIController : MonoBehaviour
     //public Transform rayPoint;
     public LayerMask rayLayers;
 
+    public LayerInfo layerInfo;
+
     [SerializeField] private List<WeaponMount> weapons;
 
     private void Awake()
@@ -83,7 +85,7 @@ public class AIController : MonoBehaviour
 //        }
 
         return Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
-            Mathf.Infinity, rayLayers);
+            Mathf.Infinity, layerInfo.weaponRaycastLayers);
     }
 
     private IEnumerator TargetSwitchTimer()

@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 5878610331577300688}
   enableCollision: 0
-  moveHurtboxToCollider: 0
+  moveHurtboxToCollider: 1
 --- !u!1 &4972902124432940107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7728483294354723430}
   - component: {fileID: 8157177353703472056}
-  m_Layer: 15
+  m_Layer: 14
   m_Name: Pickup Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3949,7 +3949,7 @@ MonoBehaviour:
   currentHealth: 100
   invincible: 0
   isPlayer: 1
-  deathExplosion: {fileID: 0}
+  deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
 --- !u!1 &8023257568901981818
 GameObject:
   m_ObjectHideFlags: 0

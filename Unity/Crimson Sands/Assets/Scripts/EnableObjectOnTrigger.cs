@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class EnableObjectOnTrigger : MonoBehaviour
 
     public List<GameObject> objsToEnable;
 
+    public bool disableOnStart = true;
     public bool resetIfAlreadyEnabled = false;
     public bool resetTransformsOnEnable = true;
 
@@ -33,11 +35,26 @@ public class EnableObjectOnTrigger : MonoBehaviour
             objsPos.Add(objsToEnable[i].transform.position);
             objsRot.Add(objsToEnable[i].transform.rotation);
         }
+
+        if (disableOnStart)
+        {
+            StartCoroutine(DisableTimer());
+        }
+    }
+
+    private IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(1f);
+
+        foreach (var obj in objsToEnable)
+        {
+            obj.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
         
         for(int i = 0; i < objsToEnable.Count; i++)
         {

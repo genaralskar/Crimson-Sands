@@ -244,7 +244,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -426,6 +426,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3291385026168448355}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_Name
+      value: GatlingFlashV3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8205571362833684013, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff0b910bca07b6249ac448ae53663217, type: 2}
+    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5771
+      objectReference: {fileID: 0}
+    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5771
+      objectReference: {fileID: 0}
+    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5771
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,31 +521,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.11090277
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_Name
-      value: GatlingFlashV3
-      objectReference: {fileID: 0}
-    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5771
-      objectReference: {fileID: 0}
-    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5771
-      objectReference: {fileID: 0}
-    - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5771
-      objectReference: {fileID: 0}
-    - target: {fileID: -8205571362833684013, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ff0b910bca07b6249ac448ae53663217, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ffb8325dca4984599775bdca5c2bbd, type: 3}
 --- !u!4 &7439579122623717412 stripped
@@ -536,6 +536,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 499286310487991186}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Reworked Minigun Animation EX
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -591,21 +606,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Reworked Minigun Animation EX
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
     - target: {fileID: -2403065033187307517, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

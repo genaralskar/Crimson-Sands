@@ -56,6 +56,8 @@ public class Weapon : MonoBehaviour
     
     private bool isFiring;
 
+    public LineRenderer lineRend;
+
     //Turning this on or off starts/stops firing
     public bool IsFiring
     {
@@ -78,6 +80,10 @@ public class Weapon : MonoBehaviour
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
         
         muzzleFlash.SetActive(false);
+
+        var lr = new GameObject("Line Rend");
+        lineRend = lr.AddComponent<LineRenderer>();
+
     }
 
 //    Used for testing purposes
@@ -166,10 +172,14 @@ public class Weapon : MonoBehaviour
     {
         Ray ray = new Ray(firePoint.position, firePoint.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastProjectileLayerMask))
+
+        LayerMask weaponRayCastMask = layerInfo.weaponRaycastLayers;
+        
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, weaponRayCastMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
             Debug.Log(hitLayer);
+            Debug.Log(hit.collider.gameObject);
 
             IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
             if (weaponHit != null)
@@ -180,13 +190,14 @@ public class Weapon : MonoBehaviour
             }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
-            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-            {
-                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-                hurtbox.SendDamage(damage);
-            }
+//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
+//            {
+//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
+//                hurtbox.SendDamage(damage);
+//            }
             
             //spawn hitsparks
+            //Debug.Log(hit.point);
             Vector3 inDir = firePoint.position - hit.point;
             
             Vector3 dir = Vector3.Reflect(inDir, hit.normal);
@@ -197,6 +208,24 @@ public class Weapon : MonoBehaviour
             Quaternion newRot = Quaternion.LookRotation(dir);
             GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
 
+            //==========================================================
+            if (lineRend)
+            {
+                Vector3[] linePos = new[] {firePoint.position, hit.point};
+                lineRend.SetPositions(linePos);
+            }
+            //============================================================            
+
+//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
+//            {
+//                Debug.Log("its close!");
+//            }
+            
+            if (hit.collider.transform.root == transform.root)
+            {
+                Debug.LogError("Weapon is hitting its own colliders! WTF!");
+            }
+            
             //play audio on impact point
 
 
