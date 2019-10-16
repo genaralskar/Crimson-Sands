@@ -28,7 +28,7 @@ public class ArmorHealth : Health
     private Vector3 lauchDirection = Vector3.forward;
 
     [SerializeField]
-    private float launchForce = 100f;
+    private float launchForce = 5;
 
     private bool dead = false;
     
@@ -76,10 +76,10 @@ public class ArmorHealth : Health
         //lauch armor
         //might have to wait for a fixed update to add force
         Vector3 dir = transform.TransformDirection(lauchDirection);
-        //Debug.Log("lauch direction: " + dir);
+        //Debug.Log("lauch direction: " + dir, this.gameObject);
         Vector3 lForce = (dir * launchForce);
         //Debug.Log("launch force: " + lForce);
-        rb.AddForce(lForce);
+        rb.AddForce(lForce, ForceMode.VelocityChange);
     }
 
     protected override void OnDamage(int amount)

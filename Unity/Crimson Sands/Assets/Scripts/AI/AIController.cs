@@ -79,13 +79,13 @@ public class AIController : MonoBehaviour
     {
         currentTarget = carController.targetChase;
         float distance = Vector3.Distance(transform.position, currentTarget.position);
-        Debug.Log("Distance = " + distance);
+        //Debug.Log("Distance = " + distance);
         
         distance = Mathf.Clamp(distance, nearDistance, farDistance);
-        Debug.Log("Distance Clamped = " + distance);
+        //Debug.Log("Distance Clamped = " + distance);
         
         float distance01 = (distance - nearDistance) / (farDistance - nearDistance);
-        Debug.Log("Distance01 = " + distance01);
+        //Debug.Log("Distance01 = " + distance01);
         
         float currentSpeed = Mathf.Lerp(minSpeed, maxSpeed, distance01);
         carController.maximumSpeed = currentSpeed;
@@ -112,8 +112,19 @@ public class AIController : MonoBehaviour
 //            FireWeapon(false);
 //        }
 
-        return Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
-            Mathf.Infinity, layerInfo.weaponRaycastLayers);
+        if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
+            Mathf.Infinity, layerInfo.weaponRaycastLayers))
+        {
+            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            if (weaponHit != null)
+            {
+                //if player, hit only enemy
+                //if enemy, hit only player
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private IEnumerator TargetSwitchTimer()
@@ -134,5 +145,11 @@ public class AIController : MonoBehaviour
         {
             weapon.SetWeaponFiring(isFiring);
         }
+    }
+
+    public void ChangeFollowTarget(Transform newTarget)
+    {
+        carController.targetChase = newTarget;
+        currentTarget = newTarget;
     }
 }

@@ -7145,6 +7145,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_Name
+      value: Smoke Explosion (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7198,16 +7208,6 @@ PrefabInstance:
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_Name
-      value: Smoke Explosion (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7493,6 +7493,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_Name
+      value: Smoke Explosion (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7546,16 +7556,6 @@ PrefabInstance:
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_Name
-      value: Smoke Explosion (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7808,6 +7808,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346517917317262693, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332611500311386524, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872684816005076, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872685354042438, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872685625514622, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872685805115285, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872686018154952, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079872686100642288, guid: fd082e0dfa681ac4d95121f5de864acf,
+        type: 3}
+      propertyPath: launchForce
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd082e0dfa681ac4d95121f5de864acf, type: 3}
@@ -12999,6 +13039,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_Name
+      value: Smoke Explosion (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13052,16 +13102,6 @@ PrefabInstance:
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_Name
-      value: Smoke Explosion (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405409, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

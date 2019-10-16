@@ -29,6 +29,8 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private LayerMask raycastProjectileLayerMask;
 
+    public float spread = 2;
+
     [SerializeField] private RaycastProjectileInfo raycastProjectileInfo;
     
     [Tooltip("The projectile particle system. This should be attached to the firePoint transform")]
@@ -187,8 +189,28 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
 
         LayerMask weaponRayCastMask = layerInfo.weaponRaycastLayers;
+        
+        Vector3 direction = firePoint.forward;
 
-        if (Physics.SphereCast(firePoint.position, .1f, firePoint.forward, out hit, Mathf.Infinity, weaponRayCastMask))
+        //do Spread
+        //use random instead of perlin
+        float xSpread = Mathf.PerlinNoise(Time.time, 1);
+        float ySpread = Mathf.PerlinNoise(1, Time.time);
+        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
+        
+        Vector3 newSpread = new Vector3(xSpread, ySpread, zSpread);
+
+        newSpread -= Vector3.one * .5f;
+        newSpread *= 2;
+        newSpread *= spread;
+        
+        Debug.Log(newSpread);
+        Debug.DrawRay(firePoint.position, direction, Color.blue);
+        
+        direction += newSpread;
+        Debug.DrawRay(firePoint.position, direction, Color.red);
+
+        if (Physics.SphereCast(firePoint.position, .1f, direction, out hit, Mathf.Infinity, weaponRayCastMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
             //Debug.Log(hitLayer);
@@ -210,7 +232,6 @@ public class Weapon : MonoBehaviour
 //            }
             
             //spawn hitsparks
-            //Debug.Log(hit.point);
             Vector3 inDir = firePoint.position - hit.point;
             
             Vector3 dir = Vector3.Reflect(inDir, hit.normal);
@@ -231,13 +252,8 @@ public class Weapon : MonoBehaviour
                 lineRendFade.StartFade();
                 
             }
-            //============================================================            
+            //============================================================
 
-//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
-//            {
-//                Debug.Log("its close!");
-//            }
-            
             if (hit.collider.transform.root == transform.root)
             {
                 Debug.LogError("Weapon is hitting its own colliders! WTF!");

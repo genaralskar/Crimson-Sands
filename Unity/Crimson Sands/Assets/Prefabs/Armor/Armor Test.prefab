@@ -116,7 +116,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &5302214252386725954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -277,8 +277,8 @@ MonoBehaviour:
   joint: {fileID: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
-  lauchDirection: {x: -0.5, y: 1, z: 0}
-  launchForce: 4000
+  lauchDirection: {x: -1, y: 0, z: 0}
+  launchForce: 2
 --- !u!54 &4892564746408446143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872684816005067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872685354042426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -895,7 +895,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872685625514621
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872685805115284
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872686018154959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
-  launchForce: 4000
+  launchForce: 2
 --- !u!54 &7079872686100642295
 Rigidbody:
   m_ObjectHideFlags: 0
