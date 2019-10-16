@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AITarget
   layers:
   - Default
   - TransparentFX
@@ -14,14 +15,14 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Player Hitbox
+  - Player Hurtbox
+  - Enemy Hitbox
+  - Enemy Hurtbox
+  - RCC
+  - VehicleBody
+  - Pickup
   - 
   - 
   - 

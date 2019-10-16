@@ -32,7 +32,7 @@ namespace genaralskar.Cars
         private int currentArmorIndex;
 
         private Car currentCar;
-        private Armor currentArmor;
+        private OldArmor currentOldArmor;
 
         [Header("Car Selection UI")]
         public TextMeshProUGUI carNameText;
@@ -78,25 +78,25 @@ namespace genaralskar.Cars
         public void NextArmor()
         {
             //++current armor index
-            currentArmorIndex = (currentArmorIndex + 1) % (currentCar.armors.Length);
+            currentArmorIndex = (currentArmorIndex + 1) % (currentCar.oldArmors.Length);
             
             //set current armor on car
             currentCar.currentArmor = currentArmorIndex;
 
             //update armor
-            UpdateArmor(currentCar.armors[currentArmorIndex]);
+            UpdateArmor(currentCar.oldArmors[currentArmorIndex]);
         }
 
         public void PreviousArmor()
         {
             //--current armor index
-            currentArmorIndex = (Mathf.Abs(currentArmorIndex - 1)) % (currentCar.armors.Length);
+            currentArmorIndex = (Mathf.Abs(currentArmorIndex - 1)) % (currentCar.oldArmors.Length);
             
             //set current armor on car
             currentCar.currentArmor = currentArmorIndex;
             
             //update armor
-            UpdateArmor(currentCar.armors[currentArmorIndex]);
+            UpdateArmor(currentCar.oldArmors[currentArmorIndex]);
         }
         #endregion
 
@@ -144,14 +144,14 @@ namespace genaralskar.Cars
             UpdateCarAction?.Invoke(currentCarObj);
 
             //update armor
-            UpdateArmor(currentCar.armors[currentCar.currentArmor]);
+            UpdateArmor(currentCar.oldArmors[currentCar.currentArmor]);
 
             //update text fields
             if(carNameFlavorText != null)
                 UpdateCarTextFields();
         }
 
-        public void UpdateArmor(Armor newArmor)
+        public void UpdateArmor(OldArmor newOldArmor)
         {
             //destory previous armor
             if(currentArmorObj != null)
@@ -160,10 +160,10 @@ namespace genaralskar.Cars
             }
 
             //set current armor
-            currentArmor = newArmor;
+            currentOldArmor = newOldArmor;
             
             //spawn new armor
-            currentArmorObj = Instantiate(newArmor.armorPrefab);
+            currentArmorObj = Instantiate(newOldArmor.armorPrefab);
             
             //parent armor to car
             currentArmorObj.transform.SetParent(currentCarObj.transform);
@@ -201,8 +201,8 @@ namespace genaralskar.Cars
 
         private void UpdateArmorTextFields()
         {
-            armorNameText.text = currentArmor.armorName;
-            armorNameFlavorText.text = currentArmor.armorFlavor;
+            armorNameText.text = currentOldArmor.armorName;
+            armorNameFlavorText.text = currentOldArmor.armorFlavor;
         }
         #endregion
     }

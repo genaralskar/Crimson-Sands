@@ -234,7 +234,7 @@ public class RCC_AICarController : MonoBehaviour {
 
 			// Setting destination of the Navigator. 
 			if(navigator.isOnNavMesh)
-				navigator.SetDestination (targetChase.position);
+				navigator.SetDestination (targetChase.position - (targetChase.forward * 2f));
 
 			break;
 

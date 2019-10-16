@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: 601fe62b9a02e5b4f8c71d3190688201
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Barrel_Cluster
+    100002: Barrel_Cluster_Crtl
+    100004: Barrel_Cluster_Jnt
+    100006: Control_Grp
+    100008: Geometry_Grp
+    100010: Gun_Mount:Base_Box_Grp
+    100012: Gun_Mount:Base_Stock
+    100014: Gun_Mount:Gun_Mount
+    100016: Gun_Mount:Gun_Mount_and_Base_Box_Grp
+    100018: Gun_Mount:Left_Door
+    100020: Gun_Mount:Mount_Box
+    100022: Gun_Mount:Mount_Grp
+    100024: Gun_Mount:Right_Door
+    100026: Jnt_Grp
+    100028: Left_Bomb_Bay_Door_Crtl
+    100030: Left_Bomb_Bay_Door_Jnt
+    100032: Main_Body
+    100034: //RootNode
+    100036: Minigun_Grp
+    100038: Mount_Base_Crtl
+    100040: Mount_Base_Jnt
+    100042: Mount_Swivel_Crtl
+    100044: Mount_Swivel_Jnt
+    100046: Right_Bomb_Bay_Door_Crtl
+    100048: Right_Bomb_Bay_Door_Jnt
+    400000: Barrel_Cluster
+    400002: Barrel_Cluster_Crtl
+    400004: Barrel_Cluster_Jnt
+    400006: Control_Grp
+    400008: Geometry_Grp
+    400010: Gun_Mount:Base_Box_Grp
+    400012: Gun_Mount:Base_Stock
+    400014: Gun_Mount:Gun_Mount
+    400016: Gun_Mount:Gun_Mount_and_Base_Box_Grp
+    400018: Gun_Mount:Left_Door
+    400020: Gun_Mount:Mount_Box
+    400022: Gun_Mount:Mount_Grp
+    400024: Gun_Mount:Right_Door
+    400026: Jnt_Grp
+    400028: Left_Bomb_Bay_Door_Crtl
+    400030: Left_Bomb_Bay_Door_Jnt
+    400032: Main_Body
+    400034: //RootNode
+    400036: Minigun_Grp
+    400038: Mount_Base_Crtl
+    400040: Mount_Base_Jnt
+    400042: Mount_Swivel_Crtl
+    400044: Mount_Swivel_Jnt
+    400046: Right_Bomb_Bay_Door_Crtl
+    400048: Right_Bomb_Bay_Door_Jnt
+    2100000: lambert1
+    2300000: Barrel_Cluster
+    2300002: Gun_Mount:Base_Stock
+    2300004: Gun_Mount:Gun_Mount
+    2300006: Gun_Mount:Left_Door
+    2300008: Gun_Mount:Mount_Box
+    2300010: Gun_Mount:Right_Door
+    2300012: Main_Body
+    3300000: Barrel_Cluster
+    3300002: Gun_Mount:Base_Stock
+    3300004: Gun_Mount:Gun_Mount
+    3300006: Gun_Mount:Left_Door
+    3300008: Gun_Mount:Mount_Box
+    3300010: Gun_Mount:Right_Door
+    3300012: Main_Body
+    4300000: Gun_Mount:Base_Stock
+    4300002: Gun_Mount:Gun_Mount
+    4300004: Main_Body
+    4300006: Barrel_Cluster
+    4300008: Gun_Mount:Left_Door
+    4300010: Gun_Mount:Right_Door
+    4300012: Gun_Mount:Mount_Box
+    7400000: Gatling Deploy TEST
+    7400002: Gatling Retract TEST
+    7400004: Gatling Idle TEST
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Gatling Deploy TEST
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Gatling Retract TEST
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Gatling Idle TEST
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 52
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
