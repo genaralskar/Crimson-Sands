@@ -150,6 +150,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   layerInfo: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4, type: 2}
+  currentTarget: {fileID: 0}
+  nearDistance: 10
+  farDistance: 50
+  minSpeed: 50
   weapons: []
 --- !u!1 &7147129535813433718
 GameObject:

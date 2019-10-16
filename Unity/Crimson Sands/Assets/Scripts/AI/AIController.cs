@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Vector3 = UnityEngine.Vector3;
+
 /// <summary>
 /// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and
 /// when to fire its weapons.
@@ -19,12 +23,20 @@ public class AIController : MonoBehaviour
     public LayerMask rayLayers;
 
     public LayerInfo layerInfo;
+    
+    public Transform currentTarget;
+    public float nearDistance = 10f;
+    public float farDistance = 50f;
+    public float minSpeed = 50f;
 
+    private float maxSpeed;
+    
     [SerializeField] private List<WeaponMount> weapons;
 
     private void Awake()
     {
         carController = GetComponent<RCC_AICarController>();
+        maxSpeed = carController.maximumSpeed;
         armorHolder = GetComponent<ArmorHolder>();
         FindWeaponMounts();
     }
@@ -33,9 +45,9 @@ public class AIController : MonoBehaviour
     {
         //shoot ray you see if player/semi is infront of ai
         CheckRayHits();
-        
-        
-        
+
+        SetVehicleSpeed();
+
         //if car gets shot by player, then switch target to player
     }
     
@@ -61,6 +73,22 @@ public class AIController : MonoBehaviour
             if (fire) break;
         }
         FireWeapon(fire);
+    }
+
+    private void SetVehicleSpeed()
+    {
+        currentTarget = carController.targetChase;
+        float distance = Vector3.Distance(transform.position, currentTarget.position);
+        Debug.Log("Distance = " + distance);
+        
+        distance = Mathf.Clamp(distance, nearDistance, farDistance);
+        Debug.Log("Distance Clamped = " + distance);
+        
+        float distance01 = (distance - nearDistance) / (farDistance - nearDistance);
+        Debug.Log("Distance01 = " + distance01);
+        
+        float currentSpeed = Mathf.Lerp(minSpeed, maxSpeed, distance01);
+        carController.maximumSpeed = currentSpeed;
     }
 
     private bool CheckRayHit(Transform rayPoint)

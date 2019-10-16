@@ -188,7 +188,7 @@ public class Weapon : MonoBehaviour
 
         LayerMask weaponRayCastMask = layerInfo.weaponRaycastLayers;
 
-        if (Physics.SphereCast(firePoint.position, .1f, firePoint.forward, out hit, 100f, weaponRayCastMask))
+        if (Physics.SphereCast(firePoint.position, .1f, firePoint.forward, out hit, Mathf.Infinity, weaponRayCastMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
             //Debug.Log(hitLayer);

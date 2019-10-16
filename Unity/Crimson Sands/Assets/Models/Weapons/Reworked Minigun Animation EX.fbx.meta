@@ -104,7 +104,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5092025
+      - time: 0.3273843
+        functionName: FireWeapon
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.741875
         functionName: FireWeapon
         data: 
         objectReferenceParameter: {instanceID: 0}

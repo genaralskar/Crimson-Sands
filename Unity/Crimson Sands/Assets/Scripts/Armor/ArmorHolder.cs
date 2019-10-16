@@ -30,9 +30,9 @@ public class ArmorHolder : MonoBehaviour
     {
         if(currentArmor)
         {
-            currentArmor.gameObject.SetActive(false);
+            currentArmor.DetachAllArmor();
+            //currentArmor.gameObject.SetActive(false);
         }
-        
     }
 
     //should only get called from another ArmorSet
