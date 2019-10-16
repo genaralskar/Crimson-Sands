@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
@@ -14,6 +15,24 @@ public class ArmorHolder : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void OnEnable()
+    {
+        if (currentArmor)
+        {
+            currentArmor.gameObject.SetActive(true);
+            AttachAllArmor();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if(currentArmor)
+        {
+            currentArmor.gameObject.SetActive(false);
+        }
+        
     }
 
     //should only get called from another ArmorSet

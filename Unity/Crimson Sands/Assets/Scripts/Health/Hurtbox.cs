@@ -57,7 +57,11 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     private void OnTriggerEnter(Collider other)
     {
+
         Hitbox otherHit = other.GetComponent<Hitbox>();
+
+        if (!otherHit) return;
+        
         SendDamage(otherHit.damage);
         
         //place hitsparks
@@ -96,7 +100,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(int damage)
     {
-        Debug.Log("Sending Damage!");
+        //Debug.Log("Sending Damage!");
         SendDamage(damage);
     }
 

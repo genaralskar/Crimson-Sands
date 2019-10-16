@@ -20,6 +20,8 @@ public class ArmorSet : MonoBehaviour
 
     private Rigidbody vehicleRb;
 
+    private bool armorSetup = false;
+
     private void Awake()
     {
         vehicleRb = vehicle.GetComponent<Rigidbody>();
@@ -42,7 +44,8 @@ public class ArmorSet : MonoBehaviour
             }
         }
         
-        SetupArmor();
+        if(!armorSetup)
+            SetupArmor();
     }
 
     public void SetupArmor()
@@ -62,6 +65,8 @@ public class ArmorSet : MonoBehaviour
         SetupJoints();
 
         vehicle.currentArmor = this;
+
+        armorSetup = true;
     }
 
     private void SetupOffsets()

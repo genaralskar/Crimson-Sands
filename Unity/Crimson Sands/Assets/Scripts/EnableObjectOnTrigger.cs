@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This is used to spawn vehicles and other objects when something passes through a boxcollider
+/// </summary>
 [RequireComponent(typeof(BoxCollider))]
 public class EnableObjectOnTrigger : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class EnableObjectOnTrigger : MonoBehaviour
 
     public float launchForce;
 
+    public string tagCheck = "";
+    
     private List<Vector3> objsPos = new List<Vector3>();
     private List<Quaternion> objsRot =  new List<Quaternion>();
     
@@ -55,38 +59,49 @@ public class EnableObjectOnTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject);
+
+        if (tagCheck != "")
+        {
+            //if the tags dont match, dont do anything
+            if (!other.gameObject.CompareTag(tagCheck)) return;
+        }
         
         for(int i = 0; i < objsToEnable.Count; i++)
         {
             GameObject obj = objsToEnable[i];
-            if (!resetIfAlreadyEnabled)
+            
+            
+            //if not reset always, and the object is enabled, dont do anything
+            if (!resetIfAlreadyEnabled && obj.activeInHierarchy)
             {
-                if (!obj.gameObject.activeInHierarchy)
-                {
-                    obj.gameObject.SetActive(true);
-                    if (resetTransformsOnEnable)
-                    {
-                        obj.transform.position = objsPos[i];
-                        obj.transform.rotation = objsRot[i];
-
-                        if (launchForce > 0)
-                        {
-                            Rigidbody rb = obj.GetComponent<Rigidbody>();
-                            if (rb)
-                            {
-                                rb.AddForce(rb.transform.forward * launchForce, ForceMode.VelocityChange);
-                            }
-                        }
-                    }
-                }
+                return;
             }
-            else
+            
+            //otherwise, reset the object
+            
+            //if gameobject is active disable it to move it
+            if (obj.activeInHierarchy)
             {
-                obj.gameObject.SetActive(true);
-                if (resetTransformsOnEnable)
+                obj.SetActive(false);
+            }
+            
+            //reset its position if needed
+            if (resetTransformsOnEnable)
+            {
+                obj.transform.position = objsPos[i];
+                obj.transform.rotation = objsRot[i];
+            }
+            
+            //enable object
+            obj.SetActive(true);
+            
+            //do launch forces
+            if (launchForce > 0)
+            {
+                Rigidbody rb = obj.GetComponent<Rigidbody>();
+                if (rb)
                 {
-                    obj.transform.position = objsPos[i];
-                    obj.transform.rotation = objsRot[i];
+                    rb.AddForce(rb.transform.forward * launchForce, ForceMode.VelocityChange);
                 }
             }
         }

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 ///<summary>
 /// This class handles firing weapons. This should only be on the root object of a weapon prefab.
@@ -56,7 +58,8 @@ public class Weapon : MonoBehaviour
     
     private bool isFiring;
 
-    public LineRenderer lineRend;
+    private LineRenderer lineRend;
+    private LineRendererFadeOverTime lineRendFade;
 
     //Turning this on or off starts/stops firing
     public bool IsFiring
@@ -80,10 +83,20 @@ public class Weapon : MonoBehaviour
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
         
         muzzleFlash.SetActive(false);
+    }
 
+    private void Start()
+    {
+        //setup line renderer
         var lr = new GameObject("Line Rend");
         lineRend = lr.AddComponent<LineRenderer>();
-
+        LineRenderer rendTemp = LineRendererTemplateObject.rend;
+        lineRend.material = rendTemp.material;
+        lineRend.colorGradient = rendTemp.colorGradient;
+        lineRend.widthCurve = rendTemp.widthCurve;
+        
+        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
+        lineRendFade.rend = lineRend;
     }
 
 //    Used for testing purposes
@@ -174,7 +187,66 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
 
         LayerMask weaponRayCastMask = layerInfo.weaponRaycastLayers;
-        
+
+        if (Physics.SphereCast(firePoint.position, .1f, firePoint.forward, out hit, 100f, weaponRayCastMask))
+        {
+            int hitLayer = hit.collider.gameObject.layer;
+            //Debug.Log(hitLayer);
+            //Debug.Log(hit.collider.gameObject);
+
+            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            if (weaponHit != null)
+            {
+                //if player, hit only enemy
+                //if enemy, hit only player
+                weaponHit.OnWeaponHit(damage);
+            }
+            
+            //player hit enemy hurtbox or enemy hit player hurtbox
+//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
+//            {
+//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
+//                hurtbox.SendDamage(damage);
+//            }
+            
+            //spawn hitsparks
+            //Debug.Log(hit.point);
+            Vector3 inDir = firePoint.position - hit.point;
+            
+            Vector3 dir = Vector3.Reflect(inDir, hit.normal);
+            dir *= -1;
+//            Debug.DrawRay(hit.point, inDir, Color.red, 1f);
+//            Debug.DrawRay(hit.point, hit.normal, Color.green, 1f);
+//            Debug.DrawRay(hit.point, dir, Color.blue, 1f);
+            Quaternion newRot = Quaternion.LookRotation(dir);
+            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
+
+            //==========================================================
+            if (lineRend)
+            {
+                Vector3[] linePos = new[] {firePoint.position, hit.point};
+                lineRend.SetPositions(linePos);
+                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
+                
+                lineRendFade.StartFade();
+                
+            }
+            //============================================================            
+
+//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
+//            {
+//                Debug.Log("its close!");
+//            }
+            
+            if (hit.collider.transform.root == transform.root)
+            {
+                Debug.LogError("Weapon is hitting its own colliders! WTF!");
+            }
+            
+            //play audio on impact point
+        }
+
+        return;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, weaponRayCastMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
@@ -213,6 +285,10 @@ public class Weapon : MonoBehaviour
             {
                 Vector3[] linePos = new[] {firePoint.position, hit.point};
                 lineRend.SetPositions(linePos);
+                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
+                
+                lineRendFade.StartFade();
+                
             }
             //============================================================            
 
