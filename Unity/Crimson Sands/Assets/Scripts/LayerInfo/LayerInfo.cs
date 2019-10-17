@@ -15,4 +15,9 @@ public class LayerInfo : ScriptableObject
     public int enemyHitbox = 12;
     [SerializeField]
     public int enemyHurtbox = 13;
+
+    public int RCCStuff = 17;
+
+    public LayerMask enemyFireLayer;
+    public LayerMask weaponRaycastLayers;
 }

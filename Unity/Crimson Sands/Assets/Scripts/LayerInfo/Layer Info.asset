@@ -17,3 +17,9 @@ MonoBehaviour:
   playerHurtbox: 11
   enemyHitbox: 12
   enemyHurtbox: 13
+  enemyFireLayer:
+    serializedVersion: 2
+    m_Bits: 122679
+  weaponRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 27137

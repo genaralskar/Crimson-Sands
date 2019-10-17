@@ -1,12 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CarHealth : Health
 {
     public bool isPlayer = false;
-    public ParticleSystem deathExplosion;
-    
+    public GameObjectPool deathExplosion;
+    public bool resetHealthOnEnable = true;
+
+    private void OnEnable()
+    {
+        if (resetHealthOnEnable)
+        {
+            SetHealth(maxHealth);
+        }
+    }
+
     protected override void Death()
     {
         //blow up car
@@ -17,9 +27,12 @@ public class CarHealth : Health
         }
         else
         {
-            deathExplosion.transform.position = transform.position;
-            deathExplosion.gameObject.SetActive(true);
-            deathExplosion.Play();
+            if (deathExplosion)
+            {
+                GameObject explosion = deathExplosion.GetPooledObject(transform.position, Quaternion.identity);
+                explosion.gameObject.SetActive(true);
+            }
+
             gameObject.SetActive(false);
         }
     }

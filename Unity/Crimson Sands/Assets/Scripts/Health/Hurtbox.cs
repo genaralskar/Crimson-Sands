@@ -8,7 +8,7 @@ using UnityEngine.Events;
 /// SendDamage(int amount) can subtract health, SendHealth(int amount) can add health
 /// Layers should be set up to only have certain hitboxes collide/interact with this collider
 /// </summary>
-public class Hurtbox : MonoBehaviour
+public class Hurtbox : MonoBehaviour, IWeaponHit
 {
     [SerializeField] public Health health;
 
@@ -46,8 +46,8 @@ public class Hurtbox : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         string searchTerm = $"Colliders/{gameObject.name}(Clone)";
-        Debug.Log(searchTerm);
-        Debug.Log(transform.root);
+        //Debug.Log(searchTerm);
+        //Debug.Log(transform.root);
         GameObject newCol = transform.root.Find(searchTerm).gameObject;
         Hurtbox newHurt = newCol.AddComponent<Hurtbox>();
         newHurt.moveHurtboxToCollider = false;
@@ -57,7 +57,11 @@ public class Hurtbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         Hitbox otherHit = other.GetComponent<Hitbox>();
+
+        if (!otherHit) return;
+        
         SendDamage(otherHit.damage);
         
         //place hitsparks
@@ -94,11 +98,17 @@ public class Hurtbox : MonoBehaviour
         otherHit.projectile.gameObject.SetActive(false);
     }
 
+    public void OnWeaponHit(int damage)
+    {
+        //Debug.Log("Sending Damage!");
+        SendDamage(damage);
+    }
+
     public void SendDamage(int amount)
     {
         health.ModifyHealth(-amount);
         OnHurtboxDamage?.Invoke();
-        Debug.Log("sending damage");
+        //Debug.Log("sending damage");
     }
 
     public void SendHealth(int amount)

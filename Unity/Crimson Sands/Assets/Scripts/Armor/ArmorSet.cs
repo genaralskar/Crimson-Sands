@@ -20,6 +20,8 @@ public class ArmorSet : MonoBehaviour
 
     private Rigidbody vehicleRb;
 
+    private bool armorSetup = false;
+
     private void Awake()
     {
         vehicleRb = vehicle.GetComponent<Rigidbody>();
@@ -42,11 +44,13 @@ public class ArmorSet : MonoBehaviour
             }
         }
         
-        SetupArmor();
+        if(!armorSetup)
+            SetupArmor();
     }
 
     public void SetupArmor()
     {
+        Debug.Log("Running armor setup");
         Vector3 offsetP = Vector3.zero;
         Quaternion offsetR = Quaternion.identity;
         if (snapPoint != null)
@@ -62,6 +66,9 @@ public class ArmorSet : MonoBehaviour
         SetupJoints();
 
         vehicle.currentArmor = this;
+
+        armorSetup = true;
+        Debug.Log("armor setup");
     }
 
     private void SetupOffsets()
@@ -101,19 +108,24 @@ public class ArmorSet : MonoBehaviour
 
     public void AttachAllArmor()
     {
+        
         foreach (var armor in armorParts)
         {
+            
             AttachArmor(armor);
         }
     }
 
     public void AttachArmor(ArmorHealth armor)
     {
+        Debug.Log("Reatching Armor");
+        if (armor.joint != null) Debug.Log("no joint?");
         if (armor.joint != null) return;
         
         //line up armor
         //set proper position based on offset
         Vector3 newPos = vehicle.transform.TransformPoint(armor.positionOffset);
+        Debug.Log(armor.gameObject + " " + this);
         armor.transform.position = newPos;
         
         //set proper rotation based on offset
@@ -127,11 +139,14 @@ public class ArmorSet : MonoBehaviour
         
         //maybe gradualy change its mass from 1 to what its supposed to be to stop the car from jittering when
         //it gets reattatched
-        
+
+
         //create joint
         Joint newJoint = armor.gameObject.AddComponent<FixedJoint>();
         armor.joint = newJoint;
         armor.joint.connectedBody = vehicleRb;
+        
+        
         
         //reset health
         armor.ResetHealth();
