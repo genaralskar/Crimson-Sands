@@ -94,6 +94,7 @@ MonoBehaviour:
   anims: {fileID: 0}
   fireSoundSource: {fileID: 6660763190451431646}
   muzzleFlash: {fileID: 1712178479581209168}
+  lineRend: {fileID: 0}
 --- !u!1 &499286312096166488
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ AudioSource:
   m_GameObject: {fileID: 4269169502571560637}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 55c2a60f99b5806498a5011fbbcc59e7,
+  OutputAudioMixerGroup: {fileID: 7865465957350336745, guid: 55c2a60f99b5806498a5011fbbcc59e7,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 8b7f09823e32afe4f809b5f3a6ff8365, type: 3}
   m_PlayOnAwake: 0
@@ -243,7 +244,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -400,16 +401,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 499286310487991186}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 388c4537cc1a8ed448c0c445172259d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Revolver_Launcher_Rough_Animation_EX
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 388c4537cc1a8ed448c0c445172259d0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0ef28ec812088a644b5f31953be5105e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 388c4537cc1a8ed448c0c445172259d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -465,16 +456,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -637024904092250941, guid: 388c4537cc1a8ed448c0c445172259d0,
+    - target: {fileID: -927199367670048503, guid: 388c4537cc1a8ed448c0c445172259d0,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_Name
+      value: Revolver_Launcher_Rough_Animation_EX
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 388c4537cc1a8ed448c0c445172259d0,
+        type: 3}
+      propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 2100000, guid: dcbd0afc074508d44935b71b03a51ea9, type: 2}
+      objectReference: {fileID: 9100000, guid: 0ef28ec812088a644b5f31953be5105e, type: 2}
     - target: {fileID: 7862842260627525700, guid: 388c4537cc1a8ed448c0c445172259d0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: be6b08072d87f4d4ba0b98bc64a5b81f, type: 2}
+    - target: {fileID: -637024904092250941, guid: 388c4537cc1a8ed448c0c445172259d0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dcbd0afc074508d44935b71b03a51ea9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388c4537cc1a8ed448c0c445172259d0, type: 3}
 --- !u!4 &7415003461266878873 stripped

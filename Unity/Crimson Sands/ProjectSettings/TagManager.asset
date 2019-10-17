@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AITarget
+  - Semi
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - RCC
   - VehicleBody
   - Pickup
-  - 
+  - RCCStuff
   - 
   - 
   - 

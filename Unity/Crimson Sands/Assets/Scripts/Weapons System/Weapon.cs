@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 ///<summary>
 /// This class handles firing weapons. This should only be on the root object of a weapon prefab.
@@ -26,6 +28,8 @@ public class Weapon : MonoBehaviour
     [Tooltip("All the layers the raycast projectile can hit. This should include all physics layers, not just hurtbox layers")]
     [SerializeField]
     private LayerMask raycastProjectileLayerMask;
+
+    public float spread = 0;
 
     [SerializeField] private RaycastProjectileInfo raycastProjectileInfo;
     
@@ -56,6 +60,9 @@ public class Weapon : MonoBehaviour
     
     private bool isFiring;
 
+    private LineRenderer lineRend;
+    private LineRendererFadeOverTime lineRendFade;
+
     //Turning this on or off starts/stops firing
     public bool IsFiring
     {
@@ -78,6 +85,20 @@ public class Weapon : MonoBehaviour
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
         
         muzzleFlash.SetActive(false);
+    }
+
+    private void Start()
+    {
+        //setup line renderer
+        var lr = new GameObject("Line Rend");
+        lineRend = lr.AddComponent<LineRenderer>();
+        LineRenderer rendTemp = LineRendererTemplateObject.rend;
+        lineRend.material = rendTemp.material;
+        lineRend.colorGradient = rendTemp.colorGradient;
+        lineRend.widthCurve = rendTemp.widthCurve;
+        
+        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
+        lineRendFade.rend = lineRend;
     }
 
 //    Used for testing purposes
@@ -166,17 +187,53 @@ public class Weapon : MonoBehaviour
     {
         Ray ray = new Ray(firePoint.position, firePoint.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastProjectileLayerMask))
+
+        LayerMask weaponRayCastMask = layerInfo.weaponRaycastLayers;
+        
+        Vector3 direction = firePoint.forward;
+
+        //do Spread
+        //use random instead of perlin
+//        float xSpread = Mathf.PerlinNoise(Time.time, 1);
+//        float ySpread = Mathf.PerlinNoise(1, Time.time);
+//        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
+        float xSpread = Random.Range(-1f, 1f);
+        float ySpread = Random.Range(-1f, 1f);
+        float zSpread = Random.Range(-1f, 1f);
+        
+        Vector3 newSpread = new Vector3(xSpread, ySpread, zSpread);
+
+        //remap perlin from 0-1 to -1-1
+//        newSpread -= Vector3.one * .5f;
+//        newSpread *= 2;
+        newSpread *= spread;
+        
+        Debug.Log(newSpread);
+        Debug.DrawRay(firePoint.position, direction, Color.blue);
+        
+        direction += newSpread;
+        Debug.DrawRay(firePoint.position, direction, Color.red);
+
+        if (Physics.SphereCast(firePoint.position, .1f, direction, out hit, Mathf.Infinity, weaponRayCastMask))
         {
             int hitLayer = hit.collider.gameObject.layer;
-            Debug.Log(hitLayer);
+            //Debug.Log(hitLayer);
+            //Debug.Log(hit.collider.gameObject);
+
+            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            if (weaponHit != null)
+            {
+                //if player, hit only enemy
+                //if enemy, hit only player
+                weaponHit.OnWeaponHit(damage);
+            }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
-            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-            {
-                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-                hurtbox.SendDamage(damage);
-            }
+//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
+//            {
+//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
+//                hurtbox.SendDamage(damage);
+//            }
             
             //spawn hitsparks
             Vector3 inDir = firePoint.position - hit.point;
@@ -189,6 +246,82 @@ public class Weapon : MonoBehaviour
             Quaternion newRot = Quaternion.LookRotation(dir);
             GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
 
+            //==========================================================
+            if (lineRend)
+            {
+                Vector3[] linePos = new[] {firePoint.position, hit.point};
+                lineRend.SetPositions(linePos);
+                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
+                
+                lineRendFade.StartFade();
+                
+            }
+            //============================================================
+
+            if (hit.collider.transform.root == transform.root)
+            {
+                Debug.LogError("Weapon is hitting its own colliders! WTF!");
+            }
+            
+            //play audio on impact point
+        }
+
+        return;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, weaponRayCastMask))
+        {
+            int hitLayer = hit.collider.gameObject.layer;
+            Debug.Log(hitLayer);
+            Debug.Log(hit.collider.gameObject);
+
+            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            if (weaponHit != null)
+            {
+                //if player, hit only enemy
+                //if enemy, hit only player
+                weaponHit.OnWeaponHit(damage);
+            }
+            
+            //player hit enemy hurtbox or enemy hit player hurtbox
+//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
+//            {
+//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
+//                hurtbox.SendDamage(damage);
+//            }
+            
+            //spawn hitsparks
+            //Debug.Log(hit.point);
+            Vector3 inDir = firePoint.position - hit.point;
+            
+            Vector3 dir = Vector3.Reflect(inDir, hit.normal);
+            dir *= -1;
+//            Debug.DrawRay(hit.point, inDir, Color.red, 1f);
+//            Debug.DrawRay(hit.point, hit.normal, Color.green, 1f);
+//            Debug.DrawRay(hit.point, dir, Color.blue, 1f);
+            Quaternion newRot = Quaternion.LookRotation(dir);
+            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
+
+            //==========================================================
+            if (lineRend)
+            {
+                Vector3[] linePos = new[] {firePoint.position, hit.point};
+                lineRend.SetPositions(linePos);
+                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
+                
+                lineRendFade.StartFade();
+                
+            }
+            //============================================================            
+
+//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
+//            {
+//                Debug.Log("its close!");
+//            }
+            
+            if (hit.collider.transform.root == transform.root)
+            {
+                Debug.LogError("Weapon is hitting its own colliders! WTF!");
+            }
+            
             //play audio on impact point
 
 

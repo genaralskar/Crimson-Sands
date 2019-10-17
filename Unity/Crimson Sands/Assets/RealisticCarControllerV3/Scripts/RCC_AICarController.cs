@@ -26,6 +26,7 @@ public class RCC_AICarController : MonoBehaviour {
 	public int currentWaypoint = 0;											// Current index in Waypoint Container.
 	public Transform targetChase;											// Target Gameobject for chasing.
 	public string targetTag = "Player";									// Search and chase Gameobjects with tags.
+	public Transform targetTransform;
 
 	// AI Type
 	public AIType _AIType;
@@ -109,6 +110,9 @@ public class RCC_AICarController : MonoBehaviour {
 		detector.gameObject.AddComponent<SphereCollider> ();
 		detector.GetComponent<SphereCollider> ().isTrigger = true;
 		detector.GetComponent<SphereCollider> ().radius = detectorRadius;
+		
+		//Set the layer for the detector!
+		detector.layer = 17;
 
 	}
 
@@ -149,10 +153,12 @@ public class RCC_AICarController : MonoBehaviour {
 		}
 
 		// If there is a target, get closest enemy.
-		if (targetsInZone.Count > 0)
-			targetChase = GetClosestEnemy(targetsInZone.ToArray());
-		else
-			targetChase = null;
+		
+		//CHAINGING THIS SO IT ONLY HAS ONE TARGET
+//		if (targetsInZone.Count > 0)
+//			targetChase = GetClosestEnemy(targetsInZone.ToArray());
+//		else
+//			targetChase = null;
 
 	}
 	
@@ -224,7 +230,9 @@ public class RCC_AICarController : MonoBehaviour {
 		case AIType.ChaseTarget:
 
 			// If our scene doesn't have a Waypoints Container, return with error.
-			if(!targetChase){
+			float distance = Vector3.Distance(transform.position, targetChase.position);
+			//Debug.Log(distance);
+			if(!targetChase || distance > detectorRadius){
 				
 				//Debug.LogError("Target Chase Couldn't Found!");
 				Stop();
@@ -233,8 +241,12 @@ public class RCC_AICarController : MonoBehaviour {
 			}
 
 			// Setting destination of the Navigator. 
-			if(navigator.isOnNavMesh)
-				navigator.SetDestination (targetChase.position - (targetChase.forward * 2f));
+			if (navigator.isOnNavMesh && distance < detectorRadius)
+			{
+				//Debug.Log("Setting Destination");
+				navigator.SetDestination (targetChase.position);
+			}
+				
 
 			break;
 

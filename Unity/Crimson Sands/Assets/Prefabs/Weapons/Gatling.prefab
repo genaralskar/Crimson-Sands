@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5103036659960103272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.465, z: 1.07}
+  m_LocalPosition: {x: 0, y: -0.03, z: 1.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3904040630897099548}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6340667838713380698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.29, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6340667839882215594}
@@ -78,12 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6644db4e4e454784ab1126af20b3fbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 2
   firePoint: {fileID: 6340667839338418529}
   useRaycast: 1
   raycastProjectileLayerMask:
     serializedVersion: 2
     m_Bits: 98103
+  spread: 0.02
   raycastProjectileInfo: {fileID: 11400000, guid: a28a0f0130b9d5444ba7a9f13e96888e,
     type: 2}
   projectile: {fileID: 11400000, guid: 1494f167d5fb59a42982f4967f2c1811, type: 2}
@@ -118,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6340667839338418528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.465, z: 1.262}
+  m_LocalPosition: {x: 0, y: -0.032, z: 1.262}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6340667838713380699}
@@ -180,7 +181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7650598188042362245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.465, z: 1.262}
+  m_LocalPosition: {x: 0, y: -0.055, z: 0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6340667838713380699}
@@ -195,7 +196,7 @@ AudioSource:
   m_GameObject: {fileID: 7650598188042362245}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 55c2a60f99b5806498a5011fbbcc59e7,
+  OutputAudioMixerGroup: {fileID: 7865465957350336745, guid: 55c2a60f99b5806498a5011fbbcc59e7,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 8b7f09823e32afe4f809b5f3a6ff8365, type: 3}
   m_PlayOnAwake: 0
@@ -243,7 +244,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -290,6 +291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6340667839882215594}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Reworked Minigun Animation EX
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -308,7 +314,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
@@ -318,12 +324,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
@@ -344,11 +350,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Reworked Minigun Animation EX
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
@@ -455,11 +456,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.11090277
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_Name
-      value: GatlingFlashV3
-      objectReference: {fileID: 0}
     - target: {fileID: -7910232852140681335, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -474,6 +470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5771
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_Name
+      value: GatlingFlashV3
       objectReference: {fileID: 0}
     - target: {fileID: -8205571362833684013, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
