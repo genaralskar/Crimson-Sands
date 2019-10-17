@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private LayerMask raycastProjectileLayerMask;
 
-    public float spread = 2;
+    public float spread = 0;
 
     [SerializeField] private RaycastProjectileInfo raycastProjectileInfo;
     
@@ -194,14 +194,18 @@ public class Weapon : MonoBehaviour
 
         //do Spread
         //use random instead of perlin
-        float xSpread = Mathf.PerlinNoise(Time.time, 1);
-        float ySpread = Mathf.PerlinNoise(1, Time.time);
-        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
+//        float xSpread = Mathf.PerlinNoise(Time.time, 1);
+//        float ySpread = Mathf.PerlinNoise(1, Time.time);
+//        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
+        float xSpread = Random.Range(-1f, 1f);
+        float ySpread = Random.Range(-1f, 1f);
+        float zSpread = Random.Range(-1f, 1f);
         
         Vector3 newSpread = new Vector3(xSpread, ySpread, zSpread);
 
-        newSpread -= Vector3.one * .5f;
-        newSpread *= 2;
+        //remap perlin from 0-1 to -1-1
+//        newSpread -= Vector3.one * .5f;
+//        newSpread *= 2;
         newSpread *= spread;
         
         Debug.Log(newSpread);
