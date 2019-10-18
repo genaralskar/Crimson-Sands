@@ -98,7 +98,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         otherHit.projectile.gameObject.SetActive(false);
     }
 
-    public void OnWeaponHit(int damage)
+    public void OnWeaponHit(int damage, Vector3 hitPoint)
     {
         //Debug.Log("Sending Damage!");
         SendDamage(damage);

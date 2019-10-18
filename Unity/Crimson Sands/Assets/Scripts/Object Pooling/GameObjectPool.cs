@@ -18,6 +18,8 @@ public class GameObjectPool : ScriptableObject
 
     private Queue<GameObject> pooledObjects;
 
+    private Transform parent;
+
     private void PoolObjectsHandler()
     {
         SpawnPooledObject();
@@ -35,10 +37,16 @@ public class GameObjectPool : ScriptableObject
         if (pooledObjects.Count >= amount)
             return;
         
+        //create new parent object
+        if (!parent)
+        {
+            parent = new GameObject(name).transform;
+        }
+        
         for (var i = pooledObjects.Count; i < amount; i++)
         {
             //spawn new objects, set them inactive, and add them to the queue
-            GameObject obj = Instantiate(poolObject);
+            GameObject obj = Instantiate(poolObject, parent);
             obj.SetActive(false);
             pooledObjects.Enqueue(obj);
         }

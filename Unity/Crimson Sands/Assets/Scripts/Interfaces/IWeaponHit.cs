@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWeaponHit
 {
-    void OnWeaponHit(int damage);
+    void OnWeaponHit(int damage, Vector3 hitPoint);
 }
