@@ -94,8 +94,8 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.9
-    - _CutoffAccelerator: 1.59
-    - _CutoffPower: 0.237
+    - _CutoffAccelerator: 3.21
+    - _CutoffPower: 0.394
     - _CutoffRamp: 0.09
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
