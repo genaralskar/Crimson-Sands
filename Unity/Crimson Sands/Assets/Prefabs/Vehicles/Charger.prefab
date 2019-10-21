@@ -1459,6 +1459,7 @@ GameObject:
   - component: {fileID: 6658236437342165889}
   - component: {fileID: 4925276424044392284}
   - component: {fileID: 6178957320909821786}
+  - component: {fileID: 1264108607903507268}
   m_Layer: 14
   m_Name: Charger
   m_TagString: Untagged
@@ -1563,6 +1564,22 @@ MonoBehaviour:
   health: {fileID: 5878610331577300688}
   enableCollision: 0
   moveHurtboxToCollider: 1
+--- !u!114 &1264108607903507268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925276424044392285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 1
 --- !u!1 &4972902124432940107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4561,6 +4578,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8023257568901981820}
     m_Modifications:
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Mount
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354696538575570063, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: c445e87ee84c0e54d82315dfcbdffc4a,
+        type: 2}
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4616,22 +4649,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon Mount
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1354696538575570063, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: c445e87ee84c0e54d82315dfcbdffc4a,
-        type: 2}
     - target: {fileID: 9144852630695215970, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer

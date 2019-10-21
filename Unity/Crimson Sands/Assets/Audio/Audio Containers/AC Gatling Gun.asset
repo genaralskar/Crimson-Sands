@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8fe505d9d60fe4cb51f1f5bd5ec88d, type: 3}
+  m_Name: AC Gatling Gun
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 8b7f09823e32afe4f809b5f3a6ff8365, type: 3}
+  pitch: 1
+  pitchVariation: 0.03
+  volume: 1

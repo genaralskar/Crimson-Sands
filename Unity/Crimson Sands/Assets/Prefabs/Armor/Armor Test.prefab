@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5302214252386725954}
   - component: {fileID: 2277927619355209290}
   - component: {fileID: 3439777522964085499}
+  - component: {fileID: 3226376651962107828}
   m_Layer: 0
   m_Name: Armor (7)
   m_TagString: Untagged
@@ -107,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -162,6 +163,21 @@ MonoBehaviour:
   health: {fileID: 4346517917317262693}
   enableCollision: 0
   moveHurtboxToCollider: 0
+--- !u!114 &3226376651962107828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496863656393455627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &5429286907411284274
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +194,7 @@ GameObject:
   - component: {fileID: 4892564746408446143}
   - component: {fileID: 6245686910592904599}
   - component: {fileID: 1744813901196915446}
+  - component: {fileID: 6664783204379882415}
   m_Layer: 0
   m_Name: Armor (8)
   m_TagString: Untagged
@@ -269,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -324,6 +341,21 @@ MonoBehaviour:
   health: {fileID: 3332611500311386524}
   enableCollision: 0
   moveHurtboxToCollider: 0
+--- !u!114 &6664783204379882415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429286907411284274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872684549910329
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +428,7 @@ GameObject:
   - component: {fileID: 7079872684816005076}
   - component: {fileID: 7079872684816005067}
   - component: {fileID: 7079872684816005066}
+  - component: {fileID: 5764531945003987322}
   m_Layer: 0
   m_Name: Armor (3)
   m_TagString: Untagged
@@ -487,8 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -527,6 +560,21 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5764531945003987322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872684816005069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872684930726317
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +697,7 @@ GameObject:
   - component: {fileID: 7079872685354042438}
   - component: {fileID: 7079872685354042426}
   - component: {fileID: 7079872685354042425}
+  - component: {fileID: 1501314212290306003}
   m_Layer: 0
   m_Name: Armor (5)
   m_TagString: Untagged
@@ -740,8 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -780,6 +829,21 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1501314212290306003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685354042431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872685625514615
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +859,7 @@ GameObject:
   - component: {fileID: 7079872685625514622}
   - component: {fileID: 7079872685625514621}
   - component: {fileID: 7079872685625514620}
+  - component: {fileID: 1081412515832048712}
   m_Layer: 0
   m_Name: Armor (2)
   m_TagString: Untagged
@@ -886,8 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -926,6 +991,21 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1081412515832048712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685625514615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872685805115278
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +1021,7 @@ GameObject:
   - component: {fileID: 7079872685805115285}
   - component: {fileID: 7079872685805115284}
   - component: {fileID: 7079872685805115275}
+  - component: {fileID: 2219278560340881258}
   m_Layer: 0
   m_Name: Armor (4)
   m_TagString: Untagged
@@ -1032,8 +1113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -1072,6 +1153,21 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2219278560340881258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685805115278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872686018154945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1184,7 @@ GameObject:
   - component: {fileID: 7079872686018154959}
   - component: {fileID: 7079872686018154958}
   - component: {fileID: 7079872686018154953}
+  - component: {fileID: 2508125607611622591}
   m_Layer: 0
   m_Name: Armor (6)
   m_TagString: Untagged
@@ -1179,8 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -1234,6 +1331,21 @@ MonoBehaviour:
   health: {fileID: 7079872686018154952}
   enableCollision: 0
   moveHurtboxToCollider: 0
+--- !u!114 &2508125607611622591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872686018154945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
 --- !u!1 &7079872686100642281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1361,7 @@ GameObject:
   - component: {fileID: 7079872686100642288}
   - component: {fileID: 7079872686100642295}
   - component: {fileID: 7079872686100642294}
+  - component: {fileID: 5373653471755595681}
   m_Layer: 0
   m_Name: Armor (1)
   m_TagString: Untagged
@@ -1341,8 +1454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 25
+  currentHealth: 25
   invincible: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
@@ -1381,3 +1494,18 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5373653471755595681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872686100642281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1

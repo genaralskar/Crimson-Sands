@@ -52,9 +52,12 @@ public class Weapon : MonoBehaviour
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
 
-    public AudioSource fireSoundSource;
+    public AudioManager fireSoundSource;
 
     public GameObject muzzleFlash;
+
+    public bool tracer = false;
+    public LineRenderer tracerTemplate;
     
     private WeaponFireHandler fireHandler;
     
@@ -89,16 +92,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        //setup line renderer
-        var lr = new GameObject("Line Rend");
-        lineRend = lr.AddComponent<LineRenderer>();
-        LineRenderer rendTemp = LineRendererTemplateObject.rend;
-        lineRend.material = rendTemp.material;
-        lineRend.colorGradient = rendTemp.colorGradient;
-        lineRend.widthCurve = rendTemp.widthCurve;
-        
-        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
-        lineRendFade.rend = lineRend;
+        SetupLineRenderer();
     }
 
 //    Used for testing purposes
@@ -113,6 +107,22 @@ public class Weapon : MonoBehaviour
         {
             IsFiring = false;
         }
+    }
+
+    private void SetupLineRenderer()
+    {
+        var lr = new GameObject("Line Rend");
+        lineRend = lr.AddComponent<LineRenderer>();
+        var rendTemp = tracerTemplate ? tracerTemplate : LineRendererTemplateObject.rend;
+        
+        lineRend.material = rendTemp.material;
+        lineRend.colorGradient = rendTemp.colorGradient;
+        lineRend.widthCurve = rendTemp.widthCurve;
+        lineRend.endWidth = rendTemp.endWidth;
+        lineRend.startWidth = rendTemp.startWidth;
+        
+        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
+        lineRendFade.rend = lineRend;
     }
 
     private void OnDrawGizmosSelected()
@@ -193,22 +203,15 @@ public class Weapon : MonoBehaviour
         Vector3 direction = firePoint.forward;
 
         //do Spread
-        //use random instead of perlin
-//        float xSpread = Mathf.PerlinNoise(Time.time, 1);
-//        float ySpread = Mathf.PerlinNoise(1, Time.time);
-//        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
         float xSpread = Random.Range(-1f, 1f);
         float ySpread = Random.Range(-1f, 1f);
         float zSpread = Random.Range(-1f, 1f);
         
         Vector3 newSpread = new Vector3(xSpread, ySpread, zSpread);
-
-        //remap perlin from 0-1 to -1-1
-//        newSpread -= Vector3.one * .5f;
-//        newSpread *= 2;
+        
         newSpread *= spread;
         
-        Debug.Log(newSpread);
+        //Debug.Log(newSpread);
         Debug.DrawRay(firePoint.position, direction, Color.blue);
         
         direction += newSpread;
@@ -220,12 +223,16 @@ public class Weapon : MonoBehaviour
             //Debug.Log(hitLayer);
             //Debug.Log(hit.collider.gameObject);
 
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
-            if (weaponHit != null)
+            IWeaponHit[] weaponHits = hit.collider.gameObject.GetComponents<IWeaponHit>();
+            if (weaponHits != null)
             {
                 //if player, hit only enemy
                 //if enemy, hit only player
-                weaponHit.OnWeaponHit(damage);
+                foreach (var weaponHit in weaponHits)
+                {
+                    weaponHit.OnWeaponHit(damage, hit.point);
+                }
+                
             }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
@@ -278,7 +285,7 @@ public class Weapon : MonoBehaviour
             {
                 //if player, hit only enemy
                 //if enemy, hit only player
-                weaponHit.OnWeaponHit(damage);
+                weaponHit.OnWeaponHit(damage, hit.point);
             }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
