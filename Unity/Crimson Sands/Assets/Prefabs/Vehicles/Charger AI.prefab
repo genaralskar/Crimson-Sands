@@ -112,11 +112,11 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   _AIType: 1
   wideRayLength: 20
-  tightRayLength: 20
-  sideRayLength: 3
+  tightRayLength: 10
+  sideRayLength: 5
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 181043
   limitSpeed: 1
   maximumSpeed: 180
   smoothedSteer: 1
@@ -124,6 +124,7 @@ MonoBehaviour:
   totalWaypointPassed: 0
   nextWaypointPassRadius: 40
   ignoreWaypointNow: 0
+  navigator: {fileID: 0}
   detectorRadius: 200
   targetsInZone: []
 --- !u!114 &8172785247847305020
@@ -151,9 +152,11 @@ MonoBehaviour:
     m_Bits: 2048
   layerInfo: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4, type: 2}
   currentTarget: {fileID: 0}
-  nearDistance: 10
+  nearDistance: 5
   farDistance: 50
   minSpeed: 50
+  minAngle: 20
+  RCCController: {fileID: 0}
   weapons: []
 --- !u!1 &7147129535813433718
 GameObject:
@@ -677,6 +680,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 064a97690fb179d4fb30a87b67a2bdc9, type: 2}
+    - target: {fileID: 8023257568847195477, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
 --- !u!1 &5046885231107123132 stripped

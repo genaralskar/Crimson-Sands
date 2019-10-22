@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UIElements;
 using Vector3 = UnityEngine.Vector3;
 
@@ -24,12 +26,19 @@ public class AIController : MonoBehaviour
 
     public LayerInfo layerInfo;
     
+    [Header("Distance Keeping Stuff")]
     public Transform currentTarget;
-    public float nearDistance = 10f;
+    public float nearDistance = 5f;
     public float farDistance = 50f;
     public float minSpeed = 50f;
+    [Tooltip("The minimum angle difference between the target and the vehicle for the AI to start slowing down")]
+    public float minAngle = 20f;
 
     private float maxSpeed;
+
+    [Header("Navigation Stuff")]
+    [SerializeField]
+    private RCC_AICarController RCCController;
     
     [SerializeField] private List<WeaponMount> weapons;
 
@@ -38,7 +47,15 @@ public class AIController : MonoBehaviour
         carController = GetComponent<RCC_AICarController>();
         maxSpeed = carController.maximumSpeed;
         armorHolder = GetComponent<ArmorHolder>();
+        RCCController = GetComponent<RCC_AICarController>();
         FindWeaponMounts();
+    }
+    
+
+    private void OnEnable()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SetDestination());
     }
 
     private void Update()
@@ -78,6 +95,15 @@ public class AIController : MonoBehaviour
     private void SetVehicleSpeed()
     {
         currentTarget = carController.targetChase;
+
+        float angleDot = Vector3.Dot(transform.forward, currentTarget.forward);
+
+        if (angleDot > minAngle)
+        {
+            carController.maximumSpeed = maxSpeed;
+            return;
+        }
+
         float distance = Vector3.Distance(transform.position, currentTarget.position);
         //Debug.Log("Distance = " + distance);
         
@@ -95,32 +121,20 @@ public class AIController : MonoBehaviour
     {
         Ray ray = new Ray(rayPoint.position, rayPoint.forward);
         RaycastHit hit;
-//        if (Physics.Raycast(ray, out hit, rayLayers))
-//        {
-//            
-//        }
-//    
-//        //then fire if it is
-//        if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation, Mathf.Infinity, rayLayers))
-//        {
-//            //Debug.Log("Firing at player. " + hit.collider);
-//            FireWeapon(true);
-//        }
-//        else
-//        {
-//            //Debug.Log("Stopped firing!");
-//            FireWeapon(false);
-//        }
 
         if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
             Mathf.Infinity, layerInfo.weaponRaycastLayers))
         {
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            IWeaponHit weaponHit = hit.collider.gameObject.GetComponent<IWeaponHit>();
             if (weaponHit != null)
             {
-                //if player, hit only enemy
-                //if enemy, hit only player
-                return true;
+                //get carhealth to figure if its a a player
+                CarHealth carHealth = hit.collider.transform.root.GetComponent<CarHealth>();
+                //if player, fire
+                if (carHealth && (carHealth.isPlayer || carHealth.playerTeam))
+                {
+                    return true;
+                }
             }
         }
 
@@ -130,6 +144,33 @@ public class AIController : MonoBehaviour
     private IEnumerator TargetSwitchTimer()
     {
         yield return new WaitForSeconds(5f);
+    }
+
+    private IEnumerator SetDestination()
+    {
+        NavMeshAgent agent = RCCController.navigator;
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        
+        while (true)
+        {
+            yield return wait;
+            if (!RCCController.targetChase || !agent)
+            {
+                agent = RCCController.navigator;
+                //Debug.Log("Attempting to get navigator");
+                continue;
+            }
+
+
+            float distance = Vector3.Distance(transform.position, RCCController.targetChase.position);
+        
+            if (agent.isOnNavMesh && distance < RCCController.detectorRadius)
+            {
+                agent.SetDestination(RCCController.targetChase.position);
+            }
+        }
+        
+        
     }
 
     private void SwitchTarget(string newTarget)
