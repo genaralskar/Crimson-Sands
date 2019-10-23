@@ -24374,7 +24374,7 @@ PrefabInstance:
     - target: {fileID: 5794101510625261335, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.266
+      value: -1.959
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261335, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
@@ -24419,7 +24419,7 @@ PrefabInstance:
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
@@ -24700,8 +24700,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: db48dda1a48db3e42ad1e3886e563c09,
-        type: 3}
+      objectReference: {fileID: 4300000, guid: db48dda1a48db3e42ad1e3886e563c09, type: 3}
     - target: {fileID: 5794101510625261333, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29579,7 +29578,7 @@ Transform:
   m_Children:
   - {fileID: 1275378578}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275378577
 GameObject:
