@@ -151,11 +151,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9ec030362429e844b9c5b6b97b4bc45b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1bc291dddd73b3546b8d909b1c407553, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 9ec030362429e844b9c5b6b97b4bc45b, type: 3}
+        m_Texture: {fileID: 2800000, guid: ee879bd20f6819143a6527d0c880ac6e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 299
-  materialHash: 46c4fe19526173057f635f483851426d215482368
+  materialHash: bd9e70825e8d064a278f82047c66e2f7215482368
   root:
     _uniqueID: 1
     seed: 1234
@@ -809,7 +809,7 @@ MonoBehaviour:
     parentGroupID: 3
     childGroupIDs: 
     geometryMode: 1
-    materialLeaf: {fileID: 2100000, guid: 42375d2e1d7b61744887ddc5186b7605, type: 2}
+    materialLeaf: {fileID: 2100000, guid: adb3c3f4ca9bc1a40bf81c5b38650edc, type: 2}
     instanceMesh: {fileID: 0}
     size: {x: 0.78663105, y: 0.9695187}
     perpendicularAlign: 0.851
