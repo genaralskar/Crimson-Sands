@@ -48,7 +48,7 @@ ModelImporter:
       takeName: Minigun Deploy
       internalID: -4419577652728318029
       firstFrame: 4
-      lastFrame: 34
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -73,8 +73,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Minigun Firing Sequence
-      takeName: Minigun Firing Sequence
+      name: Minigun Fire
+      takeName: Minigun Fire
       internalID: 469964776098608127
       firstFrame: 35
       lastFrame: 47
@@ -85,7 +85,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -126,8 +126,8 @@ ModelImporter:
       name: Minigun Retract
       takeName: Minigun Retract
       internalID: 7244914123690190803
-      firstFrame: 65
-      lastFrame: 85
+      firstFrame: 62
+      lastFrame: 98
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -153,7 +153,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Minigun Idle
-      takeName: Minigun Firing Sequence
+      takeName: Minigun Idle
       internalID: 7681462880953924169
       firstFrame: 35
       lastFrame: 47
@@ -163,8 +163,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
