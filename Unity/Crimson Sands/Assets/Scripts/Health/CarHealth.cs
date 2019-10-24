@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CarHealth : Health
 {
-    public bool isPlayer = false;
     public bool playerTeam = false;
     public GameObjectPool deathExplosion;
     public bool resetHealthOnEnable = true;

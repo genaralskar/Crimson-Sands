@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
-using Vector3 = UnityEngine.Vector3;
 
 /// <summary>
 /// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and
@@ -36,9 +32,17 @@ public class AIController : MonoBehaviour
 
     private float maxSpeed;
 
-    [Header("Navigation Stuff")]
-    [SerializeField]
-    private RCC_AICarController RCCController;
+    [Header("Navigation Stuff")] [Range(0, 10)]
+    public float navFuzz = 1f;
+
+    public bool useStaticFuzz = false;
+    private Vector3 staticFuzz;
+    public TransformReference playerFollowPoint;
+    public TransformReference SemiFollowPoint;
+    public float chanceToChangeTarget = 0.05f;
+    public float chanceToSwerveOnHit = 0.2f;
+
+    private Health health;
     
     [SerializeField] private List<WeaponMount> weapons;
 
@@ -47,10 +51,17 @@ public class AIController : MonoBehaviour
         carController = GetComponent<RCC_AICarController>();
         maxSpeed = carController.maximumSpeed;
         armorHolder = GetComponent<ArmorHolder>();
-        RCCController = GetComponent<RCC_AICarController>();
+        health = GetComponent<Health>();
+        health.HealthChange += HealthChangeHandler;
         FindWeaponMounts();
     }
-    
+
+    private void Start()
+    {
+
+        staticFuzz = GetRandomFuzz(navFuzz);
+    }
+
 
     private void OnEnable()
     {
@@ -129,9 +140,9 @@ public class AIController : MonoBehaviour
             if (weaponHit != null)
             {
                 //get carhealth to figure if its a a player
-                CarHealth carHealth = hit.collider.transform.root.GetComponent<CarHealth>();
+                Health carHealth = hit.collider.transform.root.GetComponent<Health>();
                 //if player, fire
-                if (carHealth && (carHealth.isPlayer || carHealth.playerTeam))
+                if (carHealth && (carHealth.isPlayer))
                 {
                     return true;
                 }
@@ -141,44 +152,67 @@ public class AIController : MonoBehaviour
         return false;
     }
 
-    private IEnumerator TargetSwitchTimer()
-    {
-        yield return new WaitForSeconds(5f);
-    }
-
     private IEnumerator SetDestination()
     {
-        NavMeshAgent agent = RCCController.navigator;
+        NavMeshAgent agent = carController.navigator;
         WaitForSeconds wait = new WaitForSeconds(0.2f);
         
         while (true)
         {
             yield return wait;
-            if (!RCCController.targetChase || !agent)
+            if (!carController.targetChase || !agent)
             {
-                agent = RCCController.navigator;
+                agent = carController.navigator;
                 //Debug.Log("Attempting to get navigator");
                 continue;
             }
 
 
-            float distance = Vector3.Distance(transform.position, RCCController.targetChase.position);
+            float distance = Vector3.Distance(transform.position, carController.targetChase.position);
         
-            if (agent.isOnNavMesh && distance < RCCController.detectorRadius)
+            if (agent.isOnNavMesh && distance < carController.detectorRadius)
             {
-                agent.SetDestination(RCCController.targetChase.position);
+                Vector3 newPos = carController.targetChase.position + GetRandomFuzz(navFuzz);
+                agent.SetDestination(newPos);
             }
         }
-        
-        
     }
 
-    private void SwitchTarget(string newTarget)
+    private void HealthChangeHandler(int amount)
     {
-        currentTargetTag = newTarget;
-        carController.targetTag = currentTargetTag;
+        if (amount >= 0) return;
+        float amountNormalized = (-amount) / (float)health.currentHealth;
+        float randomChance = Random.Range(0f, 1f);
+        Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
+        if (randomChance < chanceToChangeTarget)
+        {
+            TargetPlayer();
+        }
     }
 
+    private void TargetPlayer()
+    {
+        SwitchTarget(playerFollowPoint.transform);
+        StopCoroutine(TargetSwitchTimer());
+        StartCoroutine(TargetSwitchTimer());
+    }
+
+    private void TargetSemi()
+    {
+        SwitchTarget(SemiFollowPoint.transform);
+    }
+    
+    private void SwitchTarget(Transform newTarget)
+    {
+        carController.targetChase = newTarget;
+    }
+    
+    private IEnumerator TargetSwitchTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        TargetSemi();
+    }
+    
     private void FireWeapon(bool isFiring)
     {
         //Debug.Log("Pew!");
@@ -192,5 +226,16 @@ public class AIController : MonoBehaviour
     {
         carController.targetChase = newTarget;
         currentTarget = newTarget;
+    }
+
+    private Vector3 GetRandomFuzz(float fuzz)
+    {
+        float xFuzz = Mathf.PerlinNoise(0, Time.time);
+        //float yFuxx = Random.Range(0, navFuzz);
+        float zFuzz = Mathf.PerlinNoise(Time.time, 0);
+        Vector3 newFuzz = new Vector3(xFuzz, 0, zFuzz) * fuzz;
+        newFuzz -= Vector3.one * .5f;
+        newFuzz *= 2;
+        return newFuzz;
     }
 }

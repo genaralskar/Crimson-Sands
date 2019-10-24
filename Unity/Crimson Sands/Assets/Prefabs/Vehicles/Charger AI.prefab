@@ -118,7 +118,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 181043
   limitSpeed: 1
-  maximumSpeed: 180
+  maximumSpeed: 160
   smoothedSteer: 1
   lap: 0
   totalWaypointPassed: 0
@@ -156,7 +156,12 @@ MonoBehaviour:
   farDistance: 50
   minSpeed: 50
   minAngle: 20
-  RCCController: {fileID: 0}
+  navFuzz: 5
+  useStaticFuzz: 0
+  playerFollowPoint: {fileID: 11400000, guid: e4a5d6be825a435459ba5b73b2225b6b, type: 2}
+  SemiFollowPoint: {fileID: 11400000, guid: 3fc508dab1f5c684599c992071033ac8, type: 2}
+  chanceToChangeTarget: 0.1
+  chanceToSwerveOnHit: 0.2
   weapons: []
 --- !u!1 &7147129535813433718
 GameObject:
@@ -645,26 +650,6 @@ PrefabInstance:
       propertyPath: orgMaxSpeed
       value: 220
       objectReference: {fileID: 0}
-    - target: {fileID: 8023257568847195479, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: setupHandlersOnStart
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878610331577300688, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: isPlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653273529700565930, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: isPlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5246283030377722033, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Layer
@@ -675,14 +660,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195477, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195479, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: setupHandlersOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653273529700565930, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6658236437342165889, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 064a97690fb179d4fb30a87b67a2bdc9, type: 2}
-    - target: {fileID: 8023257568847195477, guid: ff362b3b7e292b545bd1c309b6729bb8,
+    - target: {fileID: 5878610331577300688, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
-      propertyPath: m_Interpolate
+      propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

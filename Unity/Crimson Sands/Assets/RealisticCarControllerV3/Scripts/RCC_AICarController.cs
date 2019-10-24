@@ -233,7 +233,8 @@ public class RCC_AICarController : MonoBehaviour {
 			// If our scene doesn't have a Waypoints Container, return with error.
 			float distance = Vector3.Distance(transform.position, targetChase.position);
 			//Debug.Log(distance);
-			if(!targetChase || distance > detectorRadius){
+			// || distance > detectorRadius
+			if(!targetChase){
 				
 				//Debug.LogError("Target Chase Couldn't Found!");
 				Stop();

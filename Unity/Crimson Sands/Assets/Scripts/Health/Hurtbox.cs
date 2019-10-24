@@ -101,7 +101,8 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
         //Debug.Log("Sending Damage!");
-        SendDamage(weapon.damage);
+        if(health.isPlayer != weapon.isPlayer)
+            SendDamage(weapon.damage);
     }
 
     public void SendDamage(int amount)

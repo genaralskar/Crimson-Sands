@@ -98,12 +98,12 @@ public class Weapon : MonoBehaviour
 //    Used for testing purposes
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !IsFiring && isPlayer)
+        if (Input.GetButtonDown("Fire1") && !IsFiring && isPlayer)
         {
             IsFiring = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && IsFiring & isPlayer)
+        if (Input.GetButtonUp("Fire1") && IsFiring & isPlayer)
         {
             IsFiring = false;
         }
