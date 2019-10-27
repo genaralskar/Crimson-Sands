@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CutoutTest
-  m_Shader: {fileID: 4800000, guid: b43c3b2ec8647e94cba768d783114d21, type: 3}
+  m_Name: SkullSmoke
+  m_Shader: {fileID: 4800000, guid: a90492b822e858c42bfb06de2e03e315, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -96,7 +96,7 @@ Material:
         m_Scale: {x: 0.3, y: 0.3}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 1403ffa56dbb037449d604b4c76d7f24, type: 3}
+        m_Texture: {fileID: 2800000, guid: b6078e47a97eff84c99943a80b195fb0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -106,11 +106,11 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0
-    - _CutoffRamp: 1.55
+    - _CutoffRamp: 1.21
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FadeStrength: 70.1
-    - _Float0: 72.2
+    - _Float0: 1.2
     - _Float1: 13
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -124,16 +124,16 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimOffset: 1
+    - _RimOffset: 0
     - _RimOffset1: 1
-    - _RimPower: 0.168
+    - _RimPower: 0.498
     - _RimPower1: 0
     - _ScaleAndOffset: 0
     - _ScaleandOffset: 0.736
     - _SmoothnessTextureChannel: 0
-    - _SpecCoverage: 1.041
+    - _SpecCoverage: 1.8
     - _SpecCoverage1: 0.284
-    - _SpecIntensity: 0.523
+    - _SpecIntensity: 0.046
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -144,9 +144,9 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimTint: {r: 0.764151, g: 0.60194916, b: 0.6114899, a: 0}
+    - _RimTint: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Speed: {r: 0.05, g: 0.05, b: 0, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
     - _Tint1: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0.01, g: 0.01, b: 0, a: 0}
