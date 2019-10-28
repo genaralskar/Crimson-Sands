@@ -96,7 +96,7 @@ Material:
         m_Scale: {x: 0.3, y: 0.3}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 1403ffa56dbb037449d604b4c76d7f24, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3010f7ad2fa61e3439b5260105434762, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -106,7 +106,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0
-    - _CutoffRamp: 1.55
+    - _CutoffRamp: 1.06
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FadeStrength: 70.1
@@ -144,9 +144,9 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimTint: {r: 0.764151, g: 0.60194916, b: 0.6114899, a: 0}
+    - _RimTint: {r: 0.9245283, g: 0.8678355, b: 0.871885, a: 1}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Speed: {r: 0.05, g: 0.05, b: 0, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _Tint1: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0.01, g: 0.01, b: 0, a: 0}
