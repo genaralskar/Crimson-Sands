@@ -18,6 +18,7 @@ public abstract class Health : MonoBehaviour
     public int currentHealth = 100;
 
     public bool invincible = false;
+    public bool isPlayer = false;
 
     public List<Hurtbox> Hurtboxes
     {
@@ -37,6 +38,7 @@ public abstract class Health : MonoBehaviour
         
         OnDamage(amount);
         currentHealth += amount;
+        HealthChange?.Invoke(amount);
 
         HealthCheck();
     }

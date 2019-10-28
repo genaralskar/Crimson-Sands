@@ -24,7 +24,7 @@ public class ProjectileImpactAudio : MonoBehaviour, IWeaponHit
             StartCoroutine(MoveThis());
     }
 
-    public void OnWeaponHit(int damage, Vector3 hitPoint)
+    public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
         source = sourcePool.GetPooledObject();
         manager = source.GetComponent<AudioManager>();

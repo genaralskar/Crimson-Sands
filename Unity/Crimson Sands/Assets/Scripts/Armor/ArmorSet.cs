@@ -125,7 +125,7 @@ public class ArmorSet : MonoBehaviour
         //line up armor
         //set proper position based on offset
         Vector3 newPos = vehicle.transform.TransformPoint(armor.positionOffset);
-        Debug.Log(armor.gameObject + " " + this);
+        //Debug.Log(armor.gameObject + " " + this);
         armor.transform.position = newPos;
         
         //set proper rotation based on offset

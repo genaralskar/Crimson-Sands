@@ -98,12 +98,12 @@ public class Weapon : MonoBehaviour
 //    Used for testing purposes
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !IsFiring && isPlayer)
+        if (Input.GetButtonDown("Fire1") && !IsFiring && isPlayer)
         {
             IsFiring = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && IsFiring & isPlayer)
+        if (Input.GetButtonUp("Fire1") && IsFiring & isPlayer)
         {
             IsFiring = false;
         }
@@ -230,7 +230,7 @@ public class Weapon : MonoBehaviour
                 //if enemy, hit only player
                 foreach (var weaponHit in weaponHits)
                 {
-                    weaponHit.OnWeaponHit(damage, hit.point);
+                    weaponHit.OnWeaponHit(this, hit.point);
                 }
                 
             }
@@ -285,7 +285,7 @@ public class Weapon : MonoBehaviour
             {
                 //if player, hit only enemy
                 //if enemy, hit only player
-                weaponHit.OnWeaponHit(damage, hit.point);
+                weaponHit.OnWeaponHit(this, hit.point);
             }
             
             //player hit enemy hurtbox or enemy hit player hurtbox
