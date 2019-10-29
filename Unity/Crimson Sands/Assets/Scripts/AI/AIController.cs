@@ -105,6 +105,8 @@ public class AIController : MonoBehaviour
 
     private void SetVehicleSpeed()
     {
+        if (!carController.targetChase) return;
+        
         currentTarget = carController.targetChase;
 
         float angleDot = Vector3.Dot(transform.forward, currentTarget.forward);

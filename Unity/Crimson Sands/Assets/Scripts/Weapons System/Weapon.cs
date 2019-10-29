@@ -63,8 +63,13 @@ public class Weapon : MonoBehaviour
     
     private bool isFiring;
 
+    private bool useLineRenderer = false;
     private LineRenderer lineRend;
     private LineRendererFadeOverTime lineRendFade;
+    
+    
+    //to get velocity for projectiles
+    private Rigidbody rb;
 
     //Turning this on or off starts/stops firing
     public bool IsFiring
@@ -88,11 +93,14 @@ public class Weapon : MonoBehaviour
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
         
         muzzleFlash.SetActive(false);
+
+        rb = GetComponentInParent<Rigidbody>();
     }
 
     private void Start()
     {
-        SetupLineRenderer();
+        if(useLineRenderer)
+            SetupLineRenderer();
     }
 
 //    Used for testing purposes
@@ -165,32 +173,19 @@ public class Weapon : MonoBehaviour
     private void FireProjectile()
     {
         GameObject newProj = projectile.GetPooledObject(firePoint.transform.position, firePoint.transform.rotation);
-        Projectile proj = newProj.GetComponent<Projectile>();
+        //Projectile proj = newProj.GetComponent<Projectile>();
+        ProjectileGrenade proj = newProj.GetComponent<ProjectileGrenade>();
         if (proj == null)
         {
             Debug.LogError("Object " + newProj + " does not have a projectile componenet. If you want to use this object " +
                            "as a projectile, you need to add the Projectile component");
             return;
         }
-            
-        
-        //set team
-        proj.player = isPlayer;
-        
-        //set the proper layer for the projectile
-        if (isPlayer)
-        {
-            proj.SetLayer(playerHitboxLayer);
-        }
-        else
-        {
-            proj.SetLayer(enemyHitboxLayer);
-        }
-        
+
         //set damage
         proj.damage = damage;
-        
-        //set projectile velocity
+        proj.weapon = this;
+        proj.Fire(rb.velocity, isPlayer);
     }
 
     private void FireRaycast()

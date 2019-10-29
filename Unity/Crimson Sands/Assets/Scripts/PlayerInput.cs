@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour
         float handBreak = Input.GetAxis(handBreakInput);
         float boost = Input.GetAxis(boostInput);
         
-        Debug.Log($"Gas: {gas}, Steer: {steer}, Hand Break: {handBreak}, Boost: {boost}");
+        //Debug.Log($"Gas: {gas}, Steer: {steer}, Hand Break: {handBreak}, Boost: {boost}");
 
         if (gas > 0)
         {

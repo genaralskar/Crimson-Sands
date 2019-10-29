@@ -21,6 +21,8 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
              " to somewhere else in the hiearchy, but just the collider not the whole game object, so this finds it again")]
     public bool moveHurtboxToCollider = false;
 
+    public bool isPlayer = false;
+
     private void OnEnable()
     {
         //health.AddHurtbox(this);
@@ -33,6 +35,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     private void Start()
     {
+        isPlayer = health.isPlayer;
         if (moveHurtboxToCollider)
         {
             StartCoroutine(MoveHurtBox());
@@ -74,7 +77,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         }
         
         //disable projectile that hit this
-        otherHit.projectile.gameObject.SetActive(false);
+        //otherHit.projectile.gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -100,7 +103,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
-        //Debug.Log("Sending Damage!");
+        Debug.Log("Sending Damage!");
         if(health.isPlayer != weapon.isPlayer)
             SendDamage(weapon.damage);
     }

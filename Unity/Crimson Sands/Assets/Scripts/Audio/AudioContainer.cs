@@ -30,6 +30,8 @@ public class AudioContainer : ScriptableObject
     
     public void PlayAudioClip(AudioSource source)
     {
+        if (clips.Count == 0) return;
+        
         source.clip = RandomClip();
         source.pitch = RandomPitch();
         source.volume = volume;
