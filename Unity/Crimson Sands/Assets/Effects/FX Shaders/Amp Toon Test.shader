@@ -247,7 +247,7 @@ Shader "Amp Smoke Toon"
 }
 /*ASEBEGIN
 Version=17101
-0;585;1100;536;1409.554;-2555.535;1.3;True;False
+141;251;1906;1011;1668.254;-2418.685;1.3;True;False
 Node;AmplifyShaderEditor.SamplerNode;20;-1000.742,609.8088;Inherit;True;Property;_Normal;Normal;7;0;Create;True;0;0;False;0;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.CommentaryNode;10;-1090.413,-299.6574;Inherit;False;1063.142;404.1316;Normal.LightDir;5;8;2;1;3;22;Normal Light Direction;1,1,1,1;0;0
 Node;AmplifyShaderEditor.CommentaryNode;11;-1090.446,141.2234;Inherit;False;1064.234;402.6019;Normal.ViewDir;5;6;5;9;7;23;Normal View Direction;1,1,1,1;0;0
@@ -350,10 +350,10 @@ Node;AmplifyShaderEditor.StandardSurfaceOutputNode;99;2411.264,1157.546;Float;Fa
 WireConnection;21;0;20;0
 WireConnection;1;0;22;0
 WireConnection;5;0;23;0
-WireConnection;2;0;1;0
-WireConnection;2;1;3;0
 WireConnection;7;0;5;0
 WireConnection;7;1;6;0
+WireConnection;2;0;1;0
+WireConnection;2;1;3;0
 WireConnection;9;0;7;0
 WireConnection;27;0;26;0
 WireConnection;27;1;24;0
@@ -368,6 +368,8 @@ WireConnection;43;0;42;0
 WireConnection;43;1;44;0
 WireConnection;63;0;62;0
 WireConnection;63;1;64;1
+WireConnection;45;0;43;0
+WireConnection;13;1;16;0
 WireConnection;65;0;66;0
 WireConnection;45;0;43;0
 WireConnection;13;1;16;0
@@ -416,6 +418,10 @@ WireConnection;136;0;134;0
 WireConnection;136;1;135;0
 WireConnection;126;0;124;0
 WireConnection;126;1;125;0
+WireConnection;49;0;53;0
+WireConnection;35;0;41;0
+WireConnection;76;0;74;0
+WireConnection;76;1;77;0
 WireConnection;78;0;76;0
 WireConnection;130;0;126;1
 WireConnection;130;1;136;0
