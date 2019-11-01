@@ -137,6 +137,7 @@ MonoBehaviour:
   health: {fileID: 5683596045391237196}
   enableCollision: 0
   moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &247071096372738896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,7 +1286,7 @@ GameObject:
   - component: {fileID: 5683596045391237196}
   m_Layer: 14
   m_Name: Semi
-  m_TagString: Player
+  m_TagString: Semi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1755,6 +1756,7 @@ MonoBehaviour:
   currentHealth: 500
   invincible: 0
   isPlayer: 0
+  playerTeam: 0
   deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
   resetHealthOnEnable: 1
 --- !u!1 &2185716373763427598
@@ -2289,7 +2291,7 @@ GameObject:
   - component: {fileID: 2185716374557129529}
   m_Layer: 14
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Semi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3727,6 +3729,7 @@ MonoBehaviour:
   health: {fileID: 5683596045391237196}
   enableCollision: 0
   moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &6408029800457944328
 GameObject:
   m_ObjectHideFlags: 0

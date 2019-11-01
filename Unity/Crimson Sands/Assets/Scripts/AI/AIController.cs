@@ -185,7 +185,7 @@ public class AIController : MonoBehaviour
         if (amount >= 0) return;
         float amountNormalized = (-amount) / (float)health.currentHealth;
         float randomChance = Random.Range(0f, 1f);
-        Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
+        //Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
         if (randomChance < chanceToChangeTarget)
         {
             TargetPlayer();

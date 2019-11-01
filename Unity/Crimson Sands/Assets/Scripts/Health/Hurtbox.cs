@@ -71,6 +71,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         //get direction to rotate the sparks in (hopefully)
         Vector3 triggerNormalDirection = other.transform.position - transform.position;
 
+        if (!otherHit.projectile) return;
         if (otherHit.projectile.hitSparks != null)
         {
             GameObject hitSparks = otherHit.projectile.hitSparks.GetPooledObject(other.transform.position, Quaternion.Euler(triggerNormalDirection));
@@ -103,7 +104,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
-        Debug.Log("Sending Damage!");
+        Debug.Log("Sending Damage!", this);
         if(health.isPlayer != weapon.isPlayer)
             SendDamage(weapon.damage);
     }

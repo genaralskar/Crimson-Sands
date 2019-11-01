@@ -214,6 +214,7 @@ public class Weapon : MonoBehaviour
 
         if (Physics.SphereCast(firePoint.position, .1f, direction, out hit, Mathf.Infinity, weaponRayCastMask))
         {
+            Debug.Log(hit.collider.gameObject);
             int hitLayer = hit.collider.gameObject.layer;
             //Debug.Log(hitLayer);
             //Debug.Log(hit.collider.gameObject);
@@ -229,13 +230,6 @@ public class Weapon : MonoBehaviour
                 }
                 
             }
-            
-            //player hit enemy hurtbox or enemy hit player hurtbox
-//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-//            {
-//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-//                hurtbox.SendDamage(damage);
-//            }
             
             //spawn hitsparks
             Vector3 inDir = firePoint.position - hit.point;
@@ -266,67 +260,6 @@ public class Weapon : MonoBehaviour
             }
             
             //play audio on impact point
-        }
-
-        return;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, weaponRayCastMask))
-        {
-            int hitLayer = hit.collider.gameObject.layer;
-            Debug.Log(hitLayer);
-            Debug.Log(hit.collider.gameObject);
-
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
-            if (weaponHit != null)
-            {
-                //if player, hit only enemy
-                //if enemy, hit only player
-                weaponHit.OnWeaponHit(this, hit.point);
-            }
-            
-            //player hit enemy hurtbox or enemy hit player hurtbox
-//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-//            {
-//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-//                hurtbox.SendDamage(damage);
-//            }
-            
-            //spawn hitsparks
-            //Debug.Log(hit.point);
-            Vector3 inDir = firePoint.position - hit.point;
-            
-            Vector3 dir = Vector3.Reflect(inDir, hit.normal);
-            dir *= -1;
-//            Debug.DrawRay(hit.point, inDir, Color.red, 1f);
-//            Debug.DrawRay(hit.point, hit.normal, Color.green, 1f);
-//            Debug.DrawRay(hit.point, dir, Color.blue, 1f);
-            Quaternion newRot = Quaternion.LookRotation(dir);
-            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
-
-            //==========================================================
-            if (lineRend)
-            {
-                Vector3[] linePos = new[] {firePoint.position, hit.point};
-                lineRend.SetPositions(linePos);
-                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
-                
-                lineRendFade.StartFade();
-                
-            }
-            //============================================================            
-
-//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
-//            {
-//                Debug.Log("its close!");
-//            }
-            
-            if (hit.collider.transform.root == transform.root)
-            {
-                Debug.LogError("Weapon is hitting its own colliders! WTF!");
-            }
-            
-            //play audio on impact point
-
-
         }
     }
 

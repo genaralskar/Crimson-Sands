@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8456338025768406398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,7 +53,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8456338025768406277
 MeshRenderer:
@@ -111,3 +111,28 @@ MonoBehaviour:
   disableTime: 0.1
   explosionPool: {fileID: 11400000, guid: e9368d2d0d75dea4798af361f0f33ffa, type: 2}
   explosiveForce: 60000
+  damageFalloff: 1
+  falloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 4.656613e-10
+      value: 1
+      inSlope: -0.84483284
+      outSlope: -0.84483284
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99871826
+      value: 0.15625
+      inSlope: -0.84483284
+      outSlope: -0.84483284
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6644db4e4e454784ab1126af20b3fbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 34
   firePoint: {fileID: 499286312096166489}
   useRaycast: 0
   raycastProjectileLayerMask:
@@ -120,13 +120,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499286312096166488}
-  m_LocalRotation: {x: -0.086572394, y: -0, z: -0, w: 0.9962456}
-  m_LocalPosition: {x: 0, y: 0.138, z: 0.597}
+  m_LocalRotation: {x: -0.01745245, y: 0, z: 0, w: 0.99984777}
+  m_LocalPosition: {x: 0, y: 0.14, z: 0.621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499286311504927843}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -9.933001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2, y: 0, z: 0}
 --- !u!1 &1712178479581209168
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,11 +293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3291385026168448355}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
-        type: 3}
-      propertyPath: m_Name
-      value: GatlingFlashV3
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -383,6 +378,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5771
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f6ffb8325dca4984599775bdca5c2bbd,
+        type: 3}
+      propertyPath: m_Name
+      value: GatlingFlashV3
+      objectReference: {fileID: 0}
     - target: {fileID: -8205571362833684013, guid: f6ffb8325dca4984599775bdca5c2bbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -408,6 +408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Revolver_Launcher_Rough_Animation_EX
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 388c4537cc1a8ed448c0c445172259d0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ef28ec812088a644b5f31953be5105e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 388c4537cc1a8ed448c0c445172259d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,21 +468,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 388c4537cc1a8ed448c0c445172259d0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0ef28ec812088a644b5f31953be5105e, type: 2}
-    - target: {fileID: 7862842260627525700, guid: 388c4537cc1a8ed448c0c445172259d0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: be6b08072d87f4d4ba0b98bc64a5b81f, type: 2}
     - target: {fileID: -637024904092250941, guid: 388c4537cc1a8ed448c0c445172259d0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dcbd0afc074508d44935b71b03a51ea9, type: 2}
+    - target: {fileID: 7862842260627525700, guid: 388c4537cc1a8ed448c0c445172259d0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be6b08072d87f4d4ba0b98bc64a5b81f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388c4537cc1a8ed448c0c445172259d0, type: 3}
 --- !u!4 &7415003461266878873 stripped

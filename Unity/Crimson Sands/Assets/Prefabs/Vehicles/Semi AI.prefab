@@ -64,11 +64,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2185716373712516749, guid: f589c5974db587641a0388a79ca48e0e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 2185716373712516745, guid: f589c5974db587641a0388a79ca48e0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1675,11 +1670,6 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2185716373763427598, guid: f589c5974db587641a0388a79ca48e0e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Semi
-      objectReference: {fileID: 0}
-    - target: {fileID: 2185716374557129535, guid: f589c5974db587641a0388a79ca48e0e,
         type: 3}
       propertyPath: m_TagString
       value: Semi

@@ -22,13 +22,12 @@ public class ArmorSet : MonoBehaviour
 
     private bool armorSetup = false;
 
-    private void Awake()
-    {
-        vehicleRb = vehicle.GetComponent<Rigidbody>();
-    }
+    public List<GameObject> attachedPieces;
 
     private void Start()
     {
+        vehicleRb = vehicle.GetComponent<Rigidbody>();
+        
         if (autoCreateArmorInChildren)
         {
             
@@ -48,9 +47,9 @@ public class ArmorSet : MonoBehaviour
             SetupArmor();
     }
 
-    public void SetupArmor()
+    private void SetupArmor()
     {
-        Debug.Log("Running armor setup");
+        //Debug.Log("Running armor setup");
         Vector3 offsetP = Vector3.zero;
         Quaternion offsetR = Quaternion.identity;
         if (snapPoint != null)
@@ -61,6 +60,8 @@ public class ArmorSet : MonoBehaviour
         transform.position = vehicle.transform.position + offsetP + armorOffset;
         transform.rotation = vehicle.transform.rotation * offsetR;
 
+        SetupOther();
+        
         SetupOffsets();
         
         SetupJoints();
@@ -68,7 +69,7 @@ public class ArmorSet : MonoBehaviour
         vehicle.currentArmor = this;
 
         armorSetup = true;
-        Debug.Log("armor setup");
+        //Debug.Log("armor setup");
     }
 
     private void SetupOffsets()
@@ -81,6 +82,7 @@ public class ArmorSet : MonoBehaviour
 
             armor.positionOffset = positionOffset;
             armor.rotationOffset = rotationOffset;
+            
         }
     }
 
@@ -90,6 +92,15 @@ public class ArmorSet : MonoBehaviour
         {
             armor.vehicleRb = vehicleRb;
             armor.joint.connectedBody = vehicleRb;
+        }
+    }
+    
+    private void SetupOther()
+    {
+        foreach (var armor in armorParts)
+        {
+            armor.armorSet = this;
+            armor.isPlayer = vehicle.isPlayer;
         }
     }
 
@@ -118,7 +129,7 @@ public class ArmorSet : MonoBehaviour
 
     public void AttachArmor(ArmorHealth armor)
     {
-        Debug.Log("Reatching Armor");
+        //Debug.Log("Reatching Armor");
         if (armor.joint != null) Debug.Log("no joint?");
         if (armor.joint != null) return;
         
@@ -150,5 +161,9 @@ public class ArmorSet : MonoBehaviour
         
         //reset health
         armor.ResetHealth();
+        
+        //Debug.Log("armors armor set set");
+
+        attachedPieces.Add(armor.gameObject);
     }
 }

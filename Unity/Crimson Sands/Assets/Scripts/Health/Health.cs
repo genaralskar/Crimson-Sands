@@ -32,7 +32,7 @@ public abstract class Health : MonoBehaviour
         get { return (float)currentHealth / (float)maxHealth; }
     }
 
-    public void ModifyHealth(int amount)
+    public virtual void ModifyHealth(int amount)
     {
         if (invincible) return;
         
@@ -53,7 +53,7 @@ public abstract class Health : MonoBehaviour
         HealthCheck();
     }
 
-    private void HealthCheck()
+    protected void HealthCheck()
     {
         if (currentHealth > maxHealth)
         {
