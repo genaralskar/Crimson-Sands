@@ -1,14 +1,82 @@
 fileFormatVersion: 2
 guid: 6c02390e509d6a348b75923ddd5fddb9
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: 5923233073000817357
-    second: 'Mount_Deploy '
-  - first:
-      74: 4385097422940436515
-    second: Mount_Retract
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Base_Box_Grp
+    100002: Box_Base_Crtl
+    100004: Box_Base_Jnt
+    100006: Crtl_Grp
+    100008: Gun_Mount_and_Base_Box_Grp
+    100010: Gun_Mount_Geo_Grp
+    100012: Gun_Mount_Swivel
+    100014: Left_Door
+    100016: Left_Door_Crtl
+    100018: Left_Door_Jnt
+    100020: Mount_Base_Elevation
+    100022: Mount_Base_Elevation_Crtl
+    100024: Mount_Base_Elevation_Jnt
+    100026: Mount_Box
+    100028: Mount_Cradle_Crtl
+    100030: Mount_Cradle_Jnt
+    100032: Mount_Grp
+    100034: Mount_Swivel_Crtl
+    100036: Mount_Swivel_Jnt
+    100038: pPlane1
+    100040: Right_Door
+    100042: Right_Door_Crtl
+    100044: Right_Door_Jnt
+    100046: Skeleton_Grp
+    100048: Transform_Crtl
+    100050: //RootNode
+    400000: Base_Box_Grp
+    400002: Box_Base_Crtl
+    400004: Box_Base_Jnt
+    400006: Crtl_Grp
+    400008: Gun_Mount_and_Base_Box_Grp
+    400010: Gun_Mount_Geo_Grp
+    400012: Gun_Mount_Swivel
+    400014: Left_Door
+    400016: Left_Door_Crtl
+    400018: Left_Door_Jnt
+    400020: Mount_Base_Elevation
+    400022: Mount_Base_Elevation_Crtl
+    400024: Mount_Base_Elevation_Jnt
+    400026: Mount_Box
+    400028: Mount_Cradle_Crtl
+    400030: Mount_Cradle_Jnt
+    400032: Mount_Grp
+    400034: Mount_Swivel_Crtl
+    400036: Mount_Swivel_Jnt
+    400038: pPlane1
+    400040: Right_Door
+    400042: Right_Door_Crtl
+    400044: Right_Door_Jnt
+    400046: Skeleton_Grp
+    400048: Transform_Crtl
+    400050: //RootNode
+    2100000: lambert1
+    2300000: Gun_Mount_Swivel
+    2300002: Left_Door
+    2300004: Mount_Base_Elevation
+    2300006: Mount_Box
+    2300008: pPlane1
+    2300010: Right_Door
+    3300000: Gun_Mount_Swivel
+    3300002: Left_Door
+    3300004: Mount_Base_Elevation
+    3300006: Mount_Box
+    3300008: pPlane1
+    3300010: Right_Door
+    4300000: Gun_Mount_Swivel
+    4300002: Mount_Base_Elevation
+    4300004: Left_Door
+    4300006: Right_Door
+    4300008: Mount_Box
+    4300010: pPlane1
+    7400000: 'Mount_Deploy '
+    7400002: Mount_Retract
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +108,6 @@ ModelImporter:
     - serializedVersion: 16
       name: 'Mount_Deploy '
       takeName: 'Mount_Deploy '
-      internalID: 5923233073000817357
       firstFrame: 4
       lastFrame: 26
       wrapMode: 0
@@ -69,7 +136,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Mount_Retract
       takeName: Mount_Retract
-      internalID: 4385097422940436515
       firstFrame: 41
       lastFrame: 74
       wrapMode: 0
@@ -109,19 +175,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 0.1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -130,11 +195,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -144,7 +208,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

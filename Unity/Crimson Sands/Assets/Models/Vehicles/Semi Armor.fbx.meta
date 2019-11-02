@@ -1,8 +1,61 @@
 fileFormatVersion: 2
 guid: b7c7f0a3571c13b41834f645a5522634
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: pCube17
+    100002: pCylinder13
+    100004: pCylinder14
+    100006: polySurface284
+    100008: polySurface563
+    100010: polySurface573
+    100012: polySurface575
+    100014: polySurface577
+    100016: polySurface578
+    100018: polySurface580
+    100020: polySurface582
+    100022: //RootNode
+    400000: pCube17
+    400002: pCylinder13
+    400004: pCylinder14
+    400006: polySurface284
+    400008: polySurface563
+    400010: polySurface573
+    400012: polySurface575
+    400014: polySurface577
+    400016: polySurface578
+    400018: polySurface580
+    400020: polySurface582
+    400022: //RootNode
+    2100000: lambert1
+    2100002: pasted__Frame_Metal
+    2100004: pasted__GunMetal
+    2100006: pasted__Gunmetal
+    2300000: pCube17
+    2300002: pCylinder13
+    2300004: pCylinder14
+    2300006: polySurface284
+    2300008: polySurface563
+    2300010: polySurface573
+    2300012: polySurface580
+    2300014: polySurface582
+    3300000: pCube17
+    3300002: pCylinder13
+    3300004: pCylinder14
+    3300006: polySurface284
+    3300008: polySurface563
+    3300010: polySurface573
+    3300012: polySurface580
+    3300014: polySurface582
+    4300000: pCylinder14
+    4300002: polySurface563
+    4300004: polySurface573
+    4300006: polySurface580
+    4300008: pCube17
+    4300010: polySurface284
+    4300012: polySurface582
+    4300014: pCylinder13
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +98,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +118,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +131,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

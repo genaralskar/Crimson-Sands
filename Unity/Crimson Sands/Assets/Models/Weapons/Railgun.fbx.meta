@@ -1,26 +1,84 @@
 fileFormatVersion: 2
 guid: 34e125c16812f4c4c88922a190175464
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: 3742668007323255584
-    second: Railgun Static Pose
-  - first:
-      74: 3860248392507609291
-    second: Railgun Deploy
-  - first:
-      74: -4945632280227259004
-    second: Railgun Idle
-  - first:
-      74: 7957556468353840759
-    second: Railgun Charge
-  - first:
-      74: 9093674643158628722
-    second: Railgun Firing
-  - first:
-      74: -2389532832449291374
-    second: Railgun Retract
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Accelerator_Spools
+    100002: Botom_Shroud
+    100004: Bottom_Rail
+    100006: Bottom_Shroud_and_Rail_Grp
+    100008: Box
+    100010: Capacitor_Bars
+    100012: Capacitor_Body_Grp
+    100014: Capacitor_Main_Body
+    100016: Capacitor_Ring
+    100018: Main_Body_Grp
+    100020: Projectile_Apeture
+    100022: //RootNode
+    100024: Roll_Cage
+    100026: Top_Rail
+    100028: Top_Shroud
+    100030: Top_Shroud_and_Rail_Grp
+    400000: Accelerator_Spools
+    400002: Botom_Shroud
+    400004: Bottom_Rail
+    400006: Bottom_Shroud_and_Rail_Grp
+    400008: Box
+    400010: Capacitor_Bars
+    400012: Capacitor_Body_Grp
+    400014: Capacitor_Main_Body
+    400016: Capacitor_Ring
+    400018: Main_Body_Grp
+    400020: Projectile_Apeture
+    400022: //RootNode
+    400024: Roll_Cage
+    400026: Top_Rail
+    400028: Top_Shroud
+    400030: Top_Shroud_and_Rail_Grp
+    2100000: lambert1
+    2100002: lambert2
+    2100004: lambert3
+    2100006: lambert4
+    2300000: Accelerator_Spools
+    2300002: Botom_Shroud
+    2300004: Bottom_Rail
+    2300006: Box
+    2300008: Capacitor_Bars
+    2300010: Capacitor_Main_Body
+    2300012: Capacitor_Ring
+    2300014: Projectile_Apeture
+    2300016: Roll_Cage
+    2300018: Top_Rail
+    2300020: Top_Shroud
+    3300000: Accelerator_Spools
+    3300002: Botom_Shroud
+    3300004: Bottom_Rail
+    3300006: Box
+    3300008: Capacitor_Bars
+    3300010: Capacitor_Main_Body
+    3300012: Capacitor_Ring
+    3300014: Projectile_Apeture
+    3300016: Roll_Cage
+    3300018: Top_Rail
+    3300020: Top_Shroud
+    4300000: Capacitor_Main_Body
+    4300002: Capacitor_Ring
+    4300004: Capacitor_Bars
+    4300006: Roll_Cage
+    4300008: Accelerator_Spools
+    4300010: Box
+    4300012: Projectile_Apeture
+    4300014: Top_Shroud
+    4300016: Top_Rail
+    4300018: Botom_Shroud
+    4300020: Bottom_Rail
+    7400000: Railgun Static Pose
+    7400002: Railgun Deploy
+    7400004: Railgun Idle
+    7400006: Railgun Charge
+    7400008: Railgun Fire
+    7400010: Railgun Retract
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -52,7 +110,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Static Pose
       takeName: Railgun Static Pose
-      internalID: 3742668007323255584
       firstFrame: 1
       lastFrame: 3
       wrapMode: 0
@@ -81,7 +138,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Deploy
       takeName: Railgun Deploy
-      internalID: 3860248392507609291
       firstFrame: 4
       lastFrame: 35
       wrapMode: 0
@@ -110,7 +166,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Idle
       takeName: Railgun Idle
-      internalID: -4945632280227259004
       firstFrame: 37
       lastFrame: 49
       wrapMode: 0
@@ -139,7 +194,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Charge
       takeName: Railgun Charge
-      internalID: 7957556468353840759
       firstFrame: 51
       lastFrame: 75
       wrapMode: 0
@@ -168,7 +222,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Fire
       takeName: Railgun Fire
-      internalID: 9093674643158628722
       firstFrame: 78
       lastFrame: 85
       wrapMode: 0
@@ -204,7 +257,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Railgun Retract
       takeName: Railgun Retract
-      internalID: -2389532832449291374
       firstFrame: 95
       lastFrame: 126
       wrapMode: 0
@@ -244,19 +296,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 0.1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -265,11 +316,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -279,7 +329,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

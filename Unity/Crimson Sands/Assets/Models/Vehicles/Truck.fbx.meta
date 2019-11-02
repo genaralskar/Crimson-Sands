@@ -1,8 +1,152 @@
 fileFormatVersion: 2
 guid: 7f200c85f8fdcd24482ba14c284df888
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armor
+    100002: Armor_Panel_01_Geo
+    100004: Armor_Panel_02_Geo
+    100006: Armor_Panel_03_Geo
+    100008: Armor_Panel_04_Geo
+    100010: Armor_Panel_05_Geo
+    100012: Armor_Panel_06_Geo
+    100014: Armor_Panel_07_Geo
+    100016: Armor_Panel_08_Geo
+    100018: Armor_Panel_09_Geo
+    100020: Armor_Panel_10_Geo
+    100022: polySurface39
+    100024: polySurface40
+    100026: Roll_Cage
+    100028: Roll_Cage 1
+    100030: Spike_01_Geo
+    100032: Spike_02_Geo
+    100034: Spike_03_Geo
+    100036: Spike_04_Geo
+    100038: Spike_05_Geo
+    100040: Spike_06_Geo
+    100042: Spike_07_Geo
+    100044: Spike_08_Geo
+    100046: Spike_09_Geo
+    100048: Spike_10_Geo
+    100050: Spike_11_Geo
+    100052: Spike_12_Geo
+    100054: Spikes
+    100056: //RootNode
+    400000: Armor
+    400002: Armor_Panel_01_Geo
+    400004: Armor_Panel_02_Geo
+    400006: Armor_Panel_03_Geo
+    400008: Armor_Panel_04_Geo
+    400010: Armor_Panel_05_Geo
+    400012: Armor_Panel_06_Geo
+    400014: Armor_Panel_07_Geo
+    400016: Armor_Panel_08_Geo
+    400018: Armor_Panel_09_Geo
+    400020: Armor_Panel_10_Geo
+    400022: polySurface39
+    400024: polySurface40
+    400026: Roll_Cage
+    400028: Roll_Cage 1
+    400030: Spike_01_Geo
+    400032: Spike_02_Geo
+    400034: Spike_03_Geo
+    400036: Spike_04_Geo
+    400038: Spike_05_Geo
+    400040: Spike_06_Geo
+    400042: Spike_07_Geo
+    400044: Spike_08_Geo
+    400046: Spike_09_Geo
+    400048: Spike_10_Geo
+    400050: Spike_11_Geo
+    400052: Spike_12_Geo
+    400054: Spikes
+    400056: //RootNode
+    2100000: pasted__Chrome1
+    2100002: pasted__Black1
+    2100004: pasted__Blue1
+    2100006: pasted__Window
+    2100008: pasted__Tire_Rubber1
+    2100010: pasted__Frame_Metal
+    2100012: Armor_Textures
+    2300000: Armor_Panel_01_Geo
+    2300002: Armor_Panel_02_Geo
+    2300004: Armor_Panel_03_Geo
+    2300006: Armor_Panel_04_Geo
+    2300008: Armor_Panel_05_Geo
+    2300010: Armor_Panel_06_Geo
+    2300012: Armor_Panel_07_Geo
+    2300014: Armor_Panel_08_Geo
+    2300016: Armor_Panel_09_Geo
+    2300018: Armor_Panel_10_Geo
+    2300020: polySurface39
+    2300022: polySurface40
+    2300024: Roll_Cage 1
+    2300026: Spike_01_Geo
+    2300028: Spike_02_Geo
+    2300030: Spike_03_Geo
+    2300032: Spike_04_Geo
+    2300034: Spike_05_Geo
+    2300036: Spike_06_Geo
+    2300038: Spike_07_Geo
+    2300040: Spike_08_Geo
+    2300042: Spike_09_Geo
+    2300044: Spike_10_Geo
+    2300046: Spike_11_Geo
+    2300048: Spike_12_Geo
+    2300050: //RootNode
+    3300000: Armor_Panel_01_Geo
+    3300002: Armor_Panel_02_Geo
+    3300004: Armor_Panel_03_Geo
+    3300006: Armor_Panel_04_Geo
+    3300008: Armor_Panel_05_Geo
+    3300010: Armor_Panel_06_Geo
+    3300012: Armor_Panel_07_Geo
+    3300014: Armor_Panel_08_Geo
+    3300016: Armor_Panel_09_Geo
+    3300018: Armor_Panel_10_Geo
+    3300020: polySurface39
+    3300022: polySurface40
+    3300024: Roll_Cage 1
+    3300026: Spike_01_Geo
+    3300028: Spike_02_Geo
+    3300030: Spike_03_Geo
+    3300032: Spike_04_Geo
+    3300034: Spike_05_Geo
+    3300036: Spike_06_Geo
+    3300038: Spike_07_Geo
+    3300040: Spike_08_Geo
+    3300042: Spike_09_Geo
+    3300044: Spike_10_Geo
+    3300046: Spike_11_Geo
+    3300048: Spike_12_Geo
+    3300050: //RootNode
+    4300000: Truck
+    4300002: Roll_Cage
+    4300004: Armor_Panel_01_Geo
+    4300006: Armor_Panel_10_Geo
+    4300008: Armor_Panel_09_Geo
+    4300010: Armor_Panel_08_Geo
+    4300012: Armor_Panel_07_Geo
+    4300014: Armor_Panel_06_Geo
+    4300016: Armor_Panel_05_Geo
+    4300018: Armor_Panel_04_Geo
+    4300020: Armor_Panel_03_Geo
+    4300022: Armor_Panel_02_Geo
+    4300024: polySurface39
+    4300026: Spike_10_Geo
+    4300028: Spike_09_Geo
+    4300030: polySurface40
+    4300032: Spike_12_Geo
+    4300034: Spike_11_Geo
+    4300036: Spike_08_Geo
+    4300038: Spike_01_Geo
+    4300040: Spike_02_Geo
+    4300042: Spike_03_Geo
+    4300044: Spike_04_Geo
+    4300046: Spike_05_Geo
+    4300048: Spike_06_Geo
+    4300050: Spike_07_Geo
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +189,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +209,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +222,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

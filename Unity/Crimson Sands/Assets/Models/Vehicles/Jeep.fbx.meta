@@ -1,8 +1,130 @@
 fileFormatVersion: 2
 guid: 21d534bbb31ac7d4ba89087f7b961230
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armor_Panel_1_Geo
+    100002: Armor_Panel_2_Geo
+    100004: Armor_Panel_3_Geo
+    100006: Armor_Panel_4_Geo
+    100008: Armor_Panel_5_Geo
+    100010: Armor_Panel_6_Geo
+    100012: Back_Panel
+    100014: Grill
+    100016: //RootNode
+    100018: Jeep_Armor
+    100020: pCube12
+    100022: pCube13
+    100024: polySurface422
+    100026: polySurface424
+    100028: polySurface426
+    100030: polySurface428
+    100032: Spikes_1_Geo
+    100034: Spikes_2_Geo
+    100036: Spikes_3_Geo
+    100038: Spikes_4_Geo
+    100040: Wheel_1_Geo
+    100042: Wheel_2_Geo
+    100044: Wheel_3_Geo
+    100046: Wheel_4_Geo
+    100048: Wheels
+    100050: Wind_screen
+    100052: Window_Slats
+    400000: Armor_Panel_1_Geo
+    400002: Armor_Panel_2_Geo
+    400004: Armor_Panel_3_Geo
+    400006: Armor_Panel_4_Geo
+    400008: Armor_Panel_5_Geo
+    400010: Armor_Panel_6_Geo
+    400012: Back_Panel
+    400014: Grill
+    400016: //RootNode
+    400018: Jeep_Armor
+    400020: pCube12
+    400022: pCube13
+    400024: polySurface422
+    400026: polySurface424
+    400028: polySurface426
+    400030: polySurface428
+    400032: Spikes_1_Geo
+    400034: Spikes_2_Geo
+    400036: Spikes_3_Geo
+    400038: Spikes_4_Geo
+    400040: Wheel_1_Geo
+    400042: Wheel_2_Geo
+    400044: Wheel_3_Geo
+    400046: Wheel_4_Geo
+    400048: Wheels
+    400050: Wind_screen
+    400052: Window_Slats
+    2100000: pasted__Game_Jeep
+    2100002: pasted__Car_Main_Color
+    2100004: pasted__Lights
+    2100006: pasted__lambert19
+    2100008: lambert1
+    2100010: pasted__Black1
+    2100012: pasted__Rusty_Metal
+    2100014: pasted__lambert18
+    2300000: Armor_Panel_1_Geo
+    2300002: Armor_Panel_2_Geo
+    2300004: Armor_Panel_3_Geo
+    2300006: Armor_Panel_4_Geo
+    2300008: Armor_Panel_5_Geo
+    2300010: Armor_Panel_6_Geo
+    2300012: Back_Panel
+    2300014: Grill
+    2300016: //RootNode
+    2300018: pCube12
+    2300020: pCube13
+    2300022: polySurface422
+    2300024: polySurface424
+    2300026: polySurface426
+    2300028: polySurface428
+    2300030: Spikes_1_Geo
+    2300032: Spikes_2_Geo
+    2300034: Spikes_3_Geo
+    2300036: Spikes_4_Geo
+    2300038: Wind_screen
+    3300000: Armor_Panel_1_Geo
+    3300002: Armor_Panel_2_Geo
+    3300004: Armor_Panel_3_Geo
+    3300006: Armor_Panel_4_Geo
+    3300008: Armor_Panel_5_Geo
+    3300010: Armor_Panel_6_Geo
+    3300012: Back_Panel
+    3300014: Grill
+    3300016: //RootNode
+    3300018: pCube12
+    3300020: pCube13
+    3300022: polySurface422
+    3300024: polySurface424
+    3300026: polySurface426
+    3300028: polySurface428
+    3300030: Spikes_1_Geo
+    3300032: Spikes_2_Geo
+    3300034: Spikes_3_Geo
+    3300036: Spikes_4_Geo
+    3300038: Wind_screen
+    4300000: Jeep
+    4300002: polySurface424
+    4300004: Spikes_2_Geo
+    4300006: polySurface426
+    4300008: Spikes_4_Geo
+    4300010: polySurface422
+    4300012: Spikes_1_Geo
+    4300014: polySurface428
+    4300016: Spikes_3_Geo
+    4300018: Armor_Panel_6_Geo
+    4300020: Armor_Panel_5_Geo
+    4300022: Armor_Panel_4_Geo
+    4300024: Armor_Panel_3_Geo
+    4300026: Armor_Panel_1_Geo
+    4300028: pCube12
+    4300030: pCube13
+    4300032: Back_Panel
+    4300034: Wind_screen
+    4300036: Grill
+    4300038: Armor_Panel_2_Geo
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +167,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +187,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +200,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

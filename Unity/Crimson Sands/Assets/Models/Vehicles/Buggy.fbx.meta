@@ -1,8 +1,194 @@
 fileFormatVersion: 2
 guid: 062685a40e444c543bbb81f99db7e58c
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Back_Bumper
+    100002: Back_bumper_Bracket
+    100004: Bracket_1_Geo
+    100006: Bracket_2_Geo
+    100008: Bracket_3_Geo
+    100010: Bracket_4_Geo
+    100012: Bracket_8_Geo
+    100014: Bracket_9_Geo
+    100016: //RootNode
+    100018: Buggy_Armor
+    100020: Bumper
+    100022: Front_Bumper
+    100024: Mount_Post_1_Geo
+    100026: Mount_Post_2_Geo
+    100028: Mount_Post_3_Geo
+    100030: Mount_Post_4_Geo
+    100032: Mount_Post_5_Geo
+    100034: Mount_Post_6_Geo
+    100036: Panel_1_Geo
+    100038: Panel_2_Geo
+    100040: Panel_3_Geo
+    100042: Panel_4_Geo
+    100044: Panel_5_Geo
+    100046: Panel_6_Geo
+    100048: Panel_7_Geo
+    100050: Panel_8_Geo
+    100052: Skid_1_Geo
+    100054: Skid_2_Geo
+    100056: Wheel1_Geo
+    100058: Wheel2_Geo
+    100060: Wheel3_Geo
+    100062: Wheel4_Geo
+    100064: Wheel_Guard
+    100066: Wheels
+    100068: Window_Visors
+    100070: WindShield
+    400000: Back_Bumper
+    400002: Back_bumper_Bracket
+    400004: Bracket_1_Geo
+    400006: Bracket_2_Geo
+    400008: Bracket_3_Geo
+    400010: Bracket_4_Geo
+    400012: Bracket_8_Geo
+    400014: Bracket_9_Geo
+    400016: //RootNode
+    400018: Buggy_Armor
+    400020: Bumper
+    400022: Front_Bumper
+    400024: Mount_Post_1_Geo
+    400026: Mount_Post_2_Geo
+    400028: Mount_Post_3_Geo
+    400030: Mount_Post_4_Geo
+    400032: Mount_Post_5_Geo
+    400034: Mount_Post_6_Geo
+    400036: Panel_1_Geo
+    400038: Panel_2_Geo
+    400040: Panel_3_Geo
+    400042: Panel_4_Geo
+    400044: Panel_5_Geo
+    400046: Panel_6_Geo
+    400048: Panel_7_Geo
+    400050: Panel_8_Geo
+    400052: Skid_1_Geo
+    400054: Skid_2_Geo
+    400056: Wheel1_Geo
+    400058: Wheel2_Geo
+    400060: Wheel3_Geo
+    400062: Wheel4_Geo
+    400064: Wheel_Guard
+    400066: Wheels
+    400068: Window_Visors
+    400070: WindShield
+    2100000: pasted__lambert18
+    2100002: pasted__lambert10
+    2100004: pasted__lambert3
+    2100006: pasted__lambert5
+    2100008: pasted__lambert9
+    2100010: pasted__lambert12
+    2100012: pasted__lambert13
+    2100014: pasted__lambert6
+    2100016: pasted__lambert2
+    2100018: pasted__lambert16
+    2100020: pasted__lambert17
+    2100022: pasted__lambert14
+    2100024: pasted__lambert15
+    2100026: pasted__Gunmetal
+    2100028: pasted__GunMetal
+    2100030: pasted__Rusty_Metal
+    2100032: pasted__lambert19
+    2300000: Bracket_1_Geo
+    2300002: Bracket_2_Geo
+    2300004: Bracket_3_Geo
+    2300006: Bracket_4_Geo
+    2300008: Bracket_8_Geo
+    2300010: Bracket_9_Geo
+    2300012: //RootNode
+    2300014: Bumper
+    2300016: Front_Bumper
+    2300018: Mount_Post_1_Geo
+    2300020: Mount_Post_2_Geo
+    2300022: Mount_Post_3_Geo
+    2300024: Mount_Post_4_Geo
+    2300026: Mount_Post_5_Geo
+    2300028: Mount_Post_6_Geo
+    2300030: Panel_1_Geo
+    2300032: Panel_2_Geo
+    2300034: Panel_3_Geo
+    2300036: Panel_4_Geo
+    2300038: Panel_5_Geo
+    2300040: Panel_6_Geo
+    2300042: Panel_7_Geo
+    2300044: Panel_8_Geo
+    2300046: Skid_1_Geo
+    2300048: Skid_2_Geo
+    2300050: Wheel1_Geo
+    2300052: Wheel2_Geo
+    2300054: Wheel3_Geo
+    2300056: Wheel4_Geo
+    2300058: Wheel_Guard
+    2300060: Window_Visors
+    2300062: WindShield
+    3300000: Bracket_1_Geo
+    3300002: Bracket_2_Geo
+    3300004: Bracket_3_Geo
+    3300006: Bracket_4_Geo
+    3300008: Bracket_8_Geo
+    3300010: Bracket_9_Geo
+    3300012: //RootNode
+    3300014: Bumper
+    3300016: Front_Bumper
+    3300018: Mount_Post_1_Geo
+    3300020: Mount_Post_2_Geo
+    3300022: Mount_Post_3_Geo
+    3300024: Mount_Post_4_Geo
+    3300026: Mount_Post_5_Geo
+    3300028: Mount_Post_6_Geo
+    3300030: Panel_1_Geo
+    3300032: Panel_2_Geo
+    3300034: Panel_3_Geo
+    3300036: Panel_4_Geo
+    3300038: Panel_5_Geo
+    3300040: Panel_6_Geo
+    3300042: Panel_7_Geo
+    3300044: Panel_8_Geo
+    3300046: Skid_1_Geo
+    3300048: Skid_2_Geo
+    3300050: Wheel1_Geo
+    3300052: Wheel2_Geo
+    3300054: Wheel3_Geo
+    3300056: Wheel4_Geo
+    3300058: Wheel_Guard
+    3300060: Window_Visors
+    3300062: WindShield
+    4300000: Buggy
+    4300002: Wheel1_Geo
+    4300004: Wheel2_Geo
+    4300006: Wheel3_Geo
+    4300008: Wheel4_Geo
+    4300010: Bracket_3_Geo
+    4300012: Bracket_1_Geo
+    4300014: Bracket_2_Geo
+    4300016: Mount_Post_6_Geo
+    4300018: Mount_Post_2_Geo
+    4300020: Bracket_8_Geo
+    4300022: Bracket_4_Geo
+    4300024: Mount_Post_1_Geo
+    4300026: Bracket_9_Geo
+    4300028: Mount_Post_4_Geo
+    4300030: Mount_Post_3_Geo
+    4300032: Mount_Post_5_Geo
+    4300034: Bumper
+    4300036: Skid_1_Geo
+    4300038: Skid_2_Geo
+    4300040: WindShield
+    4300042: Front_Bumper
+    4300044: Wheel_Guard
+    4300046: Panel_1_Geo
+    4300048: Panel_2_Geo
+    4300050: Panel_3_Geo
+    4300052: Panel_4_Geo
+    4300054: Panel_5_Geo
+    4300056: Panel_6_Geo
+    4300058: Panel_7_Geo
+    4300060: Panel_8_Geo
+    4300062: Window_Visors
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +231,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +251,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +264,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
