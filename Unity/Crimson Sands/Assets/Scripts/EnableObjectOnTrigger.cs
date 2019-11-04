@@ -63,8 +63,11 @@ public class EnableObjectOnTrigger : MonoBehaviour
         if (tagCheck != "")
         {
             //if the tags dont match, dont do anything
+            //Debug.Log($"tag check fail! {other.tag}, {tagCheck}");
             if (!other.gameObject.CompareTag(tagCheck)) return;
         }
+        
+        //Debug.Log("Colliding?");
         
         for(int i = 0; i < objsToEnable.Count; i++)
         {

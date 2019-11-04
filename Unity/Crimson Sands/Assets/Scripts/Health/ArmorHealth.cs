@@ -31,6 +31,8 @@ public class ArmorHealth : Health
     private float launchForce = 5;
 
     private bool dead = false;
+
+    public ArmorSet armorSet;
     
 
     private void Awake()
@@ -54,6 +56,7 @@ public class ArmorHealth : Health
             joint.connectedBody = null;
             Destroy(joint);
             joint = null;
+            armorSet.attachedPieces.Remove(gameObject);
 
             StartCoroutine(LaunchArmor());
         

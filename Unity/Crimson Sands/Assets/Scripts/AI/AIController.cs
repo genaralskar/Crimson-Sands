@@ -105,6 +105,8 @@ public class AIController : MonoBehaviour
 
     private void SetVehicleSpeed()
     {
+        if (!carController.targetChase) return;
+        
         currentTarget = carController.targetChase;
 
         float angleDot = Vector3.Dot(transform.forward, currentTarget.forward);
@@ -183,7 +185,7 @@ public class AIController : MonoBehaviour
         if (amount >= 0) return;
         float amountNormalized = (-amount) / (float)health.currentHealth;
         float randomChance = Random.Range(0f, 1f);
-        Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
+        //Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
         if (randomChance < chanceToChangeTarget)
         {
             TargetPlayer();
