@@ -18,6 +18,8 @@ public class GameObjectPool : ScriptableObject
 
     private Queue<GameObject> pooledObjects;
 
+    private Transform parent;
+
     private void PoolObjectsHandler()
     {
         SpawnPooledObject();
@@ -35,10 +37,16 @@ public class GameObjectPool : ScriptableObject
         if (pooledObjects.Count >= amount)
             return;
         
+        //create new parent object
+        if (!parent)
+        {
+            parent = new GameObject(name).transform;
+        }
+        
         for (var i = pooledObjects.Count; i < amount; i++)
         {
             //spawn new objects, set them inactive, and add them to the queue
-            GameObject obj = Instantiate(poolObject);
+            GameObject obj = Instantiate(poolObject, parent);
             obj.SetActive(false);
             pooledObjects.Enqueue(obj);
         }
@@ -66,10 +74,22 @@ public class GameObjectPool : ScriptableObject
 
     public GameObject GetPooledObject(Vector3 newPos, Quaternion newRot)
     {
-        GameObject proj = GetPooledObject();
-        proj.transform.position = newPos;
-        proj.transform.rotation = newRot;
-        return proj;
+        //if the pool hasnt been made yet, make it
+        if (pooledObjects == null || pooledObjects.Count < amount)
+        {
+            SpawnPooledObject();
+            Debug.LogWarning(name + " spawned mid-game. Consider adding it to the object spawner to spawn these at runtime.");
+        }
+        
+        //get reference to the first item in the queue
+        GameObject obj = pooledObjects.Dequeue();
+        
+        //place it at the end of the queue
+        pooledObjects.Enqueue(obj);
+        obj.transform.position = newPos;
+        obj.transform.rotation = newRot;
+        obj.SetActive(true);
+        return obj;
     }
 
     public GameObject GetPooledObject(Transform newParent)

@@ -65,7 +65,7 @@ public class RCC_AICarController : MonoBehaviour {
 	public bool ignoreWaypointNow = false;
 	
 	// Unity's Navigator.
-	private NavMeshAgent navigator;
+	public NavMeshAgent navigator;
 
 	// Detector with Sphere Collider. Used for finding target Gameobjects in chasing mode.
 	private GameObject detector;
@@ -104,6 +104,7 @@ public class RCC_AICarController : MonoBehaviour {
 		navigator.height = 1;
 		navigator.avoidancePriority = 99;
 
+		return;
 		// Creating our Detector and setting properties. Used for getting nearest target gameobjects.
 		detector = new GameObject ("Detector");
 		detector.transform.SetParent (transform, false);
@@ -232,7 +233,8 @@ public class RCC_AICarController : MonoBehaviour {
 			// If our scene doesn't have a Waypoints Container, return with error.
 			float distance = Vector3.Distance(transform.position, targetChase.position);
 			//Debug.Log(distance);
-			if(!targetChase || distance > detectorRadius){
+			// || distance > detectorRadius
+			if(!targetChase){
 				
 				//Debug.LogError("Target Chase Couldn't Found!");
 				Stop();
@@ -244,7 +246,10 @@ public class RCC_AICarController : MonoBehaviour {
 			if (navigator.isOnNavMesh && distance < detectorRadius)
 			{
 				//Debug.Log("Setting Destination");
-				navigator.SetDestination (targetChase.position);
+				//==============
+				//THIS IS NOW SET IN THE AIController SCRIPT in SetDestination()
+				//==============
+				//navigator.SetDestination (targetChase.position);
 			}
 				
 
@@ -499,12 +504,12 @@ public class RCC_AICarController : MonoBehaviour {
 
 		}
 
-		if(col.attachedRigidbody != null && col.gameObject.GetComponentInParent<RCC_CarControllerV3>() && col.gameObject.GetComponentInParent<RCC_CarControllerV3>().transform.CompareTag(targetTag)){
-			
-			if (!targetsInZone.Contains (col.gameObject.GetComponentInParent<RCC_CarControllerV3> ()))
-				targetsInZone.Add (col.gameObject.GetComponentInParent<RCC_CarControllerV3> ());
-
-		}
+//		if(col.attachedRigidbody != null && col.gameObject.GetComponentInParent<RCC_CarControllerV3>() && col.gameObject.GetComponentInParent<RCC_CarControllerV3>().transform.CompareTag(targetTag)){
+//			
+//			if (!targetsInZone.Contains (col.gameObject.GetComponentInParent<RCC_CarControllerV3> ()))
+//				targetsInZone.Add (col.gameObject.GetComponentInParent<RCC_CarControllerV3> ());
+//
+//		}
 
 	}
 

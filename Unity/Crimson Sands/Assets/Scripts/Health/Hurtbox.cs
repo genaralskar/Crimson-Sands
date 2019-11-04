@@ -21,6 +21,8 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
              " to somewhere else in the hiearchy, but just the collider not the whole game object, so this finds it again")]
     public bool moveHurtboxToCollider = false;
 
+    public bool isPlayer = false;
+
     private void OnEnable()
     {
         //health.AddHurtbox(this);
@@ -33,6 +35,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     private void Start()
     {
+        isPlayer = health.isPlayer;
         if (moveHurtboxToCollider)
         {
             StartCoroutine(MoveHurtBox());
@@ -68,13 +71,14 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         //get direction to rotate the sparks in (hopefully)
         Vector3 triggerNormalDirection = other.transform.position - transform.position;
 
+        if (!otherHit.projectile) return;
         if (otherHit.projectile.hitSparks != null)
         {
             GameObject hitSparks = otherHit.projectile.hitSparks.GetPooledObject(other.transform.position, Quaternion.Euler(triggerNormalDirection));
         }
         
         //disable projectile that hit this
-        otherHit.projectile.gameObject.SetActive(false);
+        //otherHit.projectile.gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -98,10 +102,11 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         otherHit.projectile.gameObject.SetActive(false);
     }
 
-    public void OnWeaponHit(int damage)
+    public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
-        //Debug.Log("Sending Damage!");
-        SendDamage(damage);
+        Debug.Log("Sending Damage!", this);
+        if(health.isPlayer != weapon.isPlayer)
+            SendDamage(weapon.damage);
     }
 
     public void SendDamage(int amount)

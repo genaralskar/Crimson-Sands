@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 5302214252386725954}
   - component: {fileID: 2277927619355209290}
   - component: {fileID: 3439777522964085499}
-  m_Layer: 0
+  - component: {fileID: 3226376651962107828}
+  m_Layer: 17
   m_Name: Armor (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,9 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -117,6 +119,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &5302214252386725954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +165,23 @@ MonoBehaviour:
   health: {fileID: 4346517917317262693}
   enableCollision: 0
   moveHurtboxToCollider: 0
+  isPlayer: 0
+--- !u!114 &3226376651962107828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496863656393455627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
 --- !u!1 &5429286907411284274
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +198,8 @@ GameObject:
   - component: {fileID: 4892564746408446143}
   - component: {fileID: 6245686910592904599}
   - component: {fileID: 1744813901196915446}
-  m_Layer: 0
+  - component: {fileID: 6664783204379882415}
+  m_Layer: 17
   m_Name: Armor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,9 +290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -279,6 +301,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -1, y: 0, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &4892564746408446143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -324,6 +347,23 @@ MonoBehaviour:
   health: {fileID: 3332611500311386524}
   enableCollision: 0
   moveHurtboxToCollider: 0
+  isPlayer: 0
+--- !u!114 &6664783204379882415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429286907411284274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
 --- !u!1 &7079872684549910329
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +421,7 @@ MonoBehaviour:
   armorOffset: {x: 0, y: 0, z: 0}
   vehicle: {fileID: 0}
   snapPoint: {fileID: 0}
+  attachedPieces: []
 --- !u!1 &7079872684816005069
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +437,9 @@ GameObject:
   - component: {fileID: 7079872684816005076}
   - component: {fileID: 7079872684816005067}
   - component: {fileID: 7079872684816005066}
-  m_Layer: 0
+  - component: {fileID: 5764531945003987322}
+  - component: {fileID: 5533398046050853919}
+  m_Layer: 17
   m_Name: Armor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,9 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -497,6 +541,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872684816005067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -527,113 +572,38 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!1 &7079872684930726317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7079872684930726318}
-  - component: {fileID: 7079872684930726314}
-  - component: {fileID: 7079872684930726313}
-  - component: {fileID: 7079872684930726312}
-  - component: {fileID: 7079872684930726319}
-  m_Layer: 13
-  m_Name: Hurtbox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7079872684930726318
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079872684930726317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7079872686100642282}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7079872684930726314
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079872684930726317}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7079872684930726313
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079872684930726317}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &7079872684930726312
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079872684930726317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7079872684930726319
+--- !u!114 &5764531945003987322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079872684930726317}
+  m_GameObject: {fileID: 7079872684816005069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
+--- !u!114 &5533398046050853919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872684816005069}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 7079872686100642288}
+  health: {fileID: 7079872684816005076}
   enableCollision: 0
   moveHurtboxToCollider: 0
+  isPlayer: 0
 --- !u!1 &7079872685354042431
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +619,9 @@ GameObject:
   - component: {fileID: 7079872685354042438}
   - component: {fileID: 7079872685354042426}
   - component: {fileID: 7079872685354042425}
-  m_Layer: 0
+  - component: {fileID: 1501314212290306003}
+  - component: {fileID: 3175556412960411002}
+  m_Layer: 17
   m_Name: Armor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,9 +712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -750,6 +723,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872685354042426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -780,6 +754,38 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1501314212290306003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685354042431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
+--- !u!114 &3175556412960411002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685354042431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7079872685354042438}
+  enableCollision: 0
+  moveHurtboxToCollider: 0
+  isPlayer: 0
 --- !u!1 &7079872685625514615
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +801,9 @@ GameObject:
   - component: {fileID: 7079872685625514622}
   - component: {fileID: 7079872685625514621}
   - component: {fileID: 7079872685625514620}
-  m_Layer: 0
+  - component: {fileID: 1081412515832048712}
+  - component: {fileID: 4622664960690572959}
+  m_Layer: 17
   m_Name: Armor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,9 +894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -896,6 +905,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872685625514621
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -926,6 +936,38 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1081412515832048712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685625514615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
+--- !u!114 &4622664960690572959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685625514615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7079872685625514622}
+  enableCollision: 0
+  moveHurtboxToCollider: 0
+  isPlayer: 0
 --- !u!1 &7079872685805115278
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +983,9 @@ GameObject:
   - component: {fileID: 7079872685805115285}
   - component: {fileID: 7079872685805115284}
   - component: {fileID: 7079872685805115275}
-  m_Layer: 0
+  - component: {fileID: 2219278560340881258}
+  - component: {fileID: 6910436018888019495}
+  m_Layer: 17
   m_Name: Armor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,9 +1076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -1042,6 +1087,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872685805115284
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1072,6 +1118,38 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2219278560340881258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685805115278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
+--- !u!114 &6910436018888019495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872685805115278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7079872685805115285}
+  enableCollision: 0
+  moveHurtboxToCollider: 0
+  isPlayer: 0
 --- !u!1 &7079872686018154945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1166,8 @@ GameObject:
   - component: {fileID: 7079872686018154959}
   - component: {fileID: 7079872686018154958}
   - component: {fileID: 7079872686018154953}
-  m_Layer: 0
+  - component: {fileID: 2508125607611622591}
+  m_Layer: 17
   m_Name: Armor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,9 +1258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -1189,6 +1269,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: -0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872686018154959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1234,6 +1315,23 @@ MonoBehaviour:
   health: {fileID: 7079872686018154952}
   enableCollision: 0
   moveHurtboxToCollider: 0
+  isPlayer: 0
+--- !u!114 &2508125607611622591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872686018154945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
 --- !u!1 &7079872686100642281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1347,9 @@ GameObject:
   - component: {fileID: 7079872686100642288}
   - component: {fileID: 7079872686100642295}
   - component: {fileID: 7079872686100642294}
-  m_Layer: 0
+  - component: {fileID: 5373653471755595681}
+  - component: {fileID: 2809095542832271995}
+  m_Layer: 17
   m_Name: Armor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1266,8 +1366,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.07, y: 0, z: 0.217}
   m_LocalScale: {x: 0.11930172, y: 0.52615, z: 1.3916452}
-  m_Children:
-  - {fileID: 7079872684930726318}
+  m_Children: []
   m_Father: {fileID: 7079872684549910330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1341,9 +1440,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bb126fb769c5b40b0b315142fad966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   invincible: 0
+  isPlayer: 0
   rb: {fileID: 0}
   vehicleRb: {fileID: 0}
   joint: {fileID: 0}
@@ -1351,6 +1451,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   lauchDirection: {x: 0.5, y: 1, z: 0}
   launchForce: 2
+  armorSet: {fileID: 0}
 --- !u!54 &7079872686100642295
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1381,3 +1482,35 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5373653471755595681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872686100642281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 0
+--- !u!114 &2809095542832271995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079872686100642281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7079872686100642288}
+  enableCollision: 0
+  moveHurtboxToCollider: 0
+  isPlayer: 0

@@ -94,8 +94,10 @@ MonoBehaviour:
   enemyHitboxLayer: 12
   layerInfo: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4, type: 2}
   anims: {fileID: 0}
-  fireSoundSource: {fileID: 6660763190451431646}
+  fireSoundSource: {fileID: 0}
   muzzleFlash: {fileID: 1712178479581209168}
+  tracer: 1
+  tracerTemplate: {fileID: 0}
 --- !u!1 &499286312096166488
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,17 +302,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 34e125c16812f4c4c88922a190175464,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0023484146
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34e125c16812f4c4c88922a190175464,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23302796
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34e125c16812f4c4c88922a190175464,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.10448976
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34e125c16812f4c4c88922a190175464,
         type: 3}

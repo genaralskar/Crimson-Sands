@@ -78,12 +78,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6644db4e4e454784ab1126af20b3fbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
   firePoint: {fileID: 6340667839338418529}
   useRaycast: 1
   raycastProjectileLayerMask:
     serializedVersion: 2
-    m_Bits: 98103
+    m_Bits: 229175
   spread: 0.02
   raycastProjectileInfo: {fileID: 11400000, guid: a28a0f0130b9d5444ba7a9f13e96888e,
     type: 2}
@@ -93,8 +93,10 @@ MonoBehaviour:
   enemyHitboxLayer: 12
   layerInfo: {fileID: 11400000, guid: 08f84ae03c0e630489f663a9c87cd3c4, type: 2}
   anims: {fileID: 0}
-  fireSoundSource: {fileID: 971802645837417446}
+  fireSoundSource: {fileID: 1309511006296511593}
   muzzleFlash: {fileID: 5103036659960103272}
+  tracer: 1
+  tracerTemplate: {fileID: 0}
 --- !u!1 &6340667839338418528
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7043951709561808203}
   - component: {fileID: 971802645837417446}
+  - component: {fileID: 1309511006296511593}
   m_Layer: 0
   m_Name: Fire Audio Source
   m_TagString: Untagged
@@ -200,7 +203,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 8b7f09823e32afe4f809b5f3a6ff8365, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.098
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -284,6 +287,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1309511006296511593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650598188042362245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7448d5b1c551fd24eb09b7f8be0b3373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: 5283c0a66e0b4ed40a41236c2896083d, type: 2}
 --- !u!1001 &4563398675237775770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,8 +310,13 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_Name
-      value: Reworked Minigun Animation EX
+      value: Minigun
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
     - target: {fileID: -4216859302048453862, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -351,21 +372,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c0b6bcd5ebdbd9c45afb715f1c66ac59, type: 2}
-    - target: {fileID: -2403065033187307517, guid: d3ade6daf511d2e47ad10a56aa0516e0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.00002852651
-      objectReference: {fileID: 0}
     - target: {fileID: -3702653043558708228, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dcbd0afc074508d44935b71b03a51ea9, type: 2}
+    - target: {fileID: -2403065033187307517, guid: d3ade6daf511d2e47ad10a56aa0516e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.00002852651
+      objectReference: {fileID: 0}
     - target: {fileID: 2863246248006578754, guid: d3ade6daf511d2e47ad10a56aa0516e0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -1446,6 +1446,7 @@ MonoBehaviour:
   health: {fileID: 5878610331577300688}
   enableCollision: 0
   moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &4925276424044392285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1460,7 @@ GameObject:
   - component: {fileID: 6658236437342165889}
   - component: {fileID: 4925276424044392284}
   - component: {fileID: 6178957320909821786}
+  - component: {fileID: 1264108607903507268}
   m_Layer: 14
   m_Name: Charger
   m_TagString: Untagged
@@ -1563,6 +1565,23 @@ MonoBehaviour:
   health: {fileID: 5878610331577300688}
   enableCollision: 0
   moveHurtboxToCollider: 1
+  isPlayer: 0
+--- !u!114 &1264108607903507268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925276424044392285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef03b72180c71640a7b10a14850427a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
+  sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  moveSourceOnHit: 1
+  moveToNewCarCollider: 1
 --- !u!1 &4972902124432940107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1746,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7728483294354723430}
   - component: {fileID: 8157177353703472056}
-  m_Layer: 14
+  - component: {fileID: 697014107411587928}
+  m_Layer: 15
   m_Name: Pickup Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,6 +1781,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.53, y: 1.4933922, z: 5.502202}
   m_Center: {x: 0, y: -0.01762116, z: 0.0044054985}
+--- !u!114 &697014107411587928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246283030377722033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0d3da3cb61b6d42b4004ae069e69f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 8023257568847195479}
 --- !u!1 &5260862611844496626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,6 +3486,8 @@ GameObject:
   - component: {fileID: 8023257568847195479}
   - component: {fileID: 5878610331577300688}
   - component: {fileID: 6083740969504776036}
+  - component: {fileID: 2414708341008138953}
+  - component: {fileID: 1682924918811996742}
   m_Layer: 14
   m_Name: Charger
   m_TagString: Player
@@ -3521,7 +3556,7 @@ MonoBehaviour:
   SteeringWheel: {fileID: 0}
   steeringWheelRotateAround: 0
   steeringWheelAngleMultiplier: 3
-  _wheelTypeChoise: 1
+  _wheelTypeChoise: 0
   biasedWheelTorque: 100
   COM: {fileID: 8023257567329175967}
   canControl: 1
@@ -3532,26 +3567,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 2
-      inSlope: 0.061983462
-      outSlope: 0.061983462
+      inSlope: 0.07177033
+      outSlope: 0.07177033
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 8.066668
+      time: 6.966667
       value: 2.5
-      inSlope: -0.007747935
-      outSlope: -0.007747935
+      inSlope: -0.008971289
+      outSlope: -0.008971289
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 40.333336
+      time: 34.833336
       value: 0
-      inSlope: -0.07747933
-      outSlope: -0.07747933
+      inSlope: -0.08971291
+      outSlope: -0.08971291
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3564,35 +3599,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.68333334
-      inSlope: 0.012727273
-      outSlope: 0.012727273
+      inSlope: 0.014736842
+      outSlope: 0.014736842
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 18.333334
+      time: 15.833334
       value: 0.9166667
-      inSlope: -0.0006060605
-      outSlope: -0.0006060605
+      inSlope: -0.00070175435
+      outSlope: -0.00070175435
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 73.333336
+      time: 63.333336
       value: 0.15
-      inSlope: -0.028446969
-      outSlope: -0.028446969
+      inSlope: -0.032938596
+      outSlope: -0.032938596
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 146.66667
+      time: 126.66667
       value: -3
-      inSlope: -0.042954545
-      outSlope: -0.042954545
+      inSlope: -0.049736843
+      outSlope: -0.049736843
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3605,35 +3640,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.525
-      inSlope: 0.00840909
-      outSlope: 0.00840909
+      inSlope: 0.009736842
+      outSlope: 0.009736842
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 36.666668
+      time: 31.666668
       value: 0.8333333
-      inSlope: -0.0004545455
-      outSlope: -0.0004545455
+      inSlope: -0.00052631553
+      outSlope: -0.00052631553
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 110
+      time: 95
       value: 0.15
-      inSlope: -0.018977273
-      outSlope: -0.018977273
+      inSlope: -0.021973684
+      outSlope: -0.021973684
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 220
+      time: 190
       value: -3
-      inSlope: -0.028636364
-      outSlope: -0.028636364
+      inSlope: -0.033157896
+      outSlope: -0.033157896
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3646,35 +3681,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.36666664
-      inSlope: 0.0069696973
-      outSlope: 0.0069696973
+      inSlope: 0.008070176
+      outSlope: 0.008070176
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 55
+      time: 47.5
       value: 0.75
-      inSlope: 0.00021212152
-      outSlope: 0.00021212152
+      inSlope: 0.0002456142
+      outSlope: 0.0002456142
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 146.66667
+      time: 126.66667
       value: 0.15
-      inSlope: -0.0140113635
-      outSlope: -0.0140113635
+      inSlope: -0.016223684
+      outSlope: -0.016223684
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 293.33334
+      time: 253.33334
       value: -3
-      inSlope: -0.021477273
-      outSlope: -0.021477273
+      inSlope: -0.024868421
+      outSlope: -0.024868421
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3687,35 +3722,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.20833336
-      inSlope: 0.0062499987
-      outSlope: 0.0062499987
+      inSlope: 0.0072368407
+      outSlope: 0.0072368407
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 73.333336
+      time: 63.333336
       value: 0.6666666
-      inSlope: 0.0007765144
-      outSlope: 0.0007765144
+      inSlope: 0.00089912186
+      outSlope: 0.00089912186
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 183.33333
+      time: 158.33333
       value: 0.15
-      inSlope: -0.010939395
-      outSlope: -0.010939395
+      inSlope: -0.012666667
+      outSlope: -0.012666667
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 366.66666
+      time: 316.66666
       value: -3
-      inSlope: -0.01718182
-      outSlope: -0.01718182
+      inSlope: -0.019894738
+      outSlope: -0.019894738
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3728,35 +3763,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.05
-      inSlope: 0.005818182
-      outSlope: 0.005818182
+      inSlope: 0.0067368424
+      outSlope: 0.0067368424
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 91.666664
+      time: 79.166664
       value: 0.5833334
-      inSlope: 0.0012207794
-      outSlope: 0.0012207794
+      inSlope: 0.0014135339
+      outSlope: 0.0014135339
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 220
+      time: 190
       value: 0.15
-      inSlope: -0.008847402
-      outSlope: -0.008847402
+      inSlope: -0.010244361
+      outSlope: -0.010244361
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 440
+      time: 380
       value: -3
-      inSlope: -0.014318182
-      outSlope: -0.014318182
+      inSlope: -0.016578948
+      outSlope: -0.016578948
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3765,23 +3800,23 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   targetSpeedForGear:
-  - 31.166668
-  - 62.333336
-  - 93.5
-  - 124.66667
-  - 155.83333
+  - 26.916668
+  - 53.833336
+  - 80.75
+  - 107.66667
+  - 134.58333
   maxSpeedForGear:
-  - 40.333336
-  - 80.66667
-  - 121
-  - 161.33334
-  - 201.66666
-  - 242
-  engineTorque: 2000
+  - 34.833336
+  - 69.66667
+  - 104.5
+  - 139.33334
+  - 174.16666
+  - 209
+  engineTorque: 4000
   brakeTorque: 2000
   minEngineRPM: 1000
   maxEngineRPM: 7000
-  engineInertia: 0.75
+  engineInertia: 2
   useRevLimiter: 1
   useExhaustFlame: 1
   useClutchMarginAtFirstGear: 1
@@ -3794,8 +3829,8 @@ MonoBehaviour:
   antiRollVertical: 0
   downForce: 25
   speed: 0
-  orgMaxSpeed: 220
-  maxspeed: 220
+  orgMaxSpeed: 190
+  maxspeed: 190
   useFuelConsumption: 0
   fuelTankCapacity: 62
   fuelTank: 62
@@ -3807,7 +3842,7 @@ MonoBehaviour:
   engineCoolRate: 1
   currentGear: 0
   totalGears: 6
-  gearShiftingDelay: 0.35
+  gearShiftingDelay: 0.102
   gearShiftingThreshold: 0.85
   clutchInertia: 0.25
   changingGear: 0
@@ -3915,7 +3950,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279762efb68661845b71ee9349ac51d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armorPrefab: {fileID: 7079872684549910329, guid: fd082e0dfa681ac4d95121f5de864acf,
+    type: 3}
   currentArmor: {fileID: 0}
+  isPlayer: 1
 --- !u!114 &8023257568847195479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3950,8 +3988,10 @@ MonoBehaviour:
   currentHealth: 100
   invincible: 0
   isPlayer: 1
+  playerTeam: 0
   deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
   resetHealthOnEnable: 1
+  armor: {fileID: 0}
 --- !u!114 &6083740969504776036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,6 +4005,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: -7439819549755713742, guid: 55c2a60f99b5806498a5011fbbcc59e7, type: 2}
+--- !u!114 &2414708341008138953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023257568847195472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216554b4d781ec94cb768ba6128edb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference: {fileID: 11400000, guid: e4a5d6be825a435459ba5b73b2225b6b, type: 2}
+--- !u!114 &1682924918811996742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023257568847195472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36aaf655840fd44448b5de44d229115e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gasBrakeInput: Vertical
+  steerInput: Horizontal
+  handBreakInput: Brake
+  boostInput: Boost
+  fireWeaponInput: Fire1
 --- !u!1 &8023257568901981818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,12 +4702,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c445e87ee84c0e54d82315dfcbdffc4a,
         type: 2}
-    - target: {fileID: 9144852630695215970, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7443303130863539076, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 183605043952530237, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4647,12 +4712,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 6452962275731322277, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 183605043952530237, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 7443303130863539076, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4667,27 +4727,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2576020987315468269, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 2600994161534270315, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 8180020839432398465, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774708860792054905, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957917075653077957, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 9144852630695215970, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4697,12 +4742,37 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2576020987315468269, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957917075653077957, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180020839432398465, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 905358317111695516, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 7399715199685979624, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 6774708860792054905, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405909561524397597, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274907931539805925, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4712,12 +4782,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 7399715199685979624, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3349167582919756522, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2405909561524397597, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 42531455430942676, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452962275731322277, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4732,22 +4812,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 42531455430942676, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2274907931539805925, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 215060513345852505, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2335658383922218576, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 215060513345852505, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -4759,6 +4829,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f6f75d49a78e749969468127d29fd9, type: 3}
+--- !u!4 &3387248481318755601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7699540449365083941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8653273529700565930 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1354696538575570063, guid: 04f6f75d49a78e749969468127d29fd9,
@@ -4771,9 +4847,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c8f442c90d78445b2ceec4d829e198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3387248481318755601 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7699540449365083941}
-  m_PrefabAsset: {fileID: 0}

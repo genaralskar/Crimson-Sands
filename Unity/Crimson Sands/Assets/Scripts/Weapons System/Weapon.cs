@@ -52,16 +52,24 @@ public class Weapon : MonoBehaviour
     [Tooltip("The animator of the weapon. Will automatically find an Animator component if none is assigned.")]
     public Animator anims;
 
-    public AudioSource fireSoundSource;
+    public AudioManager fireSoundSource;
 
     public GameObject muzzleFlash;
+
+    public bool tracer = false;
+    public LineRenderer tracerTemplate;
     
     private WeaponFireHandler fireHandler;
     
     private bool isFiring;
 
+    private bool useLineRenderer = false;
     private LineRenderer lineRend;
     private LineRendererFadeOverTime lineRendFade;
+    
+    
+    //to get velocity for projectiles
+    private Rigidbody rb;
 
     //Turning this on or off starts/stops firing
     public bool IsFiring
@@ -85,34 +93,44 @@ public class Weapon : MonoBehaviour
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
         
         muzzleFlash.SetActive(false);
+
+        rb = GetComponentInParent<Rigidbody>();
     }
 
     private void Start()
     {
-        //setup line renderer
-        var lr = new GameObject("Line Rend");
-        lineRend = lr.AddComponent<LineRenderer>();
-        LineRenderer rendTemp = LineRendererTemplateObject.rend;
-        lineRend.material = rendTemp.material;
-        lineRend.colorGradient = rendTemp.colorGradient;
-        lineRend.widthCurve = rendTemp.widthCurve;
-        
-        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
-        lineRendFade.rend = lineRend;
+        if(useLineRenderer)
+            SetupLineRenderer();
     }
 
 //    Used for testing purposes
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !IsFiring && isPlayer)
+        if (Input.GetButtonDown("Fire1") && !IsFiring && isPlayer)
         {
             IsFiring = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && IsFiring & isPlayer)
+        if (Input.GetButtonUp("Fire1") && IsFiring & isPlayer)
         {
             IsFiring = false;
         }
+    }
+
+    private void SetupLineRenderer()
+    {
+        var lr = new GameObject("Line Rend");
+        lineRend = lr.AddComponent<LineRenderer>();
+        var rendTemp = tracerTemplate ? tracerTemplate : LineRendererTemplateObject.rend;
+        
+        lineRend.material = rendTemp.material;
+        lineRend.colorGradient = rendTemp.colorGradient;
+        lineRend.widthCurve = rendTemp.widthCurve;
+        lineRend.endWidth = rendTemp.endWidth;
+        lineRend.startWidth = rendTemp.startWidth;
+        
+        lineRendFade = lr.AddComponent<LineRendererFadeOverTime>();
+        lineRendFade.rend = lineRend;
     }
 
     private void OnDrawGizmosSelected()
@@ -155,32 +173,19 @@ public class Weapon : MonoBehaviour
     private void FireProjectile()
     {
         GameObject newProj = projectile.GetPooledObject(firePoint.transform.position, firePoint.transform.rotation);
-        Projectile proj = newProj.GetComponent<Projectile>();
+        //Projectile proj = newProj.GetComponent<Projectile>();
+        ProjectileGrenade proj = newProj.GetComponent<ProjectileGrenade>();
         if (proj == null)
         {
             Debug.LogError("Object " + newProj + " does not have a projectile componenet. If you want to use this object " +
                            "as a projectile, you need to add the Projectile component");
             return;
         }
-            
-        
-        //set team
-        proj.player = isPlayer;
-        
-        //set the proper layer for the projectile
-        if (isPlayer)
-        {
-            proj.SetLayer(playerHitboxLayer);
-        }
-        else
-        {
-            proj.SetLayer(enemyHitboxLayer);
-        }
-        
+
         //set damage
         proj.damage = damage;
-        
-        //set projectile velocity
+        proj.weapon = this;
+        proj.Fire(rb.velocity, isPlayer);
     }
 
     private void FireRaycast()
@@ -193,22 +198,15 @@ public class Weapon : MonoBehaviour
         Vector3 direction = firePoint.forward;
 
         //do Spread
-        //use random instead of perlin
-//        float xSpread = Mathf.PerlinNoise(Time.time, 1);
-//        float ySpread = Mathf.PerlinNoise(1, Time.time);
-//        float zSpread = Mathf.PerlinNoise(Time.time, Time.time);
         float xSpread = Random.Range(-1f, 1f);
         float ySpread = Random.Range(-1f, 1f);
         float zSpread = Random.Range(-1f, 1f);
         
         Vector3 newSpread = new Vector3(xSpread, ySpread, zSpread);
-
-        //remap perlin from 0-1 to -1-1
-//        newSpread -= Vector3.one * .5f;
-//        newSpread *= 2;
+        
         newSpread *= spread;
         
-        Debug.Log(newSpread);
+        //Debug.Log(newSpread);
         Debug.DrawRay(firePoint.position, direction, Color.blue);
         
         direction += newSpread;
@@ -216,24 +214,22 @@ public class Weapon : MonoBehaviour
 
         if (Physics.SphereCast(firePoint.position, .1f, direction, out hit, Mathf.Infinity, weaponRayCastMask))
         {
+            Debug.Log(hit.collider.gameObject);
             int hitLayer = hit.collider.gameObject.layer;
             //Debug.Log(hitLayer);
             //Debug.Log(hit.collider.gameObject);
 
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
-            if (weaponHit != null)
+            IWeaponHit[] weaponHits = hit.collider.gameObject.GetComponents<IWeaponHit>();
+            if (weaponHits != null)
             {
                 //if player, hit only enemy
                 //if enemy, hit only player
-                weaponHit.OnWeaponHit(damage);
+                foreach (var weaponHit in weaponHits)
+                {
+                    weaponHit.OnWeaponHit(this, hit.point);
+                }
+                
             }
-            
-            //player hit enemy hurtbox or enemy hit player hurtbox
-//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-//            {
-//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-//                hurtbox.SendDamage(damage);
-//            }
             
             //spawn hitsparks
             Vector3 inDir = firePoint.position - hit.point;
@@ -264,67 +260,6 @@ public class Weapon : MonoBehaviour
             }
             
             //play audio on impact point
-        }
-
-        return;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, weaponRayCastMask))
-        {
-            int hitLayer = hit.collider.gameObject.layer;
-            Debug.Log(hitLayer);
-            Debug.Log(hit.collider.gameObject);
-
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
-            if (weaponHit != null)
-            {
-                //if player, hit only enemy
-                //if enemy, hit only player
-                weaponHit.OnWeaponHit(damage);
-            }
-            
-            //player hit enemy hurtbox or enemy hit player hurtbox
-//            if ((isPlayer && hitLayer == layerInfo.enemyHurtbox) || (!isPlayer && hitLayer == layerInfo.playerHurtbox))
-//            {
-//                Hurtbox hurtbox = hit.collider.gameObject.GetComponent<Hurtbox>();
-//                hurtbox.SendDamage(damage);
-//            }
-            
-            //spawn hitsparks
-            //Debug.Log(hit.point);
-            Vector3 inDir = firePoint.position - hit.point;
-            
-            Vector3 dir = Vector3.Reflect(inDir, hit.normal);
-            dir *= -1;
-//            Debug.DrawRay(hit.point, inDir, Color.red, 1f);
-//            Debug.DrawRay(hit.point, hit.normal, Color.green, 1f);
-//            Debug.DrawRay(hit.point, dir, Color.blue, 1f);
-            Quaternion newRot = Quaternion.LookRotation(dir);
-            GameObject hitSparks = raycastProjectileInfo.hitSparks.GetPooledObject(hit.point, newRot);
-
-            //==========================================================
-            if (lineRend)
-            {
-                Vector3[] linePos = new[] {firePoint.position, hit.point};
-                lineRend.SetPositions(linePos);
-                lineRend.colorGradient = LineRendererTemplateObject.rend.colorGradient;
-                
-                lineRendFade.StartFade();
-                
-            }
-            //============================================================            
-
-//            if (Vector3.Distance(firePoint.position, hit.point) < 5f)
-//            {
-//                Debug.Log("its close!");
-//            }
-            
-            if (hit.collider.transform.root == transform.root)
-            {
-                Debug.LogError("Weapon is hitting its own colliders! WTF!");
-            }
-            
-            //play audio on impact point
-
-
         }
     }
 

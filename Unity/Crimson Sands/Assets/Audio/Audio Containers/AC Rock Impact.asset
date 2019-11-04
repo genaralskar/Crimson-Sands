@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8fe505d9d60fe4cb51f1f5bd5ec88d, type: 3}
+  m_Name: AC Rock Impact
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 31748448c2daa054e9b2e24bd08807f6, type: 3}
+  - {fileID: 8300000, guid: 624eb28f7c07cca4faff352eca76456a, type: 3}
+  - {fileID: 8300000, guid: ec9469011bd755d44b661bcc9a9f8be1, type: 3}
+  - {fileID: 8300000, guid: 7d58c017f24592b4bb4a099c39884458, type: 3}
+  - {fileID: 8300000, guid: 266d39bdc1d56404786d66d21f9cfa8c, type: 3}
+  - {fileID: 8300000, guid: 2c4ee1416e75f7b4880f11a52003cc52, type: 3}
+  pitch: 1
+  pitchVariation: 0.1
+  volume: 1

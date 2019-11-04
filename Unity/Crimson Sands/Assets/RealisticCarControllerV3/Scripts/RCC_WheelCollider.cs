@@ -621,7 +621,7 @@ public class RCC_WheelCollider : MonoBehaviour {
 			torque = 0;
 
 		wheelCollider.motorTorque = ((torque * (1 - carController.clutchInput) * carController._boostInput) * carController._gasInput) * (carController.engineTorqueCurve[carController.currentGear].Evaluate(wheelRPMToSpeed * carController.direction) * carController.direction);
-
+		
 	}
 
 	public void ApplySteering(){
