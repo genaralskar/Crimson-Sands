@@ -18,6 +18,7 @@ public abstract class Health : MonoBehaviour
     public int currentHealth = 100;
 
     public bool invincible = false;
+    public bool isPlayer = false;
 
     public List<Hurtbox> Hurtboxes
     {
@@ -31,12 +32,13 @@ public abstract class Health : MonoBehaviour
         get { return (float)currentHealth / (float)maxHealth; }
     }
 
-    public void ModifyHealth(int amount)
+    public virtual void ModifyHealth(int amount)
     {
         if (invincible) return;
         
         OnDamage(amount);
         currentHealth += amount;
+        HealthChange?.Invoke(amount);
 
         HealthCheck();
     }
@@ -51,7 +53,7 @@ public abstract class Health : MonoBehaviour
         HealthCheck();
     }
 
-    private void HealthCheck()
+    protected void HealthCheck()
     {
         if (currentHealth > maxHealth)
         {
