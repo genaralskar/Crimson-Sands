@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
+  m_Name: Pool Small Explosion
+  m_EditorClassIdentifier: 
+  poolObject: {fileID: 7889843506191217966, guid: bb9c2e19751ef5c42bf2f3eff36ed5f5,
+    type: 3}
+  amount: 100

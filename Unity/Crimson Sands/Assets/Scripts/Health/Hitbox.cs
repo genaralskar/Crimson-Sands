@@ -6,4 +6,6 @@ public class Hitbox : MonoBehaviour
 {
     public int damage = 10;
     public Projectile projectile;
+    public bool isPlayer = false;
+    public Weapon weapon;
 }

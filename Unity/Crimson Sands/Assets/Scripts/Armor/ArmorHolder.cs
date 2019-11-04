@@ -10,11 +10,21 @@ public class ArmorHolder : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public GameObject armorPrefab;
+    
     public ArmorSet currentArmor;
+
+    public bool isPlayer = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        if (!currentArmor)
+        {
+            GameObject armor = Instantiate(armorPrefab);
+            currentArmor = armor.GetComponent<ArmorSet>();
+            currentArmor.vehicle = this;
+        }
     }
 
     private void OnEnable()

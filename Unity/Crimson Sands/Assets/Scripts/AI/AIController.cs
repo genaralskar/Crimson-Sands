@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.UIElements;
-using Vector3 = UnityEngine.Vector3;
+using UnityEngine.AI;
 
 /// <summary>
 /// This goes on the root object for an ai controlled vehicle. This handles switching targets for the RCC AI and
@@ -24,12 +22,27 @@ public class AIController : MonoBehaviour
 
     public LayerInfo layerInfo;
     
+    [Header("Distance Keeping Stuff")]
     public Transform currentTarget;
-    public float nearDistance = 10f;
+    public float nearDistance = 5f;
     public float farDistance = 50f;
     public float minSpeed = 50f;
+    [Tooltip("The minimum angle difference between the target and the vehicle for the AI to start slowing down")]
+    public float minAngle = 20f;
 
     private float maxSpeed;
+
+    [Header("Navigation Stuff")] [Range(0, 10)]
+    public float navFuzz = 1f;
+
+    public bool useStaticFuzz = false;
+    private Vector3 staticFuzz;
+    public TransformReference playerFollowPoint;
+    public TransformReference SemiFollowPoint;
+    public float chanceToChangeTarget = 0.05f;
+    public float chanceToSwerveOnHit = 0.2f;
+
+    private Health health;
     
     [SerializeField] private List<WeaponMount> weapons;
 
@@ -38,7 +51,22 @@ public class AIController : MonoBehaviour
         carController = GetComponent<RCC_AICarController>();
         maxSpeed = carController.maximumSpeed;
         armorHolder = GetComponent<ArmorHolder>();
+        health = GetComponent<Health>();
+        health.HealthChange += HealthChangeHandler;
         FindWeaponMounts();
+    }
+
+    private void Start()
+    {
+
+        staticFuzz = GetRandomFuzz(navFuzz);
+    }
+
+
+    private void OnEnable()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SetDestination());
     }
 
     private void Update()
@@ -77,7 +105,18 @@ public class AIController : MonoBehaviour
 
     private void SetVehicleSpeed()
     {
+        if (!carController.targetChase) return;
+        
         currentTarget = carController.targetChase;
+
+        float angleDot = Vector3.Dot(transform.forward, currentTarget.forward);
+
+        if (angleDot > minAngle)
+        {
+            carController.maximumSpeed = maxSpeed;
+            return;
+        }
+
         float distance = Vector3.Distance(transform.position, currentTarget.position);
         //Debug.Log("Distance = " + distance);
         
@@ -95,49 +134,87 @@ public class AIController : MonoBehaviour
     {
         Ray ray = new Ray(rayPoint.position, rayPoint.forward);
         RaycastHit hit;
-//        if (Physics.Raycast(ray, out hit, rayLayers))
-//        {
-//            
-//        }
-//    
-//        //then fire if it is
-//        if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation, Mathf.Infinity, rayLayers))
-//        {
-//            //Debug.Log("Firing at player. " + hit.collider);
-//            FireWeapon(true);
-//        }
-//        else
-//        {
-//            //Debug.Log("Stopped firing!");
-//            FireWeapon(false);
-//        }
 
         if (Physics.BoxCast(rayPoint.position, (Vector3.one * .2f), rayPoint.forward, out hit, rayPoint.rotation,
             Mathf.Infinity, layerInfo.weaponRaycastLayers))
         {
-            IWeaponHit weaponHit = (IWeaponHit) hit.collider.gameObject.GetComponent(typeof(IWeaponHit));
+            IWeaponHit weaponHit = hit.collider.gameObject.GetComponent<IWeaponHit>();
             if (weaponHit != null)
             {
-                //if player, hit only enemy
-                //if enemy, hit only player
-                return true;
+                //get carhealth to figure if its a a player
+                Health carHealth = hit.collider.transform.root.GetComponent<Health>();
+                //if player, fire
+                if (carHealth && (carHealth.isPlayer))
+                {
+                    return true;
+                }
             }
         }
 
         return false;
     }
 
+    private IEnumerator SetDestination()
+    {
+        NavMeshAgent agent = carController.navigator;
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        
+        while (true)
+        {
+            yield return wait;
+            if (!carController.targetChase || !agent)
+            {
+                agent = carController.navigator;
+                //Debug.Log("Attempting to get navigator");
+                continue;
+            }
+
+
+            float distance = Vector3.Distance(transform.position, carController.targetChase.position);
+        
+            if (agent.isOnNavMesh && distance < carController.detectorRadius)
+            {
+                Vector3 newPos = carController.targetChase.position + GetRandomFuzz(navFuzz);
+                agent.SetDestination(newPos);
+            }
+        }
+    }
+
+    private void HealthChangeHandler(int amount)
+    {
+        if (amount >= 0) return;
+        float amountNormalized = (-amount) / (float)health.currentHealth;
+        float randomChance = Random.Range(0f, 1f);
+        //Debug.Log($"Normalized Hit = {amountNormalized}, Random Change = {randomChance}");
+        if (randomChance < chanceToChangeTarget)
+        {
+            TargetPlayer();
+        }
+    }
+
+    private void TargetPlayer()
+    {
+        SwitchTarget(playerFollowPoint.transform);
+        StopCoroutine(TargetSwitchTimer());
+        StartCoroutine(TargetSwitchTimer());
+    }
+
+    private void TargetSemi()
+    {
+        SwitchTarget(SemiFollowPoint.transform);
+    }
+    
+    private void SwitchTarget(Transform newTarget)
+    {
+        carController.targetChase = newTarget;
+    }
+    
     private IEnumerator TargetSwitchTimer()
     {
         yield return new WaitForSeconds(5f);
+        TargetSemi();
     }
-
-    private void SwitchTarget(string newTarget)
-    {
-        currentTargetTag = newTarget;
-        carController.targetTag = currentTargetTag;
-    }
-
+    
     private void FireWeapon(bool isFiring)
     {
         //Debug.Log("Pew!");
@@ -151,5 +228,16 @@ public class AIController : MonoBehaviour
     {
         carController.targetChase = newTarget;
         currentTarget = newTarget;
+    }
+
+    private Vector3 GetRandomFuzz(float fuzz)
+    {
+        float xFuzz = Mathf.PerlinNoise(0, Time.time);
+        //float yFuxx = Random.Range(0, navFuzz);
+        float zFuzz = Mathf.PerlinNoise(Time.time, 0);
+        Vector3 newFuzz = new Vector3(xFuzz, 0, zFuzz) * fuzz;
+        newFuzz -= Vector3.one * .5f;
+        newFuzz *= 2;
+        return newFuzz;
     }
 }
