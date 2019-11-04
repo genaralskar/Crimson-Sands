@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cliff Normals
-  m_Shader: {fileID: 4800000, guid: 8f4b8297ed4c3d448b024de79ec36723, type: 3}
+  m_Shader: {fileID: 4800000, guid: b43c3b2ec8647e94cba768d783114d21, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,21 +19,56 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 16d574e53541bba44a84052fa38778df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 55f28575d2867d94782ae19713160e29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 55f28575d2867d94782ae19713160e29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonRamp:
+        m_Texture: {fileID: 2800000, guid: b6078e47a97eff84c99943a80b195fb0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ColorBlend: 0.3
+    - _Cutoff: 1
+    - _CutoffRamp: 0
     - _Glossiness: 2.74
     - _RimAmount: 0.855
+    - _RimOffset: 1
+    - _RimPower: 0.249
     - _RimThreshold: 0.07
+    - _ScaleAndOffset: 0.253
+    - _SpecCoverage: 0.162
+    - _SpecIntensity: 0.24
+    - __dirty: 0
     m_Colors:
     - _AmbientColor: {r: 0.4762816, g: 0.4878128, b: 0.7264151, a: 1}
     - _Color: {r: 0.8584906, g: 0.27304646, b: 0.09313814, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimTint: {r: 0.5566038, g: 0.22905695, b: 0, a: 0}
     - _SpecularColor: {r: 0.7578583, g: 0.7578583, b: 0.7578583, a: 1}
+    - _Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _Tint: {r: 0.6792453, g: 0.40972316, b: 0.10893558, a: 0}
