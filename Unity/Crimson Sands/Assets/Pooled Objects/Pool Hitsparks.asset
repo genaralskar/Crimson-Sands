@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
   m_Name: Pool Hitsparks
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 7230960600284056853, guid: 69ba33ba654ebb54c9cd2a9c8d83cf61,
+  poolObject: {fileID: 4587495024348955586, guid: 9fff0068a9750ef4ea1dc0e6f315c42d,
     type: 3}
   amount: 20
