@@ -860,7 +860,8 @@ GameObject:
   - component: {fileID: 8788357589148064317}
   - component: {fileID: 6864197611547825455}
   - component: {fileID: 7985546143920438995}
-  m_Layer: 0
+  - component: {fileID: 1817150996901992095}
+  m_Layer: 14
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,6 +941,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 3369316746193770658, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &1817150996901992095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990472839290985876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &2098833964532075196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1123,8 @@ GameObject:
   - component: {fileID: 5818005570229691580}
   - component: {fileID: 8953309412332836304}
   - component: {fileID: 2227884506520949809}
-  m_Layer: 0
+  - component: {fileID: 7678509285659144154}
+  m_Layer: 14
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,6 +1204,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -7759331768739107841, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &7678509285659144154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478172517310995546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &2480728575734441064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1776,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4925276424044392285}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
   m_Name: 
@@ -2914,7 +2948,8 @@ GameObject:
   - component: {fileID: 3839615827021579987}
   - component: {fileID: 7391430572076974280}
   - component: {fileID: 6867602752895854812}
-  m_Layer: 0
+  - component: {fileID: 2584281233323614923}
+  m_Layer: 14
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2994,6 +3029,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 3861478300804232965, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &2584281233323614923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6735854925079818109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &6765755764223437267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,7 +3134,8 @@ GameObject:
   - component: {fileID: 139223885159504224}
   - component: {fileID: 565045538892512926}
   - component: {fileID: 3218723757718749140}
-  m_Layer: 0
+  - component: {fileID: 5219584489466717196}
+  m_Layer: 14
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3163,6 +3215,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3758573805739257388, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &5219584489466717196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195175870853514403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &7218173700213523835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,7 +3243,8 @@ GameObject:
   - component: {fileID: 4249917045809895344}
   - component: {fileID: 8586949810733612512}
   - component: {fileID: 3255521880141527164}
-  m_Layer: 0
+  - component: {fileID: 7705122178309504785}
+  m_Layer: 14
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3255,6 +3324,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 5302568919011541938, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &7705122178309504785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218173700213523835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &7333439630810996007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,8 +4534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279762efb68661845b71ee9349ac51d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armorPrefab: {fileID: 7079872684549910329, guid: fd082e0dfa681ac4d95121f5de864acf,
+  armorPrefab: {fileID: 2037910464678251900, guid: a315d2ef373ab1e449b4be2a9333e815,
     type: 3}
+  snapPoint: {fileID: 8214918762681556302}
   currentArmor: {fileID: 0}
   isPlayer: 1
 --- !u!114 &8023257568847195479
@@ -4487,6 +4573,8 @@ MonoBehaviour:
   currentHealth: 100
   invincible: 0
   isPlayer: 1
+  iFrames: 1
+  iFrameTime: 0.01
   playerTeam: 0
   deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
   resetHealthOnEnable: 1
@@ -4593,7 +4681,8 @@ GameObject:
   - component: {fileID: 5198833963483160754}
   - component: {fileID: 694534409110548312}
   - component: {fileID: 7230633146172061670}
-  m_Layer: 0
+  - component: {fileID: 3846985485392157785}
+  m_Layer: 14
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,6 +4762,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4068373912626513877, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &3846985485392157785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062468435443948149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &8070025452908101153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4994,7 +5099,8 @@ GameObject:
   - component: {fileID: 669872681443848441}
   - component: {fileID: 7750011975074686871}
   - component: {fileID: 574006276346590851}
-  m_Layer: 0
+  - component: {fileID: 2290247372842907549}
+  m_Layer: 14
   m_Name: pCube8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5074,6 +5180,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6788383922943872000, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &2290247372842907549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353004645378106045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &8537685802822501942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,7 +5208,8 @@ GameObject:
   - component: {fileID: 288251325959189901}
   - component: {fileID: 1944554441146948463}
   - component: {fileID: 7676899796649806581}
-  m_Layer: 0
+  - component: {fileID: 246157176628202553}
+  m_Layer: 14
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5166,6 +5289,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6606501483488557099, guid: 476a5993611cac54394cd457a24f7720, type: 3}
+--- !u!114 &246157176628202553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537685802822501942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd002c6aa916ff468b64150b7ba2660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5878610331577300688}
+  enableCollision: 0
+  moveHurtboxToCollider: 1
+  isPlayer: 0
 --- !u!1 &8632304969254969776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,7 +5616,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c445e87ee84c0e54d82315dfcbdffc4a,
         type: 2}
-    - target: {fileID: 183605043952530237, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 9144852630695215970, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443303130863539076, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5487,7 +5631,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 7443303130863539076, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 6452962275731322277, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 183605043952530237, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5502,27 +5651,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2600994161534270315, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 9144852630695215970, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 716918105949433924, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 2576020987315468269, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 3957917075653077957, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 2600994161534270315, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5532,27 +5666,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 905358317111695516, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 6774708860792054905, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2405909561524397597, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 3957917075653077957, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2274907931539805925, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 716918105949433924, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 5972776426474900556, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 905358317111695516, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5562,17 +5691,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5972776426474900556, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3349167582919756522, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 42531455430942676, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452962275731322277, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 2405909561524397597, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5587,12 +5716,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 215060513345852505, guid: 04f6f75d49a78e749969468127d29fd9,
+    - target: {fileID: 42531455430942676, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274907931539805925, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2335658383922218576, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 215060513345852505, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_Layer
       value: 14
