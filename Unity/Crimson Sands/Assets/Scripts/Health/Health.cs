@@ -20,6 +20,10 @@ public abstract class Health : MonoBehaviour
     public bool invincible = false;
     public bool isPlayer = false;
 
+    public bool iFrames = true;
+    public float iFrameTime = 0.01f;
+    private float lastHitTime = 0;
+    
     public List<Hurtbox> Hurtboxes
     {
         get { return hurtboxes; }
@@ -35,6 +39,21 @@ public abstract class Health : MonoBehaviour
     public virtual void ModifyHealth(int amount)
     {
         if (invincible) return;
+
+        //I-Frame stuff
+        if (Time.time - lastHitTime >= iFrameTime)
+        {
+            //last hit timer up
+            //health not invincible
+            lastHitTime = Time.time;
+        }
+        else
+        {
+            Debug.Log("IFrames!");
+            //last hit timer not up
+            //health is invincible
+            return;
+        }
         
         OnDamage(amount);
         currentHealth += amount;
