@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
   m_Name: Vehicle Explosion
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 6004538668200423536, guid: 7d3465ef614f68e448c6dff060b3a737,
+  poolObject: {fileID: 3708607056188933247, guid: d9b1f1c7427e22d458e5609780479811,
     type: 3}
-  amount: 20
+  amount: 1

@@ -50,7 +50,7 @@ public class CarHealth : Health
         HealthCheck();
     }
 
-    protected override void Death()
+    public void Death()
     {
         //blow up car
 
