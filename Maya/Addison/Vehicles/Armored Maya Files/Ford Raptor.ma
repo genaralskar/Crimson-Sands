@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Ford Raptor.ma
-//Last modified: Wed, Nov 13, 2019 12:35:58 PM
+//Last modified: Wed, Nov 13, 2019 12:40:12 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "84E3A2AB-411A-7A17-193F-7DA3747469F2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.2360031591315312 0.19412821840643524 0.38803443748230126 ;
-	setAttr ".r" -type "double3" 367.46164633741381 -2248.2000000001008 2.5314213783652675e-14 ;
+	setAttr ".t" -type "double3" 0.47316583837464421 1.4936373020449811 6.0101058606944893 ;
+	setAttr ".r" -type "double3" 357.86164633718266 -2155.4000000000724 -1.2464190396677768e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "712F8C2D-4494-279D-2DE5-73908B1DE529";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8.3104418479578541;
+	setAttr ".coi" 5.9040138679693941;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
