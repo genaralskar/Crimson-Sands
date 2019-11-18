@@ -9,6 +9,7 @@
 
 using UnityEngine;
 using System.Collections;
+using Cinemachine;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -43,6 +44,7 @@ public class RCC_Camera : MonoBehaviour{
 	private Vector3 playerVelocity = new Vector3 (0f, 0f, 0f);
 
 	public Camera thisCam;			// Camera is not attached to this main gameobject. Camera is parented to pivot gameobject. Therefore, we can apply additional position and rotation changes.
+	public CinemachineVirtualCamera vCam;
 	public GameObject pivot;		// Pivot center of the camera. Used for making offsets and collision movements.
 
 	// Camera Modes.
@@ -136,7 +138,9 @@ public class RCC_Camera : MonoBehaviour{
 	void Awake(){
 
 		// Getting Camera.
-		thisCam = GetComponentInChildren<Camera>();
+		//thisCam = GetComponentInChildren<Camera>();
+		thisCam = Camera.main;
+		vCam = GetComponentInChildren<CinemachineVirtualCamera>();
 
 		// Proper settings for selected behavior type.
 		switch(RCCSettings.behaviorType){
@@ -230,19 +234,19 @@ public class RCC_Camera : MonoBehaviour{
 	void Update(){
 
 		// If it's active, enable the camera. If it's not, disable the camera.
-		if (!isRendering) {
-
-			if(thisCam.gameObject.activeInHierarchy)
-				thisCam.gameObject.SetActive (false);
-
-			return;
-
-		} else {
-
-			if(!thisCam.gameObject.activeInHierarchy)
-				thisCam.gameObject.SetActive (true);
-
-		}
+//		if (!isRendering) {
+//
+//			if(thisCam.gameObject.activeInHierarchy)
+//				thisCam.gameObject.SetActive (false);
+//
+//			return;
+//
+//		} else {
+//
+//			if(!thisCam.gameObject.activeInHierarchy)
+//				thisCam.gameObject.SetActive (true);
+//
+//		}
 
 		// Early out if we don't have the player vehicle.
 		if (!playerCar || !playerRigid){
@@ -263,7 +267,8 @@ public class RCC_Camera : MonoBehaviour{
 			index -= Time.deltaTime * 5f;
 
 		// Lerping current field of view to target field of view.
-		thisCam.fieldOfView = Mathf.Lerp (thisCam.fieldOfView, targetFieldOfView, Time.deltaTime * 5f);
+		//thisCam.fieldOfView = Mathf.Lerp (thisCam.fieldOfView, targetFieldOfView, Time.deltaTime * 5f);
+		vCam.m_Lens.FieldOfView = Mathf.Lerp (vCam.m_Lens.FieldOfView, targetFieldOfView, Time.deltaTime * 5f);
 
 	}
 
@@ -399,7 +404,7 @@ public class RCC_Camera : MonoBehaviour{
 
 		// Assigning orbit rotation, and transform rotation.
 		transform.rotation = Quaternion.Lerp(transform.rotation, playerCar.transform.rotation * orbitRotation, Time.deltaTime * 5f);
-		thisCam.transform.localRotation = Quaternion.Lerp(thisCam.transform.localRotation, Quaternion.Euler(new Vector3 (0f, Mathf.Clamp(playerVelocity.x * 1f, -25f, 25f), 0f)), Time.deltaTime * 3f);
+		vCam.transform.localRotation = Quaternion.Lerp(vCam.transform.localRotation, Quaternion.Euler(new Vector3 (0f, Mathf.Clamp(playerVelocity.x * 1f, -25f, 25f), 0f)), Time.deltaTime * 3f);
 
 	}
 
@@ -455,7 +460,7 @@ public class RCC_Camera : MonoBehaviour{
 		// RAW.
 		transform.position = targetPosition;
 
-		thisCam.transform.localPosition = Vector3.Lerp(thisCam.transform.localPosition, new Vector3 (TPSTiltAngle / 10f, 0f, 0f), Time.deltaTime * 3f);
+		vCam.transform.localPosition = Vector3.Lerp(vCam.transform.localPosition, new Vector3 (TPSTiltAngle / 10f, 0f, 0f), Time.deltaTime * 3f);
 
 		// Always look at the target.
 		transform.LookAt (playerCar.transform);
@@ -586,7 +591,7 @@ public class RCC_Camera : MonoBehaviour{
 
 			collisionPos -= collisionVector * 5f;
 			collisionRot = Quaternion.Euler(new Vector3(-collisionVector.z * 10f, -collisionVector.y * 10f, -collisionVector.x * 10f));
-			targetFieldOfView = thisCam.fieldOfView - Mathf.Clamp(collision.relativeVelocity.magnitude, 0f, 15f);
+			targetFieldOfView = vCam.m_Lens.FieldOfView - Mathf.Clamp(collision.relativeVelocity.magnitude, 0f, 15f);
 			index = Mathf.Clamp((colRelVel.magnitude * cos) * 50f, 0f, 10f);
 
 		}
@@ -603,8 +608,8 @@ public class RCC_Camera : MonoBehaviour{
 		collisionPos = Vector3.zero;
 		collisionRot = Quaternion.identity;
 
-		thisCam.transform.localPosition = Vector3.zero;
-		thisCam.transform.localRotation = Quaternion.identity;
+		vCam.transform.localPosition = Vector3.zero;
+		vCam.transform.localRotation = Quaternion.identity;
 
 		pivot.transform.localPosition = collisionPos;
 		pivot.transform.localRotation = collisionRot;
