@@ -110,7 +110,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   disableTime: 0.1
   explosionPool: {fileID: 11400000, guid: e9368d2d0d75dea4798af361f0f33ffa, type: 2}
-  explosiveForce: 60000
+  explosiveForce: 20000
   damageFalloff: 1
   falloffCurve:
     serializedVersion: 2

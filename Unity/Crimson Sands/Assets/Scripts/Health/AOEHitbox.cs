@@ -9,8 +9,10 @@ public class AOEHitbox : Hitbox
     public GameObjectPool explosionPool;
     public float explosiveForce = 10f;
 
-    public bool damageFalloff = false;
-    public AnimationCurve falloffCurve;
+    public bool damageFalloff = true;
+    public AnimationCurve falloffCurve = AnimationCurve.Linear(0, 1, 1, 0);
+    
+    
     private int startDamage;
     private SphereCollider col;
 
@@ -22,18 +24,31 @@ public class AOEHitbox : Hitbox
 
     private void OnTriggerEnter(Collider other)
     {
+        float damageMulti = 1;
         IWeaponHit[] hits = other.GetComponents<IWeaponHit>();
         foreach (var hit in hits)
         {
             if (damageFalloff)
             {
-                DamageFalloff(other.ClosestPointOnBounds(transform.position));
+                damageMulti = DamageFalloff(other.ClosestPointOnBounds(transform.position));
             }
             
             hit.OnWeaponHit(weapon, transform.position);
             weapon.damage = startDamage;
         }
-        other.attachedRigidbody?.AddExplosionForce(explosiveForce, transform.position, 2f, 1);
+
+        Rigidbody otherRb = other.attachedRigidbody;
+        if (!otherRb) return;
+        ArmorHealth ah = otherRb.GetComponent<ArmorHealth>();
+        
+        //if the armor health is not detached, or the armor health isPlayer is the same as the weapons isPlayer
+        if (ah && (!ah.dead || ah.isPlayer == weapon.isPlayer)) return;
+
+        if (otherRb)
+        {
+            otherRb.AddExplosionForce(explosiveForce * damageMulti, transform.position, 2f, 1);
+        }
+        
     }
 
     private void OnEnable()
@@ -48,7 +63,7 @@ public class AOEHitbox : Hitbox
         gameObject.SetActive(false);
     }
 
-    private void DamageFalloff(Vector3 position)
+    private float DamageFalloff(Vector3 position)
     {   
         //get distance from obj
         float distance = Vector3.Distance(position, transform.position);
@@ -64,6 +79,8 @@ public class AOEHitbox : Hitbox
         //Debug.Log($"Grenade Damage = {newDamage}");
         
         weapon.damage = (int)newDamage;
+
+        return damageMultiplier;
 
     }
 }

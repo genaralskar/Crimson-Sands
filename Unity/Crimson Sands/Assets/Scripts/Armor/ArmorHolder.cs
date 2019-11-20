@@ -11,6 +11,8 @@ public class ArmorHolder : MonoBehaviour
     private Rigidbody rb;
 
     public GameObject armorPrefab;
+
+    public Transform snapPoint;
     
     public ArmorSet currentArmor;
 
@@ -23,6 +25,7 @@ public class ArmorHolder : MonoBehaviour
         {
             GameObject armor = Instantiate(armorPrefab);
             currentArmor = armor.GetComponent<ArmorSet>();
+            currentArmor.snapPoint = snapPoint;
             currentArmor.vehicle = this;
         }
     }

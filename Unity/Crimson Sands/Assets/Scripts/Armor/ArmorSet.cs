@@ -57,8 +57,9 @@ public class ArmorSet : MonoBehaviour
             offsetP = snapPoint.localPosition;
             offsetR = snapPoint.localRotation;
         }
-        transform.position = vehicle.transform.position + offsetP + armorOffset;
-        transform.rotation = vehicle.transform.rotation * offsetR;
+
+        transform.localPosition = vehicle.transform.position + offsetP + armorOffset;
+        transform.localRotation = vehicle.transform.rotation * offsetR;
 
         SetupOther();
         
@@ -135,7 +136,7 @@ public class ArmorSet : MonoBehaviour
         
         //line up armor
         //set proper position based on offset
-        Vector3 newPos = vehicle.transform.TransformPoint(armor.positionOffset);
+        Vector3 newPos = snapPoint.transform.TransformPoint(armor.positionOffset);
         //Debug.Log(armor.gameObject + " " + this);
         armor.transform.position = newPos;
         
@@ -153,7 +154,9 @@ public class ArmorSet : MonoBehaviour
 
 
         //create joint
-        Joint newJoint = armor.gameObject.AddComponent<FixedJoint>();
+        Joint newJoint = armor.gameObject.GetComponent<FixedJoint>();
+        if(!newJoint)
+            newJoint = armor.gameObject.AddComponent<FixedJoint>();
         armor.joint = newJoint;
         armor.joint.connectedBody = vehicleRb;
         

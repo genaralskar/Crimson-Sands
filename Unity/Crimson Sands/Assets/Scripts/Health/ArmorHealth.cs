@@ -30,7 +30,7 @@ public class ArmorHealth : Health
     [SerializeField]
     private float launchForce = 5;
 
-    private bool dead = false;
+    public bool dead = false;
 
     public ArmorSet armorSet;
     
