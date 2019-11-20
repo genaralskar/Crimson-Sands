@@ -399,6 +399,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6902167845083608553, guid: 916138a6492b226419d180a0a8029db5,
+        type: 3}
+      propertyPath: RotationModule.y.scalar
+      value: 6.283185
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902167845083608553, guid: 916138a6492b226419d180a0a8029db5,
+        type: 3}
+      propertyPath: RotationModule.separateAxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902167845083608553, guid: 916138a6492b226419d180a0a8029db5,
+        type: 3}
+      propertyPath: RotationModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902167845083608553, guid: 916138a6492b226419d180a0a8029db5,
+        type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902167845083608553, guid: 916138a6492b226419d180a0a8029db5,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 916138a6492b226419d180a0a8029db5, type: 3}
 --- !u!1001 &1351047852
