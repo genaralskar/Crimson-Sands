@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7451f390f17c2478b769493df059b7, type: 3}
+  m_Name: PPSettings
+  m_EditorClassIdentifier: 
+  groups:
+  - groupName: box
+    prefabs:
+    - {fileID: 466574952162013059, guid: 32dea36ecd74f904dbf67ca26ee1cb76, type: 3}
+    - {fileID: 5089036297771359035, guid: 2e9323162e256114a84a7a00215d4641, type: 3}
+  - groupName: box2
+    prefabs:
+    - {fileID: -927199367670048503, guid: 89ee24c3aab386a4c8a6a167fbf0e475, type: 3}
+    - {fileID: -927199367670048503, guid: 64141a96f24c0914293b41f9dede4cdb, type: 3}
