@@ -20,4 +20,20 @@ public class PrefabGroup
         int randomPref = Random.Range(0, prefabs.Count);
         return prefabs[randomPref];
     }
+
+    public GameObject[] GetPrefabs(int amount = 1, int seed = -1)
+    {
+        GameObject[] objs = new GameObject[amount];
+        if (seed != -1)
+        {
+            Random.InitState(seed);
+        }
+
+        for (int i = 0; i < amount; i++)
+        {
+            objs[i] = GetPrefab();
+        }
+
+        return objs;
+    }
 }

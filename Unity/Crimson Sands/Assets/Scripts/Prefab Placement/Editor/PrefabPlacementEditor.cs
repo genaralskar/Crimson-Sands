@@ -8,39 +8,77 @@ namespace genaralskar
     
     public class PrefabPlacementEditor : EditorWindow
     {
-        static PrefabPlacementSO pps;
-        public PrefabPlacementSO prePlace;
+        private static PrefabPlacementSO pps;
+        private static bool useSeed;
+        private static bool includeSeedInGroupName;
+        private static int seed;
         
         // Add menu named "My Window" to the Window menu
-        [MenuItem("Window/Prefab Placer")]
+        [MenuItem("Tools/Prefab Placer")]
         static void Init()
         {
             // Get existing open window or if none, make a new one:
             PrefabPlacementEditor window = (PrefabPlacementEditor)EditorWindow.GetWindow(typeof(PrefabPlacementEditor));
 
-            string[] PPsettings = AssetDatabase.FindAssets("t:PrefabPlacementSO");
-            string assetPath = AssetDatabase.GUIDToAssetPath(PPsettings[0]);
-            pps = (PrefabPlacementSO)AssetDatabase.LoadAssetAtPath(assetPath, typeof(PrefabPlacementSO));
+            if (pps == null)
+            {
+                string[] PPsettings = AssetDatabase.FindAssets("t:PrefabPlacementSO");
+                string assetPath = AssetDatabase.GUIDToAssetPath(PPsettings[0]);
+                pps = (PrefabPlacementSO)AssetDatabase.LoadAssetAtPath(assetPath, typeof(PrefabPlacementSO));
+            }
+            
             
             window.Show();
         }
         
         void OnGUI()
         {
-
-            prePlace = EditorGUILayout.ObjectField("Prefab Placer Settings", prePlace, typeof(PrefabPlacementSO), false) as PrefabPlacementSO;
+            pps = EditorGUILayout.ObjectField("Prefab Placer Settings", pps, typeof(PrefabPlacementSO), false) as PrefabPlacementSO;
             
+            //seed layout
+            useSeed = EditorGUILayout.BeginToggleGroup("Use seed", useSeed);
+            seed = EditorGUILayout.IntField("Seed", seed);
+            includeSeedInGroupName = EditorGUILayout.Toggle("Include Seed In Group Name", includeSeedInGroupName);
+            EditorGUILayout.EndToggleGroup();
+            
+            //button layout and placement code
             EditorGUILayout.BeginToggleGroup("Select an object to place prefabs", Selection.gameObjects.Length > 0);
             if (GUILayout.Button("Place Prefabs"))
             {
+                if (pps == null)
+                {
+                    Debug.LogError("Prefab Placer Settings is empty!");
+                    return;
+                }
+
+                if (pps.groups.Count < 1)
+                {
+                    Debug.LogError("Prefab Placer Settings has now groups setup");
+                    return;
+                }
+
+                if (useSeed)
+                {
+                    Random.InitState(seed);
+                }
+                
+                //create parent for all groups
+                GameObject groupParent = new GameObject("Prefab Placement Parent");
+
+                if (useSeed && includeSeedInGroupName)
+                {
+                    groupParent.name = groupParent.name + "_" + seed;
+                }
+                
                 //get children of selected object
                 Transform[] children = Selection.gameObjects[0].GetComponentsInChildren<Transform>();
                 
                 //for each prefab group
-                foreach (var group in prePlace.groups)
+                foreach (var group in pps.groups)
                 {
                     //create new gameobject for parenting
                     GameObject parent = new GameObject($"{group.groupName} Parent");
+                    parent.transform.SetParent(groupParent.transform);
                     
                     //for each child object
                     foreach (var child in children)

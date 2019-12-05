@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d7451f390f17c2478b769493df059b7, type: 3}
-  m_Name: PPSettins
+  m_Name: PPSettings
   m_EditorClassIdentifier: 
   groups:
   - groupName: box
