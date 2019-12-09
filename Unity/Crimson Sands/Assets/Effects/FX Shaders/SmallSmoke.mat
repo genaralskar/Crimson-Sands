@@ -67,6 +67,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: bcb8a8d20459e6349bf5cfce27e04e22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -99,11 +103,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: bcb8a8d20459e6349bf5cfce27e04e22, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ToonRamp:
         m_Texture: {fileID: 2800000, guid: b0f67e5b0d50b994f99364a7803b1b8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 1, y: 1}
     - _TopTexture0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _nOISEtEX:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -115,14 +127,15 @@ Material:
     - _Boost: 0.66
     - _BumpScale: 1
     - _Cutoff: 0
-    - _CutoffRamp: 1.23
+    - _CutoffRamp: 0.93
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FadeSlider: 2.71
     - _FadeSlider1: 0
     - _FadeStrength: 70.1
     - _Float0: 72.2
     - _Float1: 13
-    - _Float4: 0.489
+    - _Float4: 0.297
     - _Float5: 1.4
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -141,9 +154,9 @@ Material:
     - _Parallax: 0.02
     - _RimOffset: 1
     - _RimOffset1: 1
-    - _RimPower: 0.81
+    - _RimPower: 0.692
     - _RimPower1: 0
-    - _ScaleAndOffset: 0.214
+    - _ScaleAndOffset: 0.725
     - _ScaleandOffset: 0.736
     - _Shininess: 0.6
     - _SmoothnessTextureChannel: 0
@@ -152,6 +165,8 @@ Material:
     - _SpecIntensity: 0
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
+    - _Speed: 0
+    - _Speed2: 1
     - _SrcBlend: 1
     - _Step: 1
     - _ToonIntensity: 0
@@ -162,6 +177,8 @@ Material:
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseGenerator: {r: 0.1, g: 4, b: 0, a: 0}
+    - _NoiseGenerator1: {r: 4, g: 1, b: 0, a: 0}
     - _RimTint: {r: 0.9245283, g: 0.8678355, b: 0.871885, a: 1}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Speed: {r: 0.05, g: 0.05, b: 0, a: 0}
