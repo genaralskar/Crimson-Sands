@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
   m_Name: Pool Small Explosion
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 7889843506191217966, guid: bb9c2e19751ef5c42bf2f3eff36ed5f5,
+  poolObject: {fileID: 6913696860562790714, guid: b56b397ba451c4643bd8fc07ddb5f6bf,
     type: 3}
   amount: 100
