@@ -214,7 +214,7 @@ public class Weapon : MonoBehaviour
 
         if (Physics.SphereCast(firePoint.position, .1f, direction, out hit, Mathf.Infinity, weaponRayCastMask))
         {
-            Debug.Log(hit.collider.gameObject);
+            //Debug.Log(hit.collider.gameObject);
             int hitLayer = hit.collider.gameObject.layer;
             //Debug.Log(hitLayer);
             //Debug.Log(hit.collider.gameObject);

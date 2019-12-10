@@ -104,10 +104,10 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
-        Debug.Log($"testing damage, {health.gameObject}");
+        //Debug.Log($"testing damage, {health.gameObject}");
         if(health.isPlayer != weapon.isPlayer)
         {
-            Debug.Log($"Sending Damage!, {health.gameObject}", this);
+            //Debug.Log($"Sending Damage!, {health.gameObject}", this);
             SendDamage(weapon.damage);
         }
     }

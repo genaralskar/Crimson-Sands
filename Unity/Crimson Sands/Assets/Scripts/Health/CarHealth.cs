@@ -38,7 +38,7 @@ public class CarHealth : Health
         //modify amount by number of armor pieces
         if (armor && armor.currentArmor)
         {
-            float newAmount = amount * DamageModifyier();
+            float newAmount = amount * DamageModifier();
             amount = (int)newAmount;
         }
         
@@ -50,19 +50,22 @@ public class CarHealth : Health
         HealthCheck();
     }
 
-    public void Death()
+    protected override void Death()
     {
         //blow up car
-
+        Debug.Log("Car Death!");
+        
         if (isPlayer)
         {
             //end game/respawn
         }
         else
         {
+            Debug.Log("Not Player");
             if (deathExplosion)
             {
-                GameObject explosion = deathExplosion.GetPooledObject(transform.position, Quaternion.identity);
+                Debug.Log("KABOOOM");
+                GameObject explosion = deathExplosion.GetPooledObject(transform.position, transform.rotation);
                 explosion.gameObject.SetActive(true);
             }
 
@@ -70,7 +73,7 @@ public class CarHealth : Health
         }
     }
 
-    private float DamageModifyier()
+    private float DamageModifier()
     {
         int currentArmor = armor.currentArmor.attachedPieces.Count;
 
