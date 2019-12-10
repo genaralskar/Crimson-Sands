@@ -36,7 +36,7 @@ Links to all our other stuff
 - https://sketchfab.com/caboosereynolds
 - https://www.artstation.com/caboosereynolds
 
-## Kyle Pinkham
+### Kyle Pinkham
 
 ### Logan Slater
 - https://www.artstation.com/logansl8r
