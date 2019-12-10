@@ -49,7 +49,7 @@ public abstract class Health : MonoBehaviour
         }
         else
         {
-            Debug.Log("IFrames!");
+            //Debug.Log("IFrames!");
             //last hit timer not up
             //health is invincible
             return;
@@ -81,6 +81,7 @@ public abstract class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            //Debug.Log("Health low!");
             currentHealth = 0;
             Death();
         }

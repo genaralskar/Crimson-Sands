@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolObject: {fileID: 3708607056188933247, guid: d9b1f1c7427e22d458e5609780479811,
     type: 3}
-  amount: 1
+  amount: 10
