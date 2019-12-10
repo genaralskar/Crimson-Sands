@@ -1,5 +1,5 @@
 # Crimson Sands
-A game by Addison, Collin, Josh, Logan, Mitch
+A game by bunch of college students (credits below)
 
 ## About
 Crimson Sands is a game set in a post apocalypse, where crystals are power. You've been tasked with transporting one of these giant crystals from its landing location back to your base. Be careful though, along the way you'll encounter others that will want to take the crystal for themselves, so its your job to take them down by shooting through their armor, taking them apart piece by piece until they're reduced to nothing more than scrap metal! Choose your vehicle, choose your weapons, and get that crysal home!
@@ -22,19 +22,25 @@ These are the current stable builds/releases
 
 ## Links
 Links to all our other stuff
-### Addison
+### Addison Moyer
+- https://www.artstation.com/addisonmoyer
+- https://sketchfab.com/Addison.Moyer/models
 
-
-### Collin
+### Collin Anderson
 - https://twitter.com/GenaralSkar/
 - https://www.artstation.com/genaralskar
 
-### Josh
+### Dareah Roberts
+
+### Josh Reynolds
 - https://sketchfab.com/caboosereynolds
 - https://www.artstation.com/caboosereynolds
 
-### Logan
+## Kyle Pinkham
 
+### Logan Slater
+- https://www.artstation.com/logansl8r
+- https://sketchfab.com/ldsl8r
 
 ### Mitch
 
