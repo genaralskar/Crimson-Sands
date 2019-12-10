@@ -45,79 +45,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-              <folding>
-                <marker date="1573024790153" expanded="false" signature="6:92" ph="..." />
-                <marker date="1573024790153" expanded="true" signature="125:2316" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="403:502" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="442:496" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="528:585" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="636:1127" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="718:804" ph="/* Debug.Log($&quot;damage was {amount}&quot;); ... */" />
-                <marker date="1573024790153" expanded="true" signature="845:960" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1152:1561" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1203:1254" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1267:1555" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1309:1503" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1598:2314" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1736:1816" ph="{...}" />
-                <marker date="1573024790153" expanded="true" signature="1826:1976" ph="/* if max armor, normal mod would return 1, but we want it to return 0 ... */" />
-                <marker date="1573024790153" expanded="true" signature="2017:2142" ph="/* from 0 to 1, to .3 to 1 ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickupVehicle.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <folding>
-                <marker date="1573019878837" expanded="false" signature="6:78" ph="..." />
-                <marker date="1573019878837" expanded="true" signature="79:210" ph="/// This goes on the root object for a vehicle, and adds WeaponPickupHandler to all colliders at Start ... " />
-                <marker date="1573019878837" expanded="true" signature="259:2505" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="266:484" ph="[...]" />
-                <marker date="1573019878837" expanded="true" signature="967:1160" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1051:1103" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1197:1455" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1313:1449" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1370:1439" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1497:2249" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1512:1700" ph="/* gotta wait till the next frame cause the car controller i guess makes/moves all the colliders in start, ... */" />
-                <marker date="1573019878837" expanded="true" signature="1871:2243" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="1915:2079" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="2382:2503" ph="{...}" />
-                <marker date="1573019878837" expanded="true" signature="2432:2497" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_WheelCollider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickupVehicle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/WeaponMount.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Object Pooling/GameObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AIBrakeZonesContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/ArmorHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/Hurtbox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LayerInfo/LayerInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectiles/RaycastProjectileInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_WheelCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AIBrakeZonesContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/Hurtbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/ArmorHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Object Pooling/GameObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LayerInfo/LayerInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickupVehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/WeaponMount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/ProjectileImpactAudio.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -137,19 +83,13 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="431" />
     <option name="y" value="-21" />
     <option name="width" value="1186" />
     <option name="height" value="1167" />
   </component>
   <component name="ProjectId" id="1SCelkSn654ZGeaIGEWU3yVQUpZ" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -174,12 +114,14 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <list>
@@ -200,52 +142,9 @@
       <workItem from="1566443545977" duration="2604000" />
       <workItem from="1571072163220" duration="2571000" />
       <workItem from="1573021844099" duration="1195000" />
+      <workItem from="1573495313339" duration="1094000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1195000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -258,12 +157,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -286,55 +180,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-          <folding>
-            <marker date="1573024790153" expanded="false" signature="6:92" ph="..." />
-            <marker date="1573024790153" expanded="true" signature="125:2316" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="403:502" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="442:496" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="528:585" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="636:1127" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="718:804" ph="/* Debug.Log($&quot;damage was {amount}&quot;); ... */" />
-            <marker date="1573024790153" expanded="true" signature="845:960" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1152:1561" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1203:1254" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1267:1555" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1309:1503" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1598:2314" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1736:1816" ph="{...}" />
-            <marker date="1573024790153" expanded="true" signature="1826:1976" ph="/* if max armor, normal mod would return 1, but we want it to return 0 ... */" />
-            <marker date="1573024790153" expanded="true" signature="2017:2142" ph="/* from 0 to 1, to .3 to 1 ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickupVehicle.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <folding>
-            <marker date="1573019878837" expanded="false" signature="6:78" ph="..." />
-            <marker date="1573019878837" expanded="true" signature="79:210" ph="/// This goes on the root object for a vehicle, and adds WeaponPickupHandler to all colliders at Start ... " />
-            <marker date="1573019878837" expanded="true" signature="259:2505" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="266:484" ph="[...]" />
-            <marker date="1573019878837" expanded="true" signature="967:1160" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1051:1103" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1197:1455" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1313:1449" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1370:1439" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1497:2249" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1512:1700" ph="/* gotta wait till the next frame cause the car controller i guess makes/moves all the colliders in start, ... */" />
-            <marker date="1573019878837" expanded="true" signature="1871:2243" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="1915:2079" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="2382:2503" ph="{...}" />
-            <marker date="1573019878837" expanded="true" signature="2432:2497" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
