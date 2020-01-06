@@ -157,6 +157,7 @@ Material:
     - _SpecIntensity: 0
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
+    - _Speed1: 1
     - _SrcBlend: 1
     - _Step: 1
     - _ToonIntensity: 0
