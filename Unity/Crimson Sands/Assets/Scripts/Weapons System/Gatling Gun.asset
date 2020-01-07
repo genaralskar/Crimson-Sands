@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 6340667838713380698, guid: 48d2d7b6d483aff49af84091c466ec31,
     type: 3}
-  weaponDamage: 10
+  weaponDamage: 15
   fireSound: {fileID: 0}
   projectile: {fileID: 0}
