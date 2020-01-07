@@ -31,6 +31,7 @@ Links to all our other stuff
 - https://www.artstation.com/genaralskar
 
 ### Dareah Roberts
+- https://www.artstation.com/doctoremm
 
 ### Josh Reynolds
 - https://sketchfab.com/caboosereynolds
