@@ -13,11 +13,34 @@ MonoBehaviour:
   m_Name: PPSettings
   m_EditorClassIdentifier: 
   groups:
-  - groupName: box
+  - groupName: SmallBush
     prefabs:
     - {fileID: 466574952162013059, guid: 32dea36ecd74f904dbf67ca26ee1cb76, type: 3}
     - {fileID: 5089036297771359035, guid: 2e9323162e256114a84a7a00215d4641, type: 3}
-  - groupName: box2
+  - groupName: LargeBush
     prefabs:
-    - {fileID: -927199367670048503, guid: 89ee24c3aab386a4c8a6a167fbf0e475, type: 3}
-    - {fileID: -927199367670048503, guid: 64141a96f24c0914293b41f9dede4cdb, type: 3}
+    - {fileID: 171474, guid: f62058cb710fd1745a24102fff0edd46, type: 3}
+    - {fileID: 5089036297771359035, guid: 2e9323162e256114a84a7a00215d4641, type: 3}
+  - groupName: SmallRock
+    prefabs:
+    - {fileID: -927199367670048503, guid: 9d09ff0261b643e47a30c39d70190470, type: 3}
+    - {fileID: -927199367670048503, guid: 9229c923264306046916d412f5f29ad0, type: 3}
+    - {fileID: -927199367670048503, guid: 8e95588f7c21d3446b62251461b13aa8, type: 3}
+    - {fileID: -927199367670048503, guid: 9d09ff0261b643e47a30c39d70190470, type: 3}
+  - groupName: LargeRock
+    prefabs:
+    - {fileID: -927199367670048503, guid: 3c67da7cf4a2387499aa5ff47de46e2b, type: 3}
+    - {fileID: -927199367670048503, guid: 8e95588f7c21d3446b62251461b13aa8, type: 3}
+    - {fileID: -927199367670048503, guid: 1bc611edc422280428f95ad198757ca7, type: 3}
+    - {fileID: -927199367670048503, guid: 9229c923264306046916d412f5f29ad0, type: 3}
+    - {fileID: -927199367670048503, guid: 9229c923264306046916d412f5f29ad0, type: 3}
+    - {fileID: -927199367670048503, guid: 9d09ff0261b643e47a30c39d70190470, type: 3}
+  - groupName: SmallCactus
+    prefabs:
+    - {fileID: -927199367670048503, guid: 4d66d980e01a7cd4fa3b08d952942e0b, type: 3}
+    - {fileID: -927199367670048503, guid: daa358c76a326134786ba47c53ddce1c, type: 3}
+  - groupName: LargeCactus
+    prefabs:
+    - {fileID: -927199367670048503, guid: 4dddeffa4ed08b0419ac526103490e84, type: 3}
+    - {fileID: -927199367670048503, guid: f79b241f36c8c5c46895cc7fa9d4905a, type: 3}
+    - {fileID: -927199367670048503, guid: e000adcc3c7b6604b81e277b13d10e95, type: 3}
