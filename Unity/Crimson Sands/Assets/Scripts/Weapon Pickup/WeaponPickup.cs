@@ -9,7 +9,11 @@ public class WeaponPickup : MonoBehaviour
 {
     [SerializeField] private Transform weaponSpawnPoint;
     [SerializeField] private WeaponInfo weapon;
+    [SerializeField] private float respawnTime = 10f;
 
+    private List<Transform> children = new List<Transform>();
+    private Collider col;
+    
     private void Awake()
     {
         //spawn weapon
@@ -18,6 +22,13 @@ public class WeaponPickup : MonoBehaviour
         newWeapon.transform.localRotation = Quaternion.identity;
         newWeapon.transform.localScale = Vector3.one;
         newWeapon.GetComponent<Weapon>().isPlayer = false;
+
+        col = GetComponent<Collider>();
+        
+        foreach (Transform child in transform)
+        {
+            children.Add(child);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +46,31 @@ public class WeaponPickup : MonoBehaviour
 
     private void OnPickedUp()
     {
-        gameObject.SetActive(false);
+        Deactivate();
+        if (respawnTime > 0)
+        {
+            StartCoroutine(RespawnCountdown());
+        }
+    }
+
+    private void Activate(bool value = true)
+    {
+        foreach (var child in children)
+        {
+            child.gameObject.SetActive(value);
+        }
+
+        col.enabled = value;
+    }
+
+    private void Deactivate()
+    {
+        Activate(false);
+    }
+
+    private IEnumerator RespawnCountdown()
+    {
+        yield return new WaitForSeconds(respawnTime);
+        Activate();
     }
 }

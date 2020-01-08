@@ -175,7 +175,28 @@ public class AIController : MonoBehaviour
             if (agent.isOnNavMesh && distance < carController.detectorRadius)
             {
                 Vector3 newPos = carController.targetChase.position + GetRandomFuzz(navFuzz);
-                agent.SetDestination(newPos);
+                
+                //if new destination is behind car a certain distance, slow down instead of turning around
+                //set destination to in front of car, but apply brakes
+
+                Vector3 newDir = newPos - transform.position;
+                newDir = newDir.normalized;
+                float newDist = newDir.sqrMagnitude;
+                
+                if (Vector3.Dot(newDir, transform.forward) < -.5f && newDist < 20)
+                {
+                    //point is behind car, slow down!
+                    carController.overrideBrake = true;
+                    carController.brakeInput = 1f;
+                    agent.SetDestination(transform.position);
+                }
+                else
+                {
+                    carController.overrideBrake = false;
+                    agent.SetDestination(newPos);
+                }
+                
+                
             }
         }
     }

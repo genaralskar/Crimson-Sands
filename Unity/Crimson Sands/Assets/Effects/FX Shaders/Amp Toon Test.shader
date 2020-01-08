@@ -8,7 +8,7 @@ Shader "Smoke Noise Toon"
 	{
 		_NoiseTexture("Noise Texture", 2D) = "white" {}
 		_FadeSlider("Fade Slider", Range( 0 , 5)) = 1.231126
-		_Cutoff( "Mask Clip Value", Float ) = 0
+		_Cutoff( "Mask Clip Value", Float ) = 0.1
 		_NoiseGenerator1("Noise Generator", Vector) = (1,0.1,0,0)
 		_NoiseGenerator("Noise Generator", Vector) = (0.1,2,0,0)
 		_CutoffRamp("Cutoff Ramp", Range( 0 , 2)) = 0
@@ -96,7 +96,7 @@ Shader "Smoke Noise Toon"
 		uniform sampler2D _SpecMap;
 		uniform float _SpecIntensity;
 		uniform float4 _RimTint;
-		uniform float _Cutoff = 0;
+		uniform float _Cutoff = 0.1;
 
 		UNITY_INSTANCING_BUFFER_START(SmokeNoiseToon)
 			UNITY_DEFINE_INSTANCED_PROP(float4, _Albedo_ST)
@@ -192,8 +192,8 @@ Shader "Smoke Noise Toon"
 			#endif //aseld
 			float dotResult2 = dot( ase_worldNormal , ase_worldlightDir );
 			float normal_lightDir8 = dotResult2;
-			float2 temp_cast_4 = ((normal_lightDir8*_ScaleAndOffset + _ScaleAndOffset)).xx;
-			float4 Shadow14 = ( Albedo28 * tex2D( _ToonRamp, temp_cast_4 ) );
+			float2 temp_cast_5 = ((normal_lightDir8*_ScaleAndOffset + _ScaleAndOffset)).xx;
+			float4 Shadow14 = ( Albedo28 * tex2D( _ToonRamp, temp_cast_5 ) );
 			#if defined(LIGHTMAP_ON) && ( UNITY_VERSION < 560 || ( defined(LIGHTMAP_SHADOW_MIXING) && !defined(SHADOWS_SHADOWMASK) && defined(SHADOWS_SCREEN) ) )//aselc
 			float4 ase_lightColor = 0;
 			#else //aselc
@@ -215,8 +215,8 @@ Shader "Smoke Noise Toon"
 			float dotResult20_g7 = dot( CurrentNormal23_g7 , ase_worldlightDir );
 			float NDotL21_g7 = dotResult20_g7;
 			float3 AttenuationColor8_g7 = ( ase_lightColor.rgb * ase_lightAtten );
-			float3 temp_cast_8 = (( ase_lightAtten / _Float4 )).xxx;
-			float3 DiffuseColor70_g7 = ( ( ( max( ( LightWrapVector47_g7 + ( ( 1.0 - LightWrapVector47_g7 ) * NDotL21_g7 ) ) , float3(0,0,0) ) * AttenuationColor8_g7 ) + (UNITY_LIGHTMODEL_AMBIENT).rgb ) * temp_cast_8 );
+			float3 temp_cast_9 = (( ase_lightAtten / _Float4 )).xxx;
+			float3 DiffuseColor70_g7 = ( ( ( max( ( LightWrapVector47_g7 + ( ( 1.0 - LightWrapVector47_g7 ) * NDotL21_g7 ) ) , float3(0,0,0) ) * AttenuationColor8_g7 ) + (UNITY_LIGHTMODEL_AMBIENT).rgb ) * temp_cast_9 );
 			float3 normalizeResult77_g7 = normalize( _WorldSpaceLightPos0.xyz );
 			float3 normalizeResult28_g7 = normalize( ( normalizeResult77_g7 + ase_worldViewDir ) );
 			float3 HalfDirection29_g7 = normalizeResult28_g7;
@@ -505,6 +505,8 @@ WireConnection;2;0;1;0
 WireConnection;2;1;3;0
 WireConnection;7;0;5;0
 WireConnection;7;1;6;0
+WireConnection;9;0;7;0
+WireConnection;8;0;2;0
 WireConnection;27;0;26;0
 WireConnection;27;1;24;0
 WireConnection;8;0;2;0
