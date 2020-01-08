@@ -364,6 +364,7 @@
         <option value="$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_CameraConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HeightmapFromTexture.cs" />
       </list>
     </option>
   </component>
@@ -902,6 +903,13 @@
             <marker date="1578365293591" expanded="true" signature="16652:16743" ph="{...}" />
             <marker date="1578365293591" expanded="true" signature="16793:16913" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HeightmapFromTexture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
