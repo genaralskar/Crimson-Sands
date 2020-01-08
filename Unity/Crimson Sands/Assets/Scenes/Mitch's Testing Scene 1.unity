@@ -13563,6 +13563,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933615, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13617,11 +13622,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933614, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
@@ -13783,6 +13783,11 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7864288303513219402, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671d0d8f65a41684a8707a040da1db2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
 --- !u!1001 &1458150570
@@ -14419,6 +14424,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8703049790349179964, guid: e011c99b29a001245b8afcae4cdd6ebd,
+        type: 3}
+      propertyPath: deathExplosion
+      value: 
+      objectReference: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483,
+        type: 2}
     - target: {fileID: 5046885231107123128, guid: e011c99b29a001245b8afcae4cdd6ebd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14479,12 +14490,6 @@ PrefabInstance:
       propertyPath: canControl
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8703049790349179964, guid: e011c99b29a001245b8afcae4cdd6ebd,
-        type: 3}
-      propertyPath: deathExplosion
-      value: 
-      objectReference: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483,
-        type: 2}
     - target: {fileID: 4832630987093400469, guid: e011c99b29a001245b8afcae4cdd6ebd,
         type: 3}
       propertyPath: _AIType
@@ -15375,6 +15380,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Mount
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15428,16 +15443,6 @@ PrefabInstance:
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon Mount
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155040142967078146, guid: 04f6f75d49a78e749969468127d29fd9,
@@ -15862,6 +15867,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: NoiseModule.strength.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: InheritVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
+        type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1596610954903405404, guid: 9513c2a62a9526143a01065e90e3a351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15916,41 +15956,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: NoiseModule.strength.minScalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: VelocityModule.y.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: InheritVelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596610954903405411, guid: 9513c2a62a9526143a01065e90e3a351,
-        type: 3}
-      propertyPath: stopAction
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9513c2a62a9526143a01065e90e3a351, type: 3}
@@ -16337,6 +16342,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon_Mount_Animated_EX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16390,16 +16405,6 @@ PrefabInstance:
     - target: {fileID: 5033810190589499956, guid: 04f6f75d49a78e749969468127d29fd9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon_Mount_Animated_EX
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322923048038754343, guid: 04f6f75d49a78e749969468127d29fd9,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155040142967078146, guid: 04f6f75d49a78e749969468127d29fd9,
@@ -16680,6 +16685,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8653273529700565930, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 70e2788087c853b4d83d3fa84bd30130,
+        type: 2}
     - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Layer
@@ -16690,12 +16701,6 @@ PrefabInstance:
       propertyPath: onlySetupOnPickupLayer
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8653273529700565930, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 70e2788087c853b4d83d3fa84bd30130,
-        type: 2}
     - target: {fileID: 6658236437342165889, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
