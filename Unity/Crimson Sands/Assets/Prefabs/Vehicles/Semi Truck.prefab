@@ -2262,7 +2262,7 @@ MonoBehaviour:
   highBeamHeadLightsOn: 0
   indicatorsOn: 0
   indicatorTimer: 0
-  useDamage: 1
+  useDamage: 0
   deformableMeshFilters: []
   damageFilter:
     serializedVersion: 2
