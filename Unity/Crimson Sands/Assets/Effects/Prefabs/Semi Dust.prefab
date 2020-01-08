@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5794101510625261332, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: m_Name
-      value: Dust Variant
+      value: Semi Dust
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261332, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
@@ -321,12 +321,12 @@ PrefabInstance:
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}
       propertyPath: SizeBySpeedModule.enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5794101510625261334, guid: 1ef35c752bc360041a8d8d9170296b1b,
         type: 3}

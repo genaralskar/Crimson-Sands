@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Mitch\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Mitch\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Crimson Sands.149776117.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Mitch\Documents\Fall 2019\Game\Crimson-Sands\Unity\Crimson Sands" t="IncludeRecursive">
+    <e p="C:\Users\Mitch\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mitch\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Crimson Sands.252278497.00" t="ExcludeRecursive" />
+    <e p="D:\Fall 2019\Crimson-Sands\Unity\Crimson Sands" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -1020,8 +1020,11 @@
           <e p="FX Shaders" t="Include">
             <e p="AlphaNoise.shader" t="Include" />
             <e p="Amp Toon Test.shader" t="Include" />
+            <e p="Fresnel.shader" t="Include" />
             <e p="MitchToonShader.shader" t="Include" />
+            <e p="Noise.shader" t="Include" />
             <e p="Skull Shader.shader" t="Include" />
+            <e p="TriplanarToonTest.shader" t="Include" />
           </e>
           <e p="Materials" t="Include">
             <e p="Materials" t="Include">
@@ -1031,6 +1034,7 @@
           <e p="Shader" t="Include">
             <e p="CutoutTest 1.shader" t="Include" />
             <e p="CutoutTest.shader" t="Include" />
+            <e p="New Amplify Shader.shader" t="Include" />
           </e>
         </e>
         <e p="NatureStarterKit2" t="Include">
@@ -1357,6 +1361,7 @@
             <e p="ControlInputs.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
+            <e p="ArmorSetupEditor.cs" t="Include" />
             <e p="WeaponEditor.cs" t="Include" />
           </e>
           <e p="EnableObjectOnTrigger.cs" t="Include" />
@@ -1368,6 +1373,7 @@
             <e p="Hitbox.cs" t="Include" />
             <e p="Hurtbox.cs" t="Include" />
           </e>
+          <e p="HeightmapFromTexture.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IWeaponHit.cs" t="Include" />
           </e>
@@ -1385,6 +1391,12 @@
           </e>
           <e p="OldArmor.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="Prefab Placement" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PrefabPlacementEditor.cs" t="Include" />
+            </e>
+            <e p="PrefabPlacementSO.cs" t="Include" />
+          </e>
           <e p="Projectiles" t="Include">
             <e p="Projectile.cs" t="Include" />
             <e p="RaycastProjectileInfo.cs" t="Include" />
@@ -1467,9 +1479,12 @@
         <e p="Toon.shader" t="Include" />
       </e>
       <e p="Crimson Sands.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>
