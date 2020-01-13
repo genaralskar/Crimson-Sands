@@ -117,6 +117,8 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 181043
+  brakeInput: 0
+  overrideBrake: 0
   limitSpeed: 1
   maximumSpeed: 160
   smoothedSteer: 1
@@ -710,6 +712,11 @@ PrefabInstance:
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7864288303513219402, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671d0d8f65a41684a8707a040da1db2d, type: 2}
     m_RemovedComponents:
     - {fileID: 1682924918811996742, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}

@@ -5585,11 +5585,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8023257568769631752}
     m_Modifications:
-    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933615, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5645,6 +5640,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933614, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
       propertyPath: SizeModule.enabled
@@ -5659,7 +5659,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2d1e573c93a85b24fa4c4894270a87f4, type: 2}
+      objectReference: {fileID: 2100000, guid: 671d0d8f65a41684a8707a040da1db2d, type: 2}
     - target: {fileID: 6148109115009933613, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -5903,11 +5903,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8023257568769631752}
     m_Modifications:
-    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust Variant (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933615, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5962,6 +5957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148109115009933612, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6148109115009933614, guid: 4d42b38e71899d14eb17ff6fd6ac97a0,
         type: 3}
