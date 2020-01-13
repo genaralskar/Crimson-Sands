@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
-        m_Texture: {fileID: 2800000, guid: bcb8a8d20459e6349bf5cfce27e04e22, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09319e105922246498caed573b84f774, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2:
-        m_Texture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
+        m_Texture: {fileID: 2800000, guid: e71ca94b157333347bd6eb0a25e6181e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture3:
@@ -72,6 +72,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _noiseAlpha:
+        m_Texture: {fileID: 2800000, guid: ecc4f4962a948154db0b6d787df44c42, type: 3}
+        m_Scale: {x: 0.05, y: 0.05}
+        m_Offset: {x: 0, y: 0}
+    - _noiseAlpha2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -98,13 +106,15 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.6320754, g: 0.17924528, b: 0, a: 1}
-    - _Color0: {r: 0.3490566, g: 0.14255567, b: 0, a: 1}
+    - _Color: {r: 0.8396226, g: 0.6600807, b: 0.368325, a: 0}
+    - _Color0: {r: 0.6981132, g: 0.344937, b: 0.18111429, a: 0}
     - _Color1: {r: 0.8396226, g: 0.32342586, b: 0.06732824, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Speed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _Speed1: {r: 0, g: -3, b: 0, a: 0}
     - _Speed2: {r: 0, g: 0.1, b: 0, a: 0}
     - _Tili: {r: 1, g: 1, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Tiling2: {r: 1, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Tiling1: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Tiling2: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Vector0: {r: 0, g: -1, b: 0, a: 0}
