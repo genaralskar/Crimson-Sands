@@ -49,7 +49,7 @@ Material:
     - _LightWrap: 0
     - _Metallic: 0
     - _RimOffset: 1
-    - _RimPower: 0.391
+    - _RimPower: 0.7
     - _ScaleAndOffset: 0.5
     - _SpecCoverage: 0.278
     - _SpecIntensity: 0.209
