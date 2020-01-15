@@ -67,6 +67,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -118,6 +122,7 @@ Material:
     - _CutoffRamp: 1.23
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FadeSlider: 1.231126
     - _FadeSlider1: 0
     - _FadeStrength: 70.1
     - _Float0: 72.2
@@ -152,16 +157,19 @@ Material:
     - _SpecIntensity: 0
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
+    - _Speed1: 0.6420124
     - _SrcBlend: 1
     - _Step: 1
     - _ToonIntensity: 0
     - _UVLerp: 0.12
     - _UVSec: 1
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseGenerator: {r: 0.1, g: 2, b: 0, a: 0}
+    - _NoiseGenerator1: {r: 1, g: 0.1, b: 0, a: 0}
     - _RimTint: {r: 0.9245283, g: 0.8678355, b: 0.871885, a: 1}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Speed: {r: 0.05, g: 0.05, b: 0, a: 0}

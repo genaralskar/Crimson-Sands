@@ -14,7 +14,8 @@ public class CarHealth : Health
 
     private int maxArmorMod = 10;
     private float minDamagePercent = 0.3f;
-    
+
+    [SerializeField] private GameObject healthBar;
     
     private void OnEnable()
     {
@@ -46,7 +47,7 @@ public class CarHealth : Health
         
         currentHealth += amount;
         HealthChange?.Invoke(amount);
-
+        
         HealthCheck();
     }
 

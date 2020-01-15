@@ -1020,8 +1020,11 @@
           <e p="FX Shaders" t="Include">
             <e p="AlphaNoise.shader" t="Include" />
             <e p="Amp Toon Test.shader" t="Include" />
+            <e p="Fresnel.shader" t="Include" />
             <e p="MitchToonShader.shader" t="Include" />
+            <e p="Noise.shader" t="Include" />
             <e p="Skull Shader.shader" t="Include" />
+            <e p="TriplanarToonTest.shader" t="Include" />
           </e>
           <e p="Materials" t="Include">
             <e p="Materials" t="Include">
@@ -1031,7 +1034,13 @@
           <e p="Shader" t="Include">
             <e p="CutoutTest 1.shader" t="Include" />
             <e p="CutoutTest.shader" t="Include" />
+            <e p="New Amplify Shader.shader" t="Include" />
           </e>
+        </e>
+        <e p="HealthBar.cs" t="Include" />
+        <e p="LevelManager.cs" t="Include" />
+        <e p="Materials" t="Include">
+          <e p="ToonShaderV2.shader" t="Include" />
         </e>
         <e p="NatureStarterKit2" t="Include">
           <e p="Editor" t="Include">
@@ -1357,6 +1366,8 @@
             <e p="ControlInputs.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
+            <e p="ArmorSetupEditor.cs" t="Include" />
+            <e p="HeightmapFromTexture.cs" t="Include" />
             <e p="WeaponEditor.cs" t="Include" />
           </e>
           <e p="EnableObjectOnTrigger.cs" t="Include" />
@@ -1383,8 +1394,15 @@
             <e p="PooledObjectSpawnerTest.cs" t="Include" />
             <e p="PoolObjects.cs" t="Include" />
           </e>
+          <e p="Object2Terrain.cs" t="Include" />
           <e p="OldArmor.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="Prefab Placement" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PrefabPlacementEditor.cs" t="Include" />
+            </e>
+            <e p="PrefabPlacementSO.cs" t="Include" />
+          </e>
           <e p="Projectiles" t="Include">
             <e p="Projectile.cs" t="Include" />
             <e p="RaycastProjectileInfo.cs" t="Include" />
