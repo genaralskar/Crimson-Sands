@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 57560438e95de574388779a5761264ec
+=======
+guid: 469008dc960e4824287858886b08422f
+>>>>>>> Stashed changes
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -57,7 +61,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+<<<<<<< Updated upstream
     useFileScale: 0
+=======
+    useFileScale: 1
+>>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

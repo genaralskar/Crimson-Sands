@@ -55,6 +55,7 @@ public class Weapon : MonoBehaviour
     public AudioManager fireSoundSource;
 
     public GameObject muzzleFlash;
+    public ParticleSystem chargeParticles;
 
     public bool tracer = false;
     public LineRenderer tracerTemplate;
@@ -91,6 +92,7 @@ public class Weapon : MonoBehaviour
         
         fireHandler = anims.gameObject.AddComponent<WeaponFireHandler>();
         fireHandler.OnWeaponFire += OnWeaponFireHandler;
+        fireHandler.WeaponCharge += ChargeWeaponHandler;
         
         muzzleFlash.SetActive(false);
 
@@ -168,6 +170,19 @@ public class Weapon : MonoBehaviour
             StartCoroutine(MuzzleFlash());
         }
         
+    }
+
+    private void ChargeWeaponHandler(bool charging)
+    {
+        if (!chargeParticles) return;
+        if (charging)
+        {
+            chargeParticles.Play();
+        }
+        else
+        {
+            chargeParticles.Stop();
+        }
     }
 
     private void FireProjectile()

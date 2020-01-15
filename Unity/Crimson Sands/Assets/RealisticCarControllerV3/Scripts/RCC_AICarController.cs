@@ -45,7 +45,8 @@ public class RCC_AICarController : MonoBehaviour {
 	// Steer, Motor, And Brake inputs. Will feed RCC_CarController with these inputs.
 	private float steerInput = 0f;
 	private float gasInput = 0f;
-	private float brakeInput = 0f;
+	public float brakeInput = 0f;
+	public bool overrideBrake = false;
 
 	// Limit speed.
 	public bool limitSpeed = false;
@@ -258,7 +259,8 @@ public class RCC_AICarController : MonoBehaviour {
 		}
 
 		// Gas Input.
-		if(!inBrakeZone){
+		if(!inBrakeZone)
+		{
 
 			if(carController.speed >= 10){
 
@@ -267,7 +269,9 @@ public class RCC_AICarController : MonoBehaviour {
 				else
 					gasInput = 0f;
 
-			}else{
+			}
+			else
+			{
 
 				if(!carController.changingGear)
 					gasInput = 1f;
@@ -276,7 +280,9 @@ public class RCC_AICarController : MonoBehaviour {
 
 			}
 
-		}else{
+		}
+		else
+		{
 
 			if(!carController.changingGear)
 				gasInput = Mathf.Lerp(1f, 0f, (carController.speed) / maximumSpeedInBrakeZone);
@@ -289,14 +295,21 @@ public class RCC_AICarController : MonoBehaviour {
 		steerInput = Mathf.Clamp((ignoreWaypointNow ? rayInput : navigatorInput + rayInput), -1f, 1f) * carController.direction;
 
 		// Brake Input.
-		if(!inBrakeZone){
+		if (overrideBrake && carController.speed > 10)
+		{
+			
+		}
+		else if(!inBrakeZone)
+		{
 			
 			if(carController.speed >= 25)
 				brakeInput = Mathf.Lerp(0f, .25f, (Mathf.Abs(steerInput)));
 			else
 				brakeInput = 0f;
 
-		}else{
+		}
+		else
+		{
 			
 			brakeInput = Mathf.Lerp(0f, 1f, (carController.speed - maximumSpeedInBrakeZone) / maximumSpeedInBrakeZone);
 

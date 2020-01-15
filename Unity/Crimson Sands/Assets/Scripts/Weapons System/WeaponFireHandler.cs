@@ -10,9 +10,21 @@ using UnityEngine.Events;
 public class WeaponFireHandler : MonoBehaviour
 {
     public UnityAction OnWeaponFire;
+
+    public UnityAction<bool> WeaponCharge;
     
     public void FireWeapon()
     {
         OnWeaponFire?.Invoke();
+    }
+
+    public void StartWeaponCharge()
+    {
+        WeaponCharge?.Invoke(true);
+    }
+
+    public void StopWeaponCharge()
+    {
+        WeaponCharge?.Invoke(false);
     }
 }
