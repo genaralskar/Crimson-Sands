@@ -127,7 +127,7 @@ Material:
     - _Boost: 0.66
     - _BumpScale: 1
     - _Cutoff: 0
-    - _CutoffRamp: 0.93
+    - _CutoffRamp: 1.71
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FadeSlider: 2.71
@@ -144,6 +144,7 @@ Material:
     - _GlowBaseFrequency1: 2.05
     - _GlowOverride: 1
     - _GlowOverride1: 5.28
+    - _Length: 20
     - _LightWrap: 2.17
     - _LightWrap1: 2.5
     - _Mask1: 1.22
@@ -151,12 +152,13 @@ Material:
     - _Metallic1: 1
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 5
     - _Parallax: 0.02
     - _RimOffset: 1
     - _RimOffset1: 1
     - _RimPower: 0.692
     - _RimPower1: 0
-    - _ScaleAndOffset: 0.725
+    - _ScaleAndOffset: 0.795
     - _ScaleandOffset: 0.736
     - _Shininess: 0.6
     - _SmoothnessTextureChannel: 0
@@ -166,6 +168,7 @@ Material:
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
     - _Speed: 0
+    - _Speed1: 0.6420124
     - _Speed2: 1
     - _SrcBlend: 1
     - _Step: 1
