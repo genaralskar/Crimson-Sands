@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,7 +9,12 @@ public class PlayerDeathManager : MonoBehaviour
     public static UnityAction PlayerDeath;
 
     public CarHealth playerHealth;
-    
+
+    private void Awake()
+    {
+        PlayerDeath += PlayerDeathHandler;
+    }
+
     private void PlayerDeathHandler()
     {
         StopAllCoroutines();

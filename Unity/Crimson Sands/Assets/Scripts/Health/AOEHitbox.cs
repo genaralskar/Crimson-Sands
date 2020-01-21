@@ -28,14 +28,31 @@ public class AOEHitbox : Hitbox
 
         //list to contained already activated weaponhits
         List<IWeaponHit> hits = new List<IWeaponHit>();
+        List<Health> hitHealths = new List<Health>();
 
         //for each collider hit
         foreach (var col in cols)
         {
             //get its weapon hit. if its null, return. if its already in the activated list, return
             IWeaponHit wh = col.GetComponent<IWeaponHit>();
-            if (wh == null) return;
-            if (hits.Contains(wh)) return;
+            if (wh == null) continue;
+
+            Hurtbox hb = col.GetComponent<Hurtbox>();
+            if (hb)
+            {
+                Health health = hb.health;
+                if (health != null)
+                {
+                    Debug.Log($"health {health}");
+                    if (hitHealths.Contains(health))
+                    {
+                        Debug.Log($"hitHealths already contains  {health}, returning");
+                        continue;
+                    }
+                    Debug.Log($"adding {health} to hitHealths");
+                    hitHealths.Add(health);
+                }
+            }
             
             SendDamage(col);
             

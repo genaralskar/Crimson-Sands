@@ -38,7 +38,7 @@ public class AIController : MonoBehaviour
     public bool useStaticFuzz = false;
     private Vector3 staticFuzz;
     public TransformReference playerFollowPoint;
-    public TransformReference SemiFollowPoint;
+    public TransformReference semiFollowPoint;
     public float chanceToChangeTarget = 0.05f;
     public float chanceToSwerveOnHit = 0.2f;
 
@@ -58,7 +58,7 @@ public class AIController : MonoBehaviour
 
     private void Start()
     {
-
+        SwitchTarget(semiFollowPoint.transform);
         staticFuzz = GetRandomFuzz(navFuzz);
     }
 
@@ -222,7 +222,7 @@ public class AIController : MonoBehaviour
 
     private void TargetSemi()
     {
-        SwitchTarget(SemiFollowPoint.transform);
+        SwitchTarget(semiFollowPoint.transform);
     }
     
     private void SwitchTarget(Transform newTarget)
