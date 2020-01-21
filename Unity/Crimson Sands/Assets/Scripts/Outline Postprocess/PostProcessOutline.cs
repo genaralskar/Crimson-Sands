@@ -15,6 +15,10 @@ public sealed class PostProcessOutline : PostProcessEffectSettings
     public FloatParameter depthNormalThresholdScale = new FloatParameter { value = 7 };
     public ColorParameter color = new ColorParameter { value = Color.black };
 
+    public TextureParameter noiseTexture = new TextureParameter {value = null};
+    public Vector2Parameter noiseTiling = new Vector2Parameter { value = new Vector2(1, 1) };
+    public Vector2Parameter noiseOffset = new Vector2Parameter { value = new Vector2(0, 0) };
+
 }
 
 public sealed class PostProcessOutlineRenderer : PostProcessEffectRenderer<PostProcessOutline>
@@ -29,6 +33,14 @@ public sealed class PostProcessOutlineRenderer : PostProcessEffectRenderer<PostP
         sheet.properties.SetFloat("_DepthNormalThreshold", settings.depthNormalThreshold);
         sheet.properties.SetFloat("_DepthNormalThresholdScale", settings.depthNormalThresholdScale);
         sheet.properties.SetColor("_Color", settings.color);
+
+        var imageTexture = settings.noiseTexture.value == null
+            ? RuntimeUtilities.transparentTexture
+            : settings.noiseTexture.value;
+        
+        sheet.properties.SetTexture("_NoiseTexture", imageTexture);
+        sheet.properties.SetVector("_NoiseTiling", settings.noiseTiling);
+        sheet.properties.SetVector("_NoiseOffset", settings.noiseOffset);
 
         Matrix4x4 clipToView = GL.GetGPUProjectionMatrix(context.camera.projectionMatrix, true).inverse;
         sheet.properties.SetMatrix("_ClipToView", clipToView);

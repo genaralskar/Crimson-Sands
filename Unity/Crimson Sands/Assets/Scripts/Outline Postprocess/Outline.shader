@@ -31,6 +31,10 @@ Shader "Hidden/Roystan/Outline Post Process"
             float _DepthNormalThreshold;
             float _DepthNormalThresholdScale;
             float4 _Color;
+            
+            sampler2D _NoiseTexture;
+            float2 _NoiseTiling;
+            float2 _NoiseOffset;
 
 			// Combines the top and bottom colors using normal blending.
 			// https://en.wikipedia.org/wiki/Blend_modes#Normal_blend_mode
@@ -117,12 +121,19 @@ Shader "Hidden/Roystan/Outline Post Process"
 			    float depthThreshold = _DepthThreshold * depth0 * normalThreshold;
 			    edgeDepth = edgeDepth > depthThreshold ? 1 : 0;
 			    
-			    
+			    float2 coord = i.texcoord * _NoiseTiling + _NoiseOffset;
+                float4 noiseOverlay = tex2D(_NoiseTexture, coord);
+                
+                edgeDepth = smoothstep(edgeDepth, 0, noiseOverlay.r);
 			    
 			    //take max of depth and normal outlines
 			    float edge = max(edgeDepth, edgeNormal);
-			
+			    
                 float4 edgeColor = float4(_Color.rgb, _Color.a * edge);
+                
+                
+
+                //edgeColor.a *= noiseOverlay.r;
 			
 				float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
 
