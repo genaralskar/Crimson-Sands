@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f83565a883c3c2f4f9067634edf5eb50, type: 3}
-  m_Name: Pool Grenade Explosion
+  m_Name: Pool Small Explosion Particles
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 8456338025768406398, guid: 142741520ca068f41bd17cb8eb80ada4,
+  poolObject: {fileID: 6913696860562790714, guid: b56b397ba451c4643bd8fc07ddb5f6bf,
     type: 3}
   amount: 100

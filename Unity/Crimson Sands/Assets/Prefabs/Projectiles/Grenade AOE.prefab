@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8456338025768406277}
   - component: {fileID: 8456338025768406394}
   m_Layer: 17
-  m_Name: Grenade Explosion
+  m_Name: Grenade AOE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ SphereCollider:
   m_GameObject: {fileID: 8456338025768406398}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   disableTime: 0.1
   explosionPool: {fileID: 11400000, guid: e9368d2d0d75dea4798af361f0f33ffa, type: 2}
   explosiveForce: 20000
+  explosionRadius: 2
   damageFalloff: 1
   falloffCurve:
     serializedVersion: 2
