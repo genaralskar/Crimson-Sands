@@ -58,6 +58,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectiles/RaycastProjectileInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Editor/RCC_AIEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_WheelCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AIBrakeZonesContainer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/WeaponMount.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/ProjectileImpactAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons System/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,9 +94,11 @@
         <option value="$PROJECT_DIR$/Assets/RealisticCarControllerV3/Scripts/RCC_AICarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon Pickup/WeaponPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeightmapFromTexture.cs" />
-        <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/CarHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/HealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
       </list>
     </option>
   </component>
@@ -155,6 +159,7 @@
       <workItem from="1578362915241" duration="3293000" />
       <workItem from="1578514706495" duration="3140000" />
       <workItem from="1578951746858" duration="3362000" />
+      <workItem from="1579119881145" duration="6435000" />
     </task>
     <servers />
   </component>

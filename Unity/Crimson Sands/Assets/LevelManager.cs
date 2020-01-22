@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     private bool isPause = false;
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private GameObject GameUICanvas;
+
+    [SerializeField] private string menuName;
 
     // Update is called once per frame
     void Update()
@@ -29,5 +32,11 @@ public class LevelManager : MonoBehaviour
             }
         }
         
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("TEST");
+        SceneManager.LoadScene(menuName);
     }
 }
