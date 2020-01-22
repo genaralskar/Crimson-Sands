@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6586253626075812171
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd05a6d78a21774abfff76b6af4ecee, type: 3}
+  m_Name: MitchToonShaderPPSSettings
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  _AlphaCutoffOn:
+    overrideState: 0
+    value: 0
+  _Cutoff:
+    overrideState: 0
+    value: 0
+  _DissolveTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  _Albedo:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  _CutoffRamp:
+    overrideState: 0
+    value: 0
+  _ToonRamp:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  _Speed:
+    overrideState: 0
+    value: {x: 0.1, y: 0.1, z: 0, w: 0}
+  _ScaleAndOffset:
+    overrideState: 0
+    value: 0.5
+  _Normal:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  _Tint:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  _RimOffset:
+    overrideState: 0
+    value: 1
+  _RimPower:
+    overrideState: 0
+    value: 0
+  _SpecCoverage:
+    overrideState: 0
+    value: 0.5
+  _RimTint:
+    overrideState: 0
+    value: {r: 0.8301887, g: 0.8183333, b: 0.7362049, a: 1}
+  _SpecOn:
+    overrideState: 0
+    value: 0
+  _SpecIntensity:
+    overrideState: 0
+    value: 0.5
+  _SpecMap:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  _ToonIntensity:
+    overrideState: 0
+    value: 5
 --- !u!114 &-6244076885849802160
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -88,6 +163,7 @@ MonoBehaviour:
   - {fileID: -5573368522167172065}
   - {fileID: 3726558218184769515}
   - {fileID: 4096254765254431345}
+  - {fileID: -6586253626075812171}
 --- !u!114 &3726558218184769515
 MonoBehaviour:
   m_ObjectHideFlags: 3

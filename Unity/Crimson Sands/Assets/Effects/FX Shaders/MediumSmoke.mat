@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MediumSmoke
   m_Shader: {fileID: 4800000, guid: b43c3b2ec8647e94cba768d783114d21, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _KEYWORD0_KEY0
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -124,6 +124,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _ASEOutlineWidth: 0.0001
     - _Boost: 0.66
     - _BumpScale: 1
     - _Cutoff: 0
@@ -144,6 +145,7 @@ Material:
     - _GlowBaseFrequency1: 2.05
     - _GlowOverride: 1
     - _GlowOverride1: 5.28
+    - _Keyword0: 0
     - _Length: 20
     - _LightWrap: 2.17
     - _LightWrap1: 2.5
@@ -167,7 +169,7 @@ Material:
     - _SpecIntensity: 0
     - _SpecIntensity1: 0.5
     - _SpecularHighlights: 1
-    - _Speed: 0
+    - _Speed: 0.506
     - _Speed1: 0.506
     - _Speed2: 1
     - _SrcBlend: 1
@@ -176,8 +178,9 @@ Material:
     - _UVLerp: 0.12
     - _UVSec: 1
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     m_Colors:
+    - _ASEOutlineColor: {r: 0.5, g: 0.42924526, b: 0.42924526, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NoiseGenerator: {r: 0.1, g: 6, b: 0, a: 0}
@@ -189,4 +192,4 @@ Material:
     - _Tint: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     - _Tint1: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0.01, g: 0.01, b: 0, a: 0}
-    - _Vector2: {r: 1, g: 4, b: 0, a: 0}
+    - _Vector2: {r: 6, g: 0.1, b: 0, a: 0}
