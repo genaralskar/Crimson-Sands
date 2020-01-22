@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6644db4e4e454784ab1126af20b3fbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 10
   firePoint: {fileID: 6340667839338418529}
   useRaycast: 1
   raycastProjectileLayerMask:
@@ -95,6 +95,7 @@ MonoBehaviour:
   anims: {fileID: 0}
   fireSoundSource: {fileID: 1309511006296511593}
   muzzleFlash: {fileID: 5103036659960103272}
+  chargeParticles: {fileID: 0}
   tracer: 1
   tracerTemplate: {fileID: 0}
 --- !u!1 &6340667839338418528
