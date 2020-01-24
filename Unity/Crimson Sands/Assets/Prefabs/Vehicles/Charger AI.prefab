@@ -117,6 +117,8 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 181043
+  brakeInput: 0
+  overrideBrake: 0
   limitSpeed: 1
   maximumSpeed: 160
   smoothedSteer: 1
@@ -159,7 +161,7 @@ MonoBehaviour:
   navFuzz: 5
   useStaticFuzz: 0
   playerFollowPoint: {fileID: 11400000, guid: e4a5d6be825a435459ba5b73b2225b6b, type: 2}
-  SemiFollowPoint: {fileID: 11400000, guid: 3fc508dab1f5c684599c992071033ac8, type: 2}
+  semiFollowPoint: {fileID: 11400000, guid: 3fc508dab1f5c684599c992071033ac8, type: 2}
   chanceToChangeTarget: 0.1
   chanceToSwerveOnHit: 0.2
   weapons: []
@@ -670,19 +672,24 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2227884506520949809, guid: ff362b3b7e292b545bd1c309b6729bb8,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4789610944286428147, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2414708341008138953, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: reference
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8023257568847195477, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
       propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023257568847195478, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8023257568847195479, guid: ff362b3b7e292b545bd1c309b6729bb8,
@@ -705,11 +712,16 @@ PrefabInstance:
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8023257568847195478, guid: ff362b3b7e292b545bd1c309b6729bb8,
+    - target: {fileID: 2227884506520949809, guid: ff362b3b7e292b545bd1c309b6729bb8,
         type: 3}
-      propertyPath: isPlayer
-      value: 0
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7864288303513219402, guid: ff362b3b7e292b545bd1c309b6729bb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671d0d8f65a41684a8707a040da1db2d, type: 2}
     m_RemovedComponents:
     - {fileID: 1682924918811996742, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff362b3b7e292b545bd1c309b6729bb8, type: 3}
