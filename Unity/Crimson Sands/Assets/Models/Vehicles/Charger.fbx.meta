@@ -3,7 +3,27 @@ guid: 476a5993611cac54394cd457a24f7720
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Armor_2_Text
+    second: {fileID: 2100000, guid: 8726009795dd1764f82952559d3cd616, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Armor_Texture
+    second: {fileID: 2100000, guid: 72d364693ac22c848be34bcb927f5772, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Charger_Body_Texture
+    second: {fileID: 2100000, guid: d1c9a56b22078684aba3f5a3a39f0671, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Texture
+    second: {fileID: 2100000, guid: 57f26d18ee4a58743a69c1aaa628254f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

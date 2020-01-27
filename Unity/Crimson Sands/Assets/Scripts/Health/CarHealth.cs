@@ -56,22 +56,22 @@ public class CarHealth : Health
         //blow up car
         Debug.Log("Car Death!");
         
+        
+        Debug.Log("Not Player");
+        if (deathExplosion)
+        {
+            Debug.Log("KABOOOM");
+            GameObject explosion = deathExplosion.GetPooledObject(transform.position, transform.rotation);
+            explosion.gameObject.SetActive(true);
+        }
+
+        gameObject.SetActive(false);
+
         if (isPlayer)
         {
-            //end game/respawn
+            PlayerDeathManager.PlayerDeath?.Invoke();
         }
-        else
-        {
-            Debug.Log("Not Player");
-            if (deathExplosion)
-            {
-                Debug.Log("KABOOOM");
-                GameObject explosion = deathExplosion.GetPooledObject(transform.position, transform.rotation);
-                explosion.gameObject.SetActive(true);
-            }
-
-            gameObject.SetActive(false);
-        }
+        
     }
 
     private float DamageModifier()

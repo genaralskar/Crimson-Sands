@@ -9,6 +9,8 @@ public class SetTransformReference : MonoBehaviour
 
     private void Awake()
     {
+        if (!reference) return;
         reference.transform = transform;
+        Debug.Log($"Transform set to {transform}. Transform reference is {reference}");
     }
 }
