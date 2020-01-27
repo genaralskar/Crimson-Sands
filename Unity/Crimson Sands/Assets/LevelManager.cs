@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
                 pauseCanvas.SetActive(true);
                 GameUICanvas.SetActive(false);
                 isPause = true;
+                //Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
@@ -29,10 +30,12 @@ public class LevelManager : MonoBehaviour
                 GameUICanvas.SetActive(true);
                 Time.timeScale = 1;
                 isPause = false;
+                //Cursor.lockState = CursorLockMode.None;
             }
         }
-        
     }
+    
+    
 
     public void QuitGame()
     {
