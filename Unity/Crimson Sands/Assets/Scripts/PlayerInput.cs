@@ -14,6 +14,9 @@ public class PlayerInput : MonoBehaviour
     public string boostInput = "Boost";
     public string fireWeaponInput = "Fire1";
 
+    public bool stopInputs = false;
+    public float stoppedSpeed = 0;
+
     private void Awake()
     {
         cc = GetComponent<RCC_CarControllerV3>();
@@ -21,6 +24,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        
         float gas = Input.GetAxis(gasBrakeInput);
         //float breaks = Input.GetAxis(breakReverseInput);
         float steer = Input.GetAxis(steerInput);
@@ -29,6 +33,15 @@ public class PlayerInput : MonoBehaviour
         
         //Debug.Log($"Gas: {gas}, Steer: {steer}, Hand Break: {handBreak}, Boost: {boost}");
 
+        if (stopInputs)
+        {
+            gas = stoppedSpeed;
+            steer = 0;
+            handBreak = stoppedSpeed > 0 ? 0 : 1;
+            boost = 0;
+        }
+        
+        
         if (gas > 0)
         {
             cc.gasInput = gas;

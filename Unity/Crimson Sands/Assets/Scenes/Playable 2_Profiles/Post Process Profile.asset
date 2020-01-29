@@ -255,3 +255,19 @@ MonoBehaviour:
   noiseOffset:
     overrideState: 0
     value: {x: 0, y: 0}
+--- !u!114 &6574221752913024104
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ccc619cc943734eac4714331c6b0a0, type: 3}
+  m_Name: ToonPostProcess
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
