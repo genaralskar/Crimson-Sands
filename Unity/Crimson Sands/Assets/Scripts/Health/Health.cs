@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,7 +24,7 @@ public abstract class Health : MonoBehaviour
     public bool iFrames = true;
     public float iFrameTime = 0.01f;
     private float lastHitTime = 0;
-    
+
     public List<Hurtbox> Hurtboxes
     {
         get { return hurtboxes; }
