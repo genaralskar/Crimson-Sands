@@ -948,7 +948,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 902e6bdf550ee944e82e74baf37f48c0, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -1106,7 +1106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0aeffdd2313684192d029875c108ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGamePlayable: {fileID: 421511661}
+  playableOnStart: 0
   inputs: {fileID: 988815295}
+  cineCam: {fileID: 1672458335}
 --- !u!4 &421511665
 Transform:
   m_ObjectHideFlags: 0
@@ -3200,7 +3203,9 @@ MonoBehaviour:
   m_ShowToolkit: 0
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
+  m_BeforeTransparentBundles:
+  - assemblyQualifiedName: MitchToonShaderPPSSettings, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_BeforeStackBundles:
   - assemblyQualifiedName: PostProcessOutline, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
@@ -3265,6 +3270,12 @@ Transform:
   m_Father: {fileID: 1766997777}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1672458335 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2028634, guid: 9f32ea4a11500b344ae05427bdc21e05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1009074464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1721113751
 GameObject:
   m_ObjectHideFlags: 0
