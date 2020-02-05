@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: SmallSmoke
   m_Shader: {fileID: 4800000, guid: b43c3b2ec8647e94cba768d783114d21, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _KEYWORD0_KEY0
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -69,8 +69,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NoiseTexture:
         m_Texture: {fileID: 2800000, guid: bcb8a8d20459e6349bf5cfce27e04e22, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 0.25, y: 0.25}
+        m_Offset: {x: 1, y: 1}
     - _Normal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -124,13 +124,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _ASEOutlineWidth: 0.01
     - _Boost: 0.66
     - _BumpScale: 1
     - _Cutoff: 0
-    - _CutoffRamp: 1.71
+    - _CutoffRamp: 1.055
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FadeSlider: 2.71
+    - _FadeSlider: 4.08
     - _FadeSlider1: 0
     - _FadeStrength: 70.1
     - _Float0: 72.2
@@ -144,6 +145,9 @@ Material:
     - _GlowBaseFrequency1: 2.05
     - _GlowOverride: 1
     - _GlowOverride1: 5.28
+    - _If: 0
+    - _IfCamera: 0
+    - _Keyword0: 0
     - _Length: 20
     - _LightWrap: 2.17
     - _LightWrap1: 2.5
@@ -152,7 +156,7 @@ Material:
     - _Metallic1: 1
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 5
+    - _Offset: 4
     - _Parallax: 0.02
     - _RimOffset: 1
     - _RimOffset1: 1
@@ -178,10 +182,11 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _ASEOutlineColor: {r: 0.5, g: 0.4292453, b: 0.4292453, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _NoiseGenerator: {r: 0.1, g: 4, b: 0, a: 0}
-    - _NoiseGenerator1: {r: 4, g: 1, b: 0, a: 0}
+    - _NoiseGenerator: {r: 0.1, g: 2, b: 0, a: 0}
+    - _NoiseGenerator1: {r: 2, g: 1, b: 0, a: 0}
     - _RimTint: {r: 0.9245283, g: 0.8678355, b: 0.871885, a: 1}
     - _RimTint1: {r: 0.1131185, g: 0.7239776, b: 0.7735849, a: 0}
     - _Speed: {r: 0.05, g: 0.05, b: 0, a: 0}
