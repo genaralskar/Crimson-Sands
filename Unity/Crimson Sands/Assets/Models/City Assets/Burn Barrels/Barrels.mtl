@@ -1,0 +1,15 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.206520482)
+
+newmtl SmallTrashCan
+kd 0.5 0.5 0.5
+illum 1
+
+newmtl Grout
+kd 0.5 0.5 0.5
+illum 1
+
+newmtl BurnBarrelMat
+kd 0.5 0.5 0.5
+illum 1
+
