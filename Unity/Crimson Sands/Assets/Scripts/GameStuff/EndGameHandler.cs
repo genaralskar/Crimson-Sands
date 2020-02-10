@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 
 public class EndGameHandler : MonoBehaviour
 {
-    public Playable endgamePlayable;
+    public PlayableDirector endgamePlayable;
     
     public PlayerInput playerInput;
     
@@ -13,6 +13,8 @@ public class EndGameHandler : MonoBehaviour
     {
         //stop player inputs
         playerInput.stopInputs = true;
+        
+        endgamePlayable.Play();
         
         
         //move camera out
