@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class SnapToGridEditor
+namespace genaralskar.Tools
 {
-    [MenuItem("Tools/Snap To Grid")]
-    static void SnapToPoint()
+    public class SnapToGridEditor
     {
-        var sels = Selection.gameObjects;
-
-        foreach (var sel in sels)
+        [MenuItem("Tools/genaralskar/Snap To Grid")]
+        static void SnapToPoint()
         {
-            Vector3 newPos = sel.transform.position;
-            newPos = new Vector3((int)newPos.x, (int)newPos.y, (int)newPos.z);
-            sel.transform.position = newPos;
+            var sels = Selection.gameObjects;
+
+            foreach (var sel in sels)
+            {
+                Vector3 newPos = sel.transform.position;
+                newPos = new Vector3((int) newPos.x, (int) newPos.y, (int) newPos.z);
+                sel.transform.position = newPos;
+            }
         }
     }
 }
