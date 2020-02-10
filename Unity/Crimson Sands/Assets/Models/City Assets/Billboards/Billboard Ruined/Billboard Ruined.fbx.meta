@@ -3,7 +3,22 @@ guid: f57def2781fd1d94daeb57ebb2a8b214
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BillboardMat
+    second: {fileID: 2100000, guid: 5c0209f0372f4f94392109702d28adaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 6cc6b807913ea2947ac6bcc4e50126c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalBroken
+    second: {fileID: 2100000, guid: 6cc6b807913ea2947ac6bcc4e50126c2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -57,7 +72,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
