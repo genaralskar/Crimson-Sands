@@ -24,15 +24,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: fdb4317b84f9c0444b09f3fd9f2f95be, type: 3}
+        m_Texture: {fileID: 2800000, guid: 73d12eb50a8ebfb49a774dcf6359f86c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
-        m_Texture: {fileID: 2800000, guid: 55f28575d2867d94782ae19713160e29, type: 3}
+        m_Texture: {fileID: 2800000, guid: 680365b93b7fd0a43aad033a66030c46, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 73d12eb50a8ebfb49a774dcf6359f86c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3d8675433a508ec47b8f895201eacf20, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
@@ -46,11 +50,11 @@ Material:
     m_Floats:
     - _FresnelBias: 0
     - _FresnelPower: 10
-    - _FresnelScale: 0.5
+    - _FresnelScale: 1
     - _RimIntensity: 1
     - __dirty: 0
     m_Colors:
     - _LightColor: {r: 1, g: 1, b: 1, a: 0}
-    - _RimColor: {r: 0.9433962, g: 0.9268183, b: 0.6986472, a: 0}
-    - _ShadowColor: {r: 0.6213064, g: 0.63822967, b: 0.735849, a: 0}
-    - _Tiling: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadowColor: {r: 0.7949448, g: 0.820172, b: 0.8301887, a: 0}
+    - _Tiling: {r: 0.01, g: 0.01, b: 0, a: 0}
