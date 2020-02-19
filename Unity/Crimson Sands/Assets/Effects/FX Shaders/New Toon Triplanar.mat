@@ -51,10 +51,12 @@ Material:
     - _FresnelBias: 0
     - _FresnelPower: 10
     - _FresnelScale: 1
-    - _RimIntensity: 1
+    - _NoiseIntensity: 0.5
+    - _NoiseScale: 0.02
+    - _RimIntensity: 0.347
     - __dirty: 0
     m_Colors:
-    - _LightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _LightColor: {r: 1, g: 0.44860822, b: 0.32199997, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
-    - _ShadowColor: {r: 0.7949448, g: 0.820172, b: 0.8301887, a: 0}
-    - _Tiling: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 0.05, g: 0.05, b: 0, a: 0}
