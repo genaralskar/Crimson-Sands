@@ -53,7 +53,7 @@ public class MusicPlayer : MonoBehaviour
         if (increment)
         {
             //songs increment up to amount of songs in list, then loop
-            currentSongIndex = currentSongIndex % songs.Count;
+            currentSongIndex = (currentSongIndex + 1) % songs.Count;
         }
         gmSource.clip = songs[currentSongIndex];
         songStartTime = Time.time;

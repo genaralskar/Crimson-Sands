@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ChargerArmor1
-  m_Shader: {fileID: 4800000, guid: c5984449a9ab2fa439adf5b7aacf4c71, type: 3}
+  m_Shader: {fileID: 4800000, guid: f51d4bc57942c8e44af48d9d2f93e8fd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: ab49628b65e29e1469c1df343636ae2a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTexture:
+        m_Texture: {fileID: 2800000, guid: 55f28575d2867d94782ae19713160e29, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -46,8 +50,12 @@ Material:
     m_Floats:
     - _Cutoff: 0
     - _CutoffRamp: 0
+    - _FresnelBias: 0
+    - _FresnelPower: 5
+    - _FresnelScale: 1.94
     - _LightWrap: 0
     - _Metallic: 0
+    - _RimIntensity: 1
     - _RimOffset: 1
     - _RimPower: 0.7
     - _ScaleAndOffset: 0.5
@@ -57,6 +65,9 @@ Material:
     - _UVLerp: 0
     - __dirty: 0
     m_Colors:
+    - _LightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimTint: {r: 0.5767177, g: 0.8821644, b: 0.9056604, a: 0}
+    - _ShadowColor: {r: 0.51886785, g: 0.51886785, b: 0.51886785, a: 0}
     - _Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Tint: {r: 0.764151, g: 0.7028747, b: 0.7028747, a: 1}
