@@ -51,5 +51,7 @@ public class RenderReplacementShaderToTexture : MonoBehaviour
         camera.depth = thisCamera.depth - 1;
         camera.clearFlags = cameraClearFlags;
         camera.backgroundColor = background;
+        MatchCamFOV fov = copy.AddComponent<MatchCamFOV>();
+        fov.cameraToMatch = thisCamera;
     }
 }
