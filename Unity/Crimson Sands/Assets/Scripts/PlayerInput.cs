@@ -29,7 +29,7 @@ public class PlayerInput : MonoBehaviour
         //float breaks = Input.GetAxis(breakReverseInput);
         float steer = Input.GetAxis(steerInput);
         float handBreak = Input.GetAxis(handBreakInput);
-        float boost = Input.GetAxis(boostInput);
+        float boost = Input.GetAxis(boostInput) + 1;
         
         //Debug.Log($"Gas: {gas}, Steer: {steer}, Hand Break: {handBreak}, Boost: {boost}");
 
@@ -63,5 +63,9 @@ public class PlayerInput : MonoBehaviour
         cc.steerInput = steer;
         cc.handbrakeInput = handBreak;
         cc.boostInput = boost;
+        if (boost > 1)
+        {
+            Debug.Log("BOOST");
+        }
     }
 }

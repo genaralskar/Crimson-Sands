@@ -58,5 +58,5 @@ Material:
     m_Colors:
     - _LightColor: {r: 1, g: 0.6164013, b: 0.5235849, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
-    - _ShadowColor: {r: 0.74061054, g: 0.79639363, b: 0.8396226, a: 0}
+    - _ShadowColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
     - _Tiling: {r: 0.05, g: 0.05, b: 0, a: 0}
