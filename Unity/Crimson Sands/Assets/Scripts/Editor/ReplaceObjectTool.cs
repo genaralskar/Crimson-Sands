@@ -45,9 +45,10 @@ namespace genaralskar.Tools
             foreach (var sel in sels)
             {
                 //instantiate new obj
-                var newObj = Instantiate(rObj);
-                Undo.RegisterCreatedObjectUndo(newObj, "Create Object");
-                
+                var obj = PrefabUtility.InstantiatePrefab(rObj);
+                Undo.RegisterCreatedObjectUndo(obj, "Create Object");
+                GameObject newObj = obj as GameObject;
+
                 //if obj is parented, move it to parent
                 newObj.transform.SetParent(sel.transform.parent);
                 

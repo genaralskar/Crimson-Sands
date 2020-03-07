@@ -124,6 +124,34 @@ MonoBehaviour:
   quality:
     overrideState: 0
     value: 2
+--- !u!114 &-5972185747604916085
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2a446ab8d8ec6489b34c9f399a4b03, type: 3}
+  m_Name: DitherAndPixelatePPSSettings
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  _ToggleDither:
+    overrideState: 1
+    value: 0
+  _Intensity:
+    overrideState: 1
+    value: 0.5
+  _TogglePixelation:
+    overrideState: 1
+    value: 1
+  _PixelationAmount:
+    overrideState: 1
+    value: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +170,7 @@ MonoBehaviour:
   - {fileID: 4096254765254431345}
   - {fileID: -6586253626075812171}
   - {fileID: 3813897966191061583}
+  - {fileID: -5972185747604916085}
 --- !u!114 &3726558218184769515
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -201,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

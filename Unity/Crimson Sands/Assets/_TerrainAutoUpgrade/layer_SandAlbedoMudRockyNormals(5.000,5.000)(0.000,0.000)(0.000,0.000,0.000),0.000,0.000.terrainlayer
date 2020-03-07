@@ -7,10 +7,10 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_SandAlbedoMudRockyNormals(5.000,5.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000
-  m_DiffuseTexture: {fileID: 2800000, guid: c4db52bebf1d1d448b94c0ce96d6351d, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 680365b93b7fd0a43aad033a66030c46, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 662d72b6ec210cf4cbeec2b4d3cb8b2a, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: f53512d44b91e954dae7bf028209df1a, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 5, y: 5}
+  m_TileSize: {x: 20, y: 20}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
