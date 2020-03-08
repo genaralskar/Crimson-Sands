@@ -990,6 +990,7 @@ MonoBehaviour:
   container: {fileID: 11400000, guid: a5c19482527161e489e3f95eede9d6a0, type: 2}
   sourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
   moveSourceOnHit: 1
+  root: {fileID: 8023257568847195476}
   moveToNewCarCollider: 1
 --- !u!1 &5079029316421056929
 GameObject:
@@ -1079,7 +1080,7 @@ GameObject:
   - component: {fileID: 7728483294354723430}
   - component: {fileID: 8157177353703472056}
   - component: {fileID: 697014107411587928}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Pickup Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3119,6 +3120,8 @@ MonoBehaviour:
   deathExplosion: {fileID: 11400000, guid: 76153b354ef700849b8263b7cd92d483, type: 2}
   resetHealthOnEnable: 1
   armor: {fileID: 0}
+  healthRegen: 1
+  regenPerSec: 1
   healthBar: {fileID: 0}
 --- !u!114 &6083740969504776036
 MonoBehaviour:

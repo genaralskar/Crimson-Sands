@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4466413143539029472}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7150107143572836773}
   - component: {fileID: 3902767756625953208}
   - component: {fileID: 9171138848776990981}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Drivers_Side_Back_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 9039911263685453822}
   - component: {fileID: 1351977660025879042}
   - component: {fileID: 1587777392361408456}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 8116755145164449275}
   - component: {fileID: 352157919403078641}
   - component: {fileID: 6783047241919592837}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Drivers_Side_Back_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 718080180466077402}
   - component: {fileID: 5905111403557606366}
   - component: {fileID: 4647706121125393884}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Passenger_Side_Front_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 2209779102782353522}
   - component: {fileID: 5372268714407448558}
   - component: {fileID: 7161256861066917586}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 1075736440936052267}
   - component: {fileID: 6507954393942994686}
   - component: {fileID: 694673871029226437}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Passenger_Side_Back_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5160530782405636880}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Wheel Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 206220265529349754}
   - component: {fileID: 8731857742787911629}
   - component: {fileID: 7711498742140672739}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Drivers_Side_Front_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 8506562602290983930}
   - component: {fileID: 5022423146651668688}
   - component: {fileID: 8233641421935057518}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Passenger_Side_Front_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 4750018677028035724}
   - component: {fileID: 2592014270437925407}
   - component: {fileID: 7558603080185127576}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Passenger_Side_Back_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 9211325045528915581}
   - component: {fileID: 7733769712318247712}
   - component: {fileID: 3170121220282880112}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Drivers_Side_Front_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,8 +2192,8 @@ MonoBehaviour:
   - 110
   - 121
   - 132
-  engineTorque: 6000
-  brakeTorque: 6000
+  engineTorque: 8000
+  brakeTorque: 8000
   minEngineRPM: 1000
   maxEngineRPM: 7000
   engineInertia: 1
@@ -2330,8 +2330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d011048399a32fa4b9323ae83da72bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 1000
+  maxHealth: 10000
+  currentHealth: 10000
   invincible: 0
   isPlayer: 1
   iFrames: 1
@@ -2340,6 +2340,7 @@ MonoBehaviour:
   deathExplosion: {fileID: 0}
   resetHealthOnEnable: 1
   armor: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!1 &7177976938374168948
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,7 +3127,7 @@ GameObject:
   - component: {fileID: 4780929373139083746}
   - component: {fileID: 7902727043701244475}
   - component: {fileID: 4346483251019925925}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Bus Trailer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3339,7 +3340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8318670880486520880}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3369,7 +3370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 141634888026891988}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Wheel Models
   m_TagString: Untagged
   m_Icon: {fileID: 0}

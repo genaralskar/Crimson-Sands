@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: OilPumpMetal
-  m_Shader: {fileID: 4800000, guid: a4d617760bab8de4b8742cb83ba24cfd, type: 3}
+  m_Shader: {fileID: 4800000, guid: f51d4bc57942c8e44af48d9d2f93e8fd, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -63,6 +63,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTexture:
+        m_Texture: {fileID: 2800000, guid: 63ef4ff9a23e07d42a91b21d5465e116, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -91,6 +95,9 @@ Material:
     - _CutoffRamp: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FresnelBias: 0
+    - _FresnelPower: 5
+    - _FresnelScale: 1
     - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -99,6 +106,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RimAmount: 0.716
+    - _RimIntensity: 1
     - _RimOffset: 1
     - _RimPower: 0
     - _RimThreshold: 0.1
@@ -117,8 +125,10 @@ Material:
     - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimTint: {r: 0.8301887, g: 0.8183333, b: 0.7362049, a: 1}
+    - _ShadowColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
     - _SpecularColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
     - _Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Tint: {r: 1, g: 1, b: 1, a: 0}

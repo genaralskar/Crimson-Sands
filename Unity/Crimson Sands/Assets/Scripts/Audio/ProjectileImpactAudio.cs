@@ -15,6 +15,8 @@ public class ProjectileImpactAudio : MonoBehaviour, IWeaponHit
     public bool moveSourceOnHit = true;
     private GameObject source;
 
+    public Transform root;
+
     [Tooltip("Check this if this is on the vehicle somewhere 'cause the car controller likes to move the colliders around")]
     public bool moveToNewCarCollider = false;
 
@@ -51,7 +53,7 @@ public class ProjectileImpactAudio : MonoBehaviour, IWeaponHit
         string searchTerm = $"Colliders/{gameObject.name}(Clone)";
         //Debug.Log(searchTerm);
         //Debug.Log(transform.root);
-        GameObject newCol = transform.root.Find(searchTerm).gameObject;
+        GameObject newCol = root.Find(searchTerm).gameObject;
 
         ProjectileImpactAudio newPIA = newCol.AddComponent<ProjectileImpactAudio>();
         newPIA.container = container;
