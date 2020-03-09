@@ -603,6 +603,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1525057567249432073, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
+    - target: {fileID: 2881619220360615620, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
+    - target: {fileID: 3438427705407654661, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
+    - target: {fileID: 3936701422293451320, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
     - target: {fileID: 4528158096481825046, guid: 5c34a52e6d2dee244802201c96919142,
         type: 3}
       propertyPath: m_Layer
@@ -613,6 +633,16 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 7347918174659503338}
+    - target: {fileID: 5937776063320477788, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
+    - target: {fileID: 7305396937717616393, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
     - target: {fileID: 7177976937633519746, guid: 5c34a52e6d2dee244802201c96919142,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -668,6 +698,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8909280702289558923, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10bfd20fe0f88d145b25e4bbee52656e, type: 2}
+    - target: {fileID: 8909280702289558923, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cf3f6da5e6103c4bbb3e04103543e5d, type: 2}
+    - target: {fileID: 8909280702289558923, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8794cf508fdcc564cb18e1326edcdd0c, type: 2}
+    - target: {fileID: 8909280702289558923, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82d79f70ea1601c439a2d86bf1c22a1d, type: 2}
     - target: {fileID: 1281612240452347264, guid: 5c34a52e6d2dee244802201c96919142,
         type: 3}
       propertyPath: m_Layer
@@ -703,6 +753,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 6520052866174440212, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91891aaef0ab46d4ea711c4e4e513482, type: 2}
+    - target: {fileID: 6520052866174440212, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e9bb018e34285f4cbbed3f8bac72b4a, type: 2}
+    - target: {fileID: 6520052866174440212, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: e05f93b4501dd25478c580155977bcde, type: 2}
+    - target: {fileID: 6520052866174440212, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5163bb74e5fa2f240a33c25600f34e47, type: 2}
+    - target: {fileID: 6520052866174440212, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad95014f859a3384297a09219c34d77b, type: 2}
     - target: {fileID: 6362616331890152958, guid: 5c34a52e6d2dee244802201c96919142,
         type: 3}
       propertyPath: m_Layer
@@ -723,6 +798,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Semi
       objectReference: {fileID: 0}
+    - target: {fileID: 7711498742140672739, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10bfd20fe0f88d145b25e4bbee52656e, type: 2}
+    - target: {fileID: 7711498742140672739, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cf3f6da5e6103c4bbb3e04103543e5d, type: 2}
+    - target: {fileID: 9171138848776990981, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10bfd20fe0f88d145b25e4bbee52656e, type: 2}
+    - target: {fileID: 9171138848776990981, guid: 5c34a52e6d2dee244802201c96919142,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cf3f6da5e6103c4bbb3e04103543e5d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c34a52e6d2dee244802201c96919142, type: 3}
 --- !u!1 &3724776814268702917 stripped
