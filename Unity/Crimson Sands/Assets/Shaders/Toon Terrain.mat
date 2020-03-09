@@ -74,6 +74,6 @@ Material:
     - __dirty: 0
     m_Colors:
     - _CurveColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0}
-    - _LightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _LightColor: {r: 1, g: 0.966027, b: 0.9292453, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
-    - _ShadowColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 0}
+    - _ShadowColor: {r: 0.5513528, g: 0.5976999, b: 0.6603774, a: 0}

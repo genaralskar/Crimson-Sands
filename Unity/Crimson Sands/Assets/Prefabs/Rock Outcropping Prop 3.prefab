@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3792613015398086926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5994390407459106944}
-  - component: {fileID: 5153927691044910037}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5994390407459106944
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792613015398086926}
-  m_LocalRotation: {x: -0, y: -0.07390201, z: -0, w: 0.9972655}
-  m_LocalPosition: {x: 0, y: -0.00000047683716, z: 0}
-  m_LocalScale: {x: 6.413133, y: 7.208447, z: 3.44605}
-  m_Children: []
-  m_Father: {fileID: 593070282355002005}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -8.476001, z: 0}
---- !u!65 &5153927691044910037
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792613015398086926}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4494693168671537286
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +12,7 @@ GameObject:
   - component: {fileID: 8457765565620252835}
   - component: {fileID: 2764239937163791450}
   - component: {fileID: 7399697338799286255}
+  - component: {fileID: 2117591708796149221}
   m_Layer: 0
   m_Name: Rock Outcropping Prop 3
   m_TagString: Untagged
@@ -73,8 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 291.3, y: 14.8, z: 938}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children:
-  - {fileID: 5994390407459106944}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 3241d9e91dcbb4843971481ff87e1a61, type: 3}
+  - {fileID: 2100000, guid: aeb7c0521edb1bd49ab17b1b976d20e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,3 +98,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &2117591708796149221
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494693168671537286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5714920925340250722, guid: 3241d9e91dcbb4843971481ff87e1a61, type: 3}

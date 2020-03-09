@@ -92,7 +92,7 @@ MonoBehaviour:
   useOcclusion: 1
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 130615
   useAutoChangeCamera: 0
   topCameraAngle: {x: 45, y: 45, z: 0}
   maximumZDistanceOffset: 10
@@ -276,11 +276,17 @@ MonoBehaviour:
   m_ShowToolkit: 0
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
+  m_BeforeTransparentBundles:
+  - assemblyQualifiedName: MitchToonShaderPPSSettings, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: DitherAndPixelatePPSSettings, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_BeforeStackBundles:
   - assemblyQualifiedName: PostProcessOutline, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: FadeNearCameraPPSSettings, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &3413230595453352408
 MonoBehaviour:
   m_ObjectHideFlags: 0
