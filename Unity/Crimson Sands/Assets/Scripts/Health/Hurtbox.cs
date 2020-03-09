@@ -51,7 +51,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
         string searchTerm = $"Colliders/{gameObject.name}(Clone)";
         //Debug.Log(searchTerm);
         //Debug.Log(transform.root);
-        GameObject newCol = transform.root.Find(searchTerm).gameObject;
+        GameObject newCol = health.transform.Find(searchTerm).gameObject;
         Hurtbox newHurt = newCol.AddComponent<Hurtbox>();
         newHurt.moveHurtboxToCollider = false;
         newHurt.health = this.health;
@@ -104,6 +104,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
+        Debug.Log("Dealing Damage");
         //Debug.Log($"testing damage, {health.gameObject}");
         if(health.isPlayer != weapon.isPlayer)
         {

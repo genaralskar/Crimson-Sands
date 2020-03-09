@@ -41,6 +41,8 @@ public abstract class Health : MonoBehaviour
     {
         if (invincible) return;
 
+        Debug.Log("dealing damage");
+        
         //I-Frame stuff
         if (Time.time - lastHitTime >= iFrameTime)
         {

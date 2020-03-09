@@ -10,7 +10,9 @@ public class CarHealth : Health
     public bool resetHealthOnEnable = true;
 
     public ArmorHolder armor;
-    //
+
+    public bool healthRegen = false;
+    public int regenPerSec = 1;
 
     private int maxArmorMod = 10;
     private float minDamagePercent = 0.3f;
@@ -28,6 +30,10 @@ public class CarHealth : Health
     private void Start()
     {
         armor = GetComponent<ArmorHolder>();
+        if (healthRegen)
+        {
+            StartCoroutine(HealthRegen());
+        }
     }
 
     public override void ModifyHealth(int amount)
@@ -37,7 +43,7 @@ public class CarHealth : Health
         OnDamage(amount);
         //Debug.Log($"damage was {amount}");
         //modify amount by number of armor pieces
-        if (armor && armor.currentArmor)
+        if (armor && armor.currentArmor && amount < 0)
         {
             float newAmount = amount * DamageModifier();
             amount = (int)newAmount;
@@ -96,5 +102,19 @@ public class CarHealth : Health
         
         //Debug.Log($"damage mod = {mod}, currentArmor = {currentArmor}, maxArmorMod = {maxArmorMod}");
         return mod;
+    }
+
+    private IEnumerator HealthRegen()
+    {
+        float timer = Time.time;
+        while (true)
+        {
+            yield return null;
+            if (Time.time - timer > 1)
+            {
+                timer = Time.time;
+                ModifyHealth(regenPerSec);
+            }
+        }
     }
 }

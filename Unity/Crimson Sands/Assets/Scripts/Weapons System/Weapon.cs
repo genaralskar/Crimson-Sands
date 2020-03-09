@@ -235,8 +235,10 @@ public class Weapon : MonoBehaviour
             //Debug.Log(hit.collider.gameObject);
 
             IWeaponHit[] weaponHits = hit.collider.gameObject.GetComponents<IWeaponHit>();
-            if (weaponHits != null)
+            if (weaponHits.Length > 0)
             {
+                Debug.Log($"Weapon hit{weaponHits[0]}");
+                
                 //if player, hit only enemy
                 //if enemy, hit only player
                 foreach (var weaponHit in weaponHits)
