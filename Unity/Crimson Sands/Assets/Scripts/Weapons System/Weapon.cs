@@ -108,6 +108,7 @@ public class Weapon : MonoBehaviour
 //    Used for testing purposes
     private void Update()
     {
+        if (PauseMenu.paused) return;
         if (Input.GetButtonDown("Fire1") && !IsFiring && isPlayer)
         {
             IsFiring = true;

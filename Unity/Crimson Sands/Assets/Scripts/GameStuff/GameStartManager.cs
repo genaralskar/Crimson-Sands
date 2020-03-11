@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class GameStartManager : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class GameStartManager : MonoBehaviour
     {
         Debug.Log("Start the game!");
         inputs.stopInputs = false;
+    }
+
+    public void ChangeScenes(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
