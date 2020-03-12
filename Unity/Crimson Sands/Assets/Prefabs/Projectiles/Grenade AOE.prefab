@@ -137,3 +137,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  audioSourcePool: {fileID: 11400000, guid: c966bba34a836894aa9f0245f07af0a5, type: 2}
+  explosionSound: {fileID: 11400000, guid: f09733a44d1f6d94bb78ea30cfe8725d, type: 2}

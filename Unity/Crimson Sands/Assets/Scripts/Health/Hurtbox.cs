@@ -104,7 +104,7 @@ public class Hurtbox : MonoBehaviour, IWeaponHit
 
     public void OnWeaponHit(Weapon weapon, Vector3 hitPoint)
     {
-        Debug.Log("Dealing Damage");
+        //Debug.Log("Dealing Damage");
         //Debug.Log($"testing damage, {health.gameObject}");
         if(health.isPlayer != weapon.isPlayer)
         {
