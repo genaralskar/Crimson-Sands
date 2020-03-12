@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CarHealth : Health
 {
+    public UnityAction OnDeath;
+    
     public bool playerTeam = false;
     public GameObjectPool deathExplosion;
     public bool resetHealthOnEnable = true;
@@ -60,23 +63,25 @@ public class CarHealth : Health
     protected override void Death()
     {
         //blow up car
-        Debug.Log("Car Death!");
+        //Debug.Log("Car Death!");
         
         
-        Debug.Log("Not Player");
+        //Debug.Log("Not Player");
         if (deathExplosion)
         {
-            Debug.Log("KABOOOM");
+            //Debug.Log("KABOOOM");
             GameObject explosion = deathExplosion.GetPooledObject(transform.position, transform.rotation);
             explosion.gameObject.SetActive(true);
         }
-
-        gameObject.SetActive(false);
 
         if (isPlayer)
         {
             PlayerDeathManager.PlayerDeath?.Invoke();
         }
+        
+        OnDeath?.Invoke();
+        
+        gameObject.SetActive(false);
         
     }
 

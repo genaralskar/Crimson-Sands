@@ -38,7 +38,7 @@ public class PlayerInput : MonoBehaviour
             gas = stoppedSpeed;
             steer = 0;
             handBreak = stoppedSpeed > 0 ? 0 : 1;
-            boost = 0;
+            boost = 1;
         }
         
         
@@ -65,7 +65,7 @@ public class PlayerInput : MonoBehaviour
         cc.boostInput = boost;
         if (boost > 1)
         {
-            Debug.Log("BOOST");
+            //Debug.Log("BOOST");
         }
     }
 }

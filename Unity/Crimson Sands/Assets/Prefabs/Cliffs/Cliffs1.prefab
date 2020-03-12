@@ -92,6 +92,53 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -3914798656235243572, guid: 0a5009a02ec522d4b9fcdeccbb0b942f, type: 3}
+--- !u!1 &5803532894123723056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7500295465322750813}
+  - component: {fileID: 2434364098529174285}
+  m_Layer: 0
+  m_Name: navob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7500295465322750813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803532894123723056}
+  m_LocalRotation: {x: -0, y: 0.1623707, z: -0, w: 0.98672986}
+  m_LocalPosition: {x: 618.5, y: 61.1, z: -232.5}
+  m_LocalScale: {x: 160.90395, y: 124.11886, z: 64.51171}
+  m_Children: []
+  m_Father: {fileID: 6646714534733104183}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 18.689001, z: 0}
+--- !u!208 &2434364098529174285
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803532894123723056}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7666963298375939620
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7899186677585378971}
+  - {fileID: 7500295465322750813}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

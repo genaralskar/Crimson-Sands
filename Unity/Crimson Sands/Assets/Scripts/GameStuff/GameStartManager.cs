@@ -30,12 +30,13 @@ public class GameStartManager : MonoBehaviour
 
     public void StartGameStuff()
     {
-        Debug.Log("Start the game!");
+        //Debug.Log("Start the game!");
         inputs.stopInputs = false;
     }
 
     public void ChangeScenes(int scene)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(scene);
     }
 }

@@ -11,6 +11,6 @@ public class SetTransformReference : MonoBehaviour
     {
         if (!reference) return;
         reference.transform = transform;
-        Debug.Log($"Transform set to {transform}. Transform reference is {reference}");
+        //Debug.Log($"Transform set to {transform}. Transform reference is {reference}");
     }
 }
