@@ -8,13 +8,19 @@ public class EndGameHandler : MonoBehaviour
     public PlayableDirector endgamePlayable;
     
     public PlayerInput playerInput;
+
+    public string tagCheck = "Semi";
     
     private void OnTriggerEnter(Collider other)
     {
-        //stop player inputs
-        playerInput.stopInputs = true;
+        if (other.CompareTag(tagCheck))
+        {
+            //stop player inputs
+            playerInput.stopInputs = true;
         
-        endgamePlayable.Play();
+            endgamePlayable.Play();
+        }
+        
         
         
         //move camera out

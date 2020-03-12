@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     [Tooltip("The AudioContainer to determine which sounds will play from the attached AudioSource")]
     public AudioContainer container;
 
-    private bool playOnAwake;
+    public bool playOnAwake = false;
 
     private void Awake()
     {

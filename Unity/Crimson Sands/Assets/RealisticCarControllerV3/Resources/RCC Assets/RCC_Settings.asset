@@ -52,7 +52,7 @@ MonoBehaviour:
   gyroSensitivity: 2
   useLightsAsVertexLights: 1
   useLightProjectorForLightingEffect: 0
-  setTagsAndLayers: 1
+  setTagsAndLayers: 0
   RCCLayer: RCC
   RCCTag: Player
   tagAllChildrenGameobjects: 0

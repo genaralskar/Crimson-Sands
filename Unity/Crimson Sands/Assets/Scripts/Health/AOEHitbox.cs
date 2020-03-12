@@ -13,6 +13,12 @@ public class AOEHitbox : Hitbox
     public bool damageFalloff = true;
     public AnimationCurve falloffCurve = AnimationCurve.Linear(0, 1, 1, 0);
     
+    [Header("Audio")]
+    public GameObjectPool audioSourcePool;
+    public AudioContainer explosionSound;
+    private GameObject audioSource;
+    private AudioManager audioManager;
+    
     
     private int startDamage;
 
@@ -61,6 +67,7 @@ public class AOEHitbox : Hitbox
         }
         
         Invoke(nameof(Disable), disableTime);
+        PlaySound(explosionSound);
     }
 
     
@@ -153,5 +160,14 @@ public class AOEHitbox : Hitbox
 
         return damageMultiplier;
 
+    }
+    
+    private void PlaySound(AudioContainer container)
+    {
+        audioSource = audioSourcePool.GetPooledObject(transform.position, Quaternion.identity);
+        audioManager = audioSource.GetComponent<AudioManager>();
+        audioManager.container = container;
+        
+        audioManager.Play();
     }
 }

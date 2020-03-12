@@ -108,6 +108,7 @@ public class Weapon : MonoBehaviour
 //    Used for testing purposes
     private void Update()
     {
+        if (PauseMenu.paused) return;
         if (Input.GetButtonDown("Fire1") && !IsFiring && isPlayer)
         {
             IsFiring = true;
@@ -237,7 +238,7 @@ public class Weapon : MonoBehaviour
             IWeaponHit[] weaponHits = hit.collider.gameObject.GetComponents<IWeaponHit>();
             if (weaponHits.Length > 0)
             {
-                Debug.Log($"Weapon hit{weaponHits[0]}");
+                //Debug.Log($"Weapon hit{weaponHits[0]}");
                 
                 //if player, hit only enemy
                 //if enemy, hit only player

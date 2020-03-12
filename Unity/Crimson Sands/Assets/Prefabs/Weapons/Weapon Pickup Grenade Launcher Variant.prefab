@@ -12,6 +12,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon Pickup Grenade Launcher Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2987207339272269053, guid: 648ec64965f13804da38a9639a2c33c0,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 70e2788087c853b4d83d3fa84bd30130,
+        type: 2}
     - target: {fileID: 2987207339272269052, guid: 648ec64965f13804da38a9639a2c33c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -32,12 +38,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2987207339272269053, guid: 648ec64965f13804da38a9639a2c33c0,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 70e2788087c853b4d83d3fa84bd30130,
-        type: 2}
     - target: {fileID: 7355730899281021089, guid: 648ec64965f13804da38a9639a2c33c0,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r

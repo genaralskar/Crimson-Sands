@@ -14,14 +14,19 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (!paused)
-            {
-                Pause();
-            }
-            else
-            {
-                Unpause();
-            }
+            TogglePause();
+        }
+    }
+    
+    public void TogglePause()
+    {
+        if (!paused)
+        {
+            Pause();
+        }
+        else
+        {
+            Unpause();
         }
     }
 
